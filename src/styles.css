@@ -1,0 +1,156 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #e8e8f0;        /* was #f8f8fc - darker */
+  --surface: #f2f2f8;           /* was #ffffff - darker */
+  --surface-elevated: #e0e0ea;  /* was #f2f2f7 - darker */
+  --text-primary: #0a0a12;      /* was #111118 - darker */
+  --text-secondary: #3a4055;    /* was #4f5565 - darker */
+  --text-muted: #6a7085;        /* was #7c8293 - darker */
+  --accent-primary: #9b72f3;    /* same */
+  --accent-hover: #8a5fef;      /* same */
+  --accent-text: #7c4dff;       /* same */
+  --border-default: #d0d0dc;    /* was #e4e4ec - darker */
+  --border-subtle: #dcdce8;     /* was #ececf3 - darker */
+  --success: #16a34a;           /* same */
+  --error: #dc2626;             /* same */
+}
+
+:root[data-theme="dark"] {
+ --background:#0b0b10;
+ --surface: #111118;
+ --surface-elevated: #181822;
+ --text-primary: #f2f2f7;
+ --text-secondary: #a3a3b2;
+ --text-muted: #6d6d7a;
+ --accent-primary: #9b72f3;
+  --accent-hover: #a987ff;
+  --accent-text: #b99bff;
+  --border-default: #242430;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --success: #32d583;
+  --error: #ef6b6b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+ --background:#0b0b10;
+ --surface: #111118;
+ --surface-elevated: #181822;
+ --text-primary: #f2f2f7;
+ --text-secondary: #a3a3b2;
+ --text-muted: #6d6d7a;
+ --accent-primary: #9b72f3;
+  --accent-hover: #a987ff;
+  --accent-text: #b99bff;
+  --border-default: #242430;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --success: #32d583;
+  --error: #ef6b6b;
+  }
+}
+
+@theme inline{
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-border-default: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-success: var(--success);
+  --color-error: var(--error);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  background:
+    radial-gradient(800px 500px at -5% -10%, var(--accent-primary), transparent 55%),
+    radial-gradient(800px 500px at 105% -10%, var(--accent-hover), transparent 55%),
+    radial-gradient(600px 400px at 50% 120%, var(--accent-primary), transparent 60%),
+    linear-gradient(180deg, var(--surface) 0%, var(--background) 100%);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.28;
+  background:
+    radial-gradient(circle at 20% 15%, var(--accent-primary), transparent 34%),
+    radial-gradient(circle at 78% 26%, var(--accent-primary), transparent 42%),
+    radial-gradient(circle at 42% 82%, var(--accent-primary), transparent 36%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at 50% 30%, black, transparent 78%);
+}
+
+.page-wrap {
+  width: min(1240px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.rise-in {
+  animation: rise-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
