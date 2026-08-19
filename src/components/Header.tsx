@@ -102,8 +102,8 @@ export default function Header() {
           className="hover:bg-accent-hover cursor-pointer p-2 rounded-lg text-text-muted hover:text-text-primary"
           onClick={()=>setIsOpen(!isOpen)}>
             {!isOpen 
-            ? <GiHamburgerMenu/>
-            : <FaTimes />}
+            ? <GiHamburgerMenu size={18}/>
+            : <FaTimes size={18}/>}
           </button>
           <ThemeToggle />
         </div>

@@ -108,7 +108,7 @@ function ProjectsPage() {
                     <p className="text-[10px] text-text-muted font-semibold leading-relaxed tracking-widest">FEATURED</p>
                 </div>
                 <div className="flex flex-col md:flex-row w-full min-h-fit rounded-2xl bg-surface border border-border-default">
-                    <img src="i.png" alt="" className='h-82 md:h-102! lg:h-86! xl:h-82! w-full flex-1 shrink-0 rounded-tl-2xl rounded-bl-2xl'/>
+                    <img src="i.png" alt="" className='h-82 md:h-102! lg:h-86! xl:h-82! w-full flex-1 shrink-0 rounded-tl-2xl rounded-tr-2xl md:rounded-bl-2xl'/>
                     <div className="flex flex-col gap-6 md:w-[60%] rounded-tr-2xl rounded-br-2xl p-10 h-fit">
                         <div className="flex items-center text-xs gap-2">
                             <span className="text-text-secondary font-semibold">01</span>

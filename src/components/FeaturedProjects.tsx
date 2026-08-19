@@ -8,7 +8,7 @@ const FeaturedProjects = () => {
       <section className='page-wrap'>
        <span className="text-accent-text mb-6 text-[11px]">// SELECTED WORK</span>
        <div className="flex justify-between items-center mt-2 mb-6">
-        <h2 className="font-bold text-text-primary text-[28px] md:text-4xl">Featured Projects</h2>
+        <h2 className="font-bold text-text-primary text-[24px] md:text-[28px]! md:text-4xl">Featured Projects</h2>
         <AnimatedLink 
         classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-110 transition'
         route='/projects'
