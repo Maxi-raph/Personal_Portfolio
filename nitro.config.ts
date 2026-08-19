@@ -1,8 +1,7 @@
-// nitro.config.ts
 import { defineConfig } from 'nitro'
 
 export default defineConfig({
-  preset: 'node-server',
+  preset: process.env.NODE_ENV === 'production' ? 'vercel' : 'node-server',
   serverDir: './server',
   dev: true,
 })
