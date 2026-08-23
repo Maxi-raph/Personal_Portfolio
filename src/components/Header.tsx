@@ -62,11 +62,11 @@ export default function Header() {
       {/*  Mobile Navigation */}
       <nav className="flex md:hidden page-wrap flex-wrap items-center justify-between gap-x-3 gap-y-2 py-3 sm:py-4">
         <Link to={'/'} className="font-bold text-text-primary" onClick={()=>{if(isOpen) setIsOpen(!isOpen)}}>raphael.dev</Link>
-        <div className={`absolute bg-surface-elevated border border-accent-primary/50 shadow-xl w-full flex max-h-content top-18 right-0 z-20 flex flex-col text-center transition-opacity duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className={`absolute bg-surface-elevated border border-accent-primary/50 shadow-xl w-[96%] rounded-lg flex max-h-content top-19 right-3 z-20 flex flex-col text-center transition-opacity duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <Link  to={'/'} 
           className="text-text-muted border-b border-b-accent-primary text-sm transition py-4 px-4 
-          hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40
-          data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
+          hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 rounded-tr-lg rounded-tl-lg 
+          data-[status=active]:text-accent-primary data-[status=active]:rounded-tr-lg data-[status=active]:rounded-tl-lg data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
           onClick={()=>setIsOpen(!isOpen)}>Home</Link>
 
           <Link  to={'/about'} 
@@ -89,8 +89,8 @@ export default function Header() {
 
           <Link  to={'/about'}
            className="text-text-muted text-sm transition py-4 px-4 hover:bg-accent-hover/10
-            hover:text-accent-hover hover:bg-backdrop-blur/40
-            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
+            hover:text-accent-hover hover:bg-backdrop-blur/40 rounded-br-lg rounded-bl-lg 
+            data-[status=active]:text-accent-primary data-[status=active]:rounded-br-lg data-[status=active]:rounded-bl-lg  data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
             onClick={()=>setIsOpen(!isOpen)}>Resume</Link>
             
         </div>
