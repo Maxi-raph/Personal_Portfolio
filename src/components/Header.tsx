@@ -10,12 +10,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border-default bg-background/50 px-4 py-2 backdrop-blur-2xl">
+    <header className="fixed w-full top-0 z-50 border-b border-border-default bg-background/50 px-4 py-2 backdrop-blur-2xl">
       {/*  Desktop Navigation */}
       <nav className="hidden md:flex page-wrap flex-wrap items-center justify-between gap-x-3 gap-y-2 py-3 sm:py-4">
         <Link to={'/'} 
-        className="font-bold text-text-primary"
-        onClick={()=>setIsOpen(!isOpen)}>raphael.dev</Link>
+        className="font-bold text-text-primary">raphael.dev</Link>
 
         <div className="flex md:gap-6 lg:gap-8 justify-center items-center">
           <AnimatedLink 
@@ -62,13 +61,12 @@ export default function Header() {
       </nav>
       {/*  Mobile Navigation */}
       <nav className="flex md:hidden page-wrap flex-wrap items-center justify-between gap-x-3 gap-y-2 py-3 sm:py-4">
-        <Link to={'/'} className="font-bold text-text-primary" onClick={()=>setIsOpen(!isOpen)}>raphael.dev</Link>
-        <div className={`bg-surface-elevated border border-accent-primary/50 shadow-xl backdrop-blur-2xl w-52 max-h-content fixed top-17 right-0 z-20 rounded-xl flex flex-col justify-between text-center transition ${isOpen ? '-translate-x-2' : 'translate-x-54'}`}>
+        <Link to={'/'} className="font-bold text-text-primary" onClick={()=>{if(isOpen) setIsOpen(!isOpen)}}>raphael.dev</Link>
+        <div className={`absolute bg-surface-elevated border border-accent-primary/50 shadow-xl w-full flex max-h-content top-18 right-0 z-20 flex flex-col text-center transition-opacity duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <Link  to={'/'} 
           className="text-text-muted border-b border-b-accent-primary text-sm transition py-4 px-4 
-          hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 hover:rounded-tl-xl hover:rounded-tr-xl
-          data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]
-          data-[status=active]:rounded-tr-xl data-[status=active]:rounded-tl-xl"
+          hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40
+          data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
           onClick={()=>setIsOpen(!isOpen)}>Home</Link>
 
           <Link  to={'/about'} 
@@ -91,9 +89,8 @@ export default function Header() {
 
           <Link  to={'/about'}
            className="text-text-muted text-sm transition py-4 px-4 hover:bg-accent-hover/10
-            hover:text-accent-hover hover:bg-backdrop-blur/40 hover:rounded-bl-xl hover:rounded-br-xl
-            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]
-            data-[status=active]:rounded-br-xl data-[status=active]:rounded-bl-xl"
+            hover:text-accent-hover hover:bg-backdrop-blur/40
+            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
             onClick={()=>setIsOpen(!isOpen)}>Resume</Link>
             
         </div>

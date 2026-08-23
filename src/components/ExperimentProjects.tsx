@@ -7,10 +7,10 @@ const ExperimentProjects = () => {
     return ( 
         <>
             <section className="page-wrap flex flex-col gap-3">
-                    <div className="flex flex-wrap justify-between items-center mt-2 mb-6">
+                    <div className="flex flex-wrap gap-4 justify-between items-center mt-2 mb-6">
                     <div className='flex flex-col gap-2'>
                         <span className="text-accent-text text-[11px]"><span className="inline-block mr-2">//</span>PLAYGROUND</span>
-                        <h2 className="text-2xl md:text-3xl font-bold text-text-primary max-w-md">
+                        <h2 className="text-2xl md:text-3xl! lg:text-4xl! font-bold text-text-primary max-w-md">
                         Experiments
                         </h2>
                     </div>

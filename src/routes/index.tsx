@@ -35,7 +35,7 @@ function HomePage() {
 
 
   return (
-    <main className=''>
+    <main>
       <HeroSection />
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <FeaturedProjects />

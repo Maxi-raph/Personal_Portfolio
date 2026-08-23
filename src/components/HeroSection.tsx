@@ -46,8 +46,8 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="md:w-[44%] lg:w-[35%] pt-18 pl-14">
-          <div className="relative">
+        <div className="md:w-[44%] lg:w-[35%] pt-18 pl-14 rounded-3xl">
+          <div className="relative rounded-3xl">
             <span className="absolute -top-3 -right-2 block text-[11px] text-accent-primary
             bg-background w-fit p-2 rounded-2xl border border-border-default">
               <span className="mr-2">{'</>'}</span>{' React · Next.js · TypeScript'}
@@ -68,7 +68,7 @@ const HeroSection = () => {
             <span className="block rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
             <p className="text-[12px] text-text-muted leading-relaxed tracking-widest">AVAILABLE FOR WORK - LAGOS, NIGERIA</p>
           </div>
-          <div className="relative shadow-xl">
+          <div className="relative shadow-xl rounded-3xl">
             <span className="absolute top-4 right-4 block text-[11px] text-accent-primary
             bg-background w-fit p-2 rounded-2xl border border-border-default">
               <span className="mr-2">{'</>'}</span>{' React · Next.js · TypeScript'}
