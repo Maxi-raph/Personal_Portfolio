@@ -107,7 +107,7 @@ function HomePage() {
       <section className='page-wrap grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div className='flex flex-col gap-6'>
           <span className="text-accent-text text-[11px]"><span className="inline-block mr-2">//</span>CONTACT</span>
-          <h2 className="text-3xl font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-lg">
+          <h2 className="text-2xl md:text-3xl! font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-lg">
             Have a project in mind? Let's build something great.
           </h2>
           <p className="text-text-secondary text-sm leading-6">

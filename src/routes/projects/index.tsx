@@ -2,6 +2,7 @@ import AnimatedButton from '#/components/AnimatedButton'
 import AnimatedLink from '#/components/AnimatedLink'
 import ProjectCard from '#/components/ProjectCard'
 import TechStack from '#/components/TechStack'
+import { projectsArr } from '#/services/projectsArr'
 import { createFileRoute } from '@tanstack/react-router'
 import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
@@ -12,75 +13,14 @@ export const Route = createFileRoute('/projects/')({
 })
 
 function ProjectsPage() {
-    const projects = [
-        {
-        img:undefined, 
-        category:'Web Apps',
-        title:'Pulse Dashboard',
-        desc:'Real-time analytics platform with animated charts and live data streaming.', 
-        stacks:['Next.js', 'Recharts', 'WebSocket', 'Tailwind'], 
-        route:'/projects/detail/$projectId',
-        id:'1',
-        featured:true,
-        createdAt: new Date().toISOString()},
-        {
-        img:undefined, 
-        category:'Landing Pages',
-        title:'Folio Motion',
-        desc:'A portfolio template with cinematic scroll effects and smooth transitions.', 
-        stacks:['React', 'Framer Motion', 'GSAP', 'CSS'], 
-        route:'/projects/detail/$projectId',
-        id:'2',
-        featured:true,
-        createdAt: new Date().toISOString()},
-        {
-        img:undefined, 
-        category:'Dashboards',
-        title:'Northlight SaaS',
-        desc:'Landing page for a B2B SaaS product, conversion-optimised with animated sections.', 
-        stacks:['Next.js', 'Tailwind', 'Motion'], 
-        route:'/projects/detail/$projectId',
-        id:'3',
-        featured:false,
-        createdAt: new Date().toISOString()},
-        {
-        img:undefined, 
-        category:'Web Apps',
-        title:'Forma Table',
-        desc:'Advanced data table UI with inline editing, sorting, filtering and virtual scroll.', 
-        stacks:['React.js', 'TanstackTable', 'TypeScript'], 
-        route:'/projects/detail/$projectId',
-        id:'4',
-        featured:false,
-        createdAt: new Date().toISOString()},
-        {
-        img:undefined, 
-        category:'Experiments',
-        title:'Haze Notes',
-        desc:'Advanced data table UI with inline editing, sorting, filtering and virtual scroll.', 
-        stacks:['React.js', 'MDS', 'Zustand', 'CSS'], 
-        route:'/projects/detail/$projectId',
-        id:'5',
-        featured:false,
-        createdAt: new Date().toISOString()},
-        {
-        img:undefined, 
-        category:'Dashboards',
-        title:'Orbit Calendar',
-        desc:'A beautiful drag-and-drop scheduling calendar with smart conflict resolution.', 
-        stacks:['React.js', 'DnD Kit', 'TypeScript', 'Tailwind'], 
-        route:'/projects/detail/$projectId',
-        id:'6',
-        featured:true,
-        createdAt: new Date().toISOString()},
-    ]
+    const projects = projectsArr
     const categoryArr = ['All', 'Web Apps', 'Landing Pages', 'Dashboards', 'Experiments']
     const [category, setCategory] = useState('All')
     const filteredProjects = category ===  'All' ? projects : projects.filter((project)=> project.category === category)
 
   return (
     <section>
-        <div className="page-wrap mt-18">
+        <div className="page-wrap mt-34">
             <div className="flex flex-col md:justify-between md:items-end md:flex-row gap-6">
                 <div className='flex flex-col gap-4'>
                     <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> WORK</span>
