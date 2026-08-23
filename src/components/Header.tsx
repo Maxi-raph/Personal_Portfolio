@@ -62,7 +62,7 @@ export default function Header() {
       {/*  Mobile Navigation */}
       <nav className="flex md:hidden page-wrap flex-wrap items-center justify-between gap-x-3 gap-y-2 py-3 sm:py-4">
         <Link to={'/'} className="font-bold text-text-primary" onClick={()=>{if(isOpen) setIsOpen(!isOpen)}}>raphael.dev</Link>
-        <div className={`absolute bg-surface-elevated border border-accent-primary/50 shadow-xl w-[96%] rounded-lg flex max-h-content top-19 right-3 z-20 flex flex-col text-center transition-opacity duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className={`absolute bg-surface-elevated border border-accent-primary/50 shadow-xl w-[96%] rounded-lg flex max-h-content top-19 right-2 z-20 flex flex-col text-center transition-opacity duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <Link  to={'/'} 
           className="text-text-muted border-b border-b-accent-primary text-sm transition py-4 px-4 
           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 rounded-tr-lg rounded-tl-lg 
