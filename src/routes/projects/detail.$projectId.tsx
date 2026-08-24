@@ -2,7 +2,7 @@ import AnimatedLink from '#/components/AnimatedLink'
 import TechStack from '#/components/TechStack'
 import { projectsArr } from '#/services/projectsArr'
 import { createFileRoute } from '@tanstack/react-router'
-import { ArrowLeft, ExternalLink } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 
 export const Route = createFileRoute('/projects/detail/$projectId')({
@@ -133,6 +133,74 @@ function ProjectDetailsPage() {
               </div>
             </div>
           </div>
+        </div>
+        <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
+        <div className="flex flex-col gap-4">
+          <span className="w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> GALLERY</span>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-12 row-span-16">
+              <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
+            </div>
+            <div className="col-span-12 row-span-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
+                <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
+              </div>
+              <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
+                <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
+        <div className="flex flex-col md:flex-row gap-4 justify-between">
+          <span className="w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> CHALLENGE</span>
+          <div className="flex-1 flex flex-col gap-4">
+            <h3 className="text-text-primary text-xl font-bold">
+              Shipped faster. More consistently. With confidence.
+            </h3>
+            <p className="text-sm text-accent-text leading-5">
+              Within 3 months of adoption, the team reported 60% reduction in design-to-dev handoff time. Component duplication dropped
+              to near zero across all product surfaces. Accessibility audits went from failing to passing across the board.
+            </p>
+            <p className="text-sm text-accent-text leading-5">
+              Key takeaway: a design system isn't a project you finish — 
+              it's infrastructure you maintain. The most important work was writing great documentation and making contributors feel welcome.
+            </p>
+          </div>
+        </div>
+        <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
+        <div className="grid grid-cols-2 gap-4">
+          <AnimatedLink 
+          classes={`${Number(project?.id) === 1 && 'pointer-events-none cursor-disabled bg-surface-elevated/60'}
+          flex flex-col gap-2 p-4 bg-surface-elevated 
+          border border-border-default rounded-3xl`}
+          route='/projects/detail/$projectId'
+          params={{projectId: String(Number(project?.id) - 1) }}
+          func={()=>undefined} >
+            <div className="flex gap-2 items-center">
+              <ArrowLeft size={16} className='text-accent-primary'/>
+              <div className='flex flex-col gap-4'>
+                <h4 className="font-bold text-[11px] text-text-muted">Previous</h4>
+                <p className="text-accent-text text-[14px]">{}</p>
+              </div>
+            </div>
+          </AnimatedLink>
+          <AnimatedLink 
+          classes={`${Number(project?.id) === projectsArr.length -1 && 'pointer-events-none cursor-disabled bg-surface-elevated/60'}
+          flex flex-col items-end gap-2 p-4 bg-surface-elevated 
+          border border-border-default rounded-3xl`}
+          route='/projects/detail/$projectId'
+          params={{projectId: String(Number(project?.id) + 1) }}
+          func={()=>undefined}
+          >
+            <div className="flex gap-2 items-center">
+              <div className='flex flex-col gap-4'>
+                <h4 className="font-bold text-[11px] text-text-muted">Next</h4>
+                <p className="text-accent-text text-[14px]">{}</p>
+              </div>
+              <ArrowRight size={16} className='text-accent-primary'/>
+            </div>
+          </AnimatedLink>
         </div>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
       </div>
