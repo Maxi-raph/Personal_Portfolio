@@ -17,6 +17,7 @@ function ProjectsPage() {
     const categoryArr = ['All', 'Web Apps', 'Landing Pages', 'Dashboards', 'Experiments']
     const [category, setCategory] = useState('All')
     const filteredProjects = category ===  'All' ? projects : projects.filter((project)=> project.category === category)
+    const firstFeaturedProject =  projects.filter(p => p.featured)
 
   return (
     <section>
@@ -58,21 +59,14 @@ function ProjectsPage() {
                             </span>
                         </div>
                         <h2 className="text-text-primary font-bold text-3xl">
-                            Aether UI
+                           {firstFeaturedProject[0]?.title}
                         </h2>
                         <p className="text-text-secondary text-sm leading-6">
-                            A full-featured design system and accessible component library built to scale 
-                            with product teams. Covers everything from tokens to complex interactive patterns.
+                            {firstFeaturedProject[0]?.desc}
                         </p>
                         <TechStack
                         techStack={
-                            [
-                                {name:'React'},
-                                {name:'TypeScript'},
-                                {name:'Storybook'},
-                                {name:'Radix UI'},
-                                {name:'Tailwind'}
-                            ]
+                          (firstFeaturedProject[0]?.stacks?.map(name => ({name})) || [])
                         } 
                         containerClass='flex flex-wrap items-center gap-4'
                         classes='text-accent-text py-1 px-2 text-xs rounded-lg
@@ -80,7 +74,8 @@ function ProjectsPage() {
                         />
                         <AnimatedLink 
                         classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
-                        route='/'
+                        route='/projects/detail/$projectId'
+                        params={{projectId: firstFeaturedProject[0]?.id}}
                         func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
                     </div>
                 </div>

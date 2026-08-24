@@ -14,7 +14,7 @@ export default function Header() {
       {/*  Desktop Navigation */}
       <nav className="hidden md:flex page-wrap flex-wrap items-center justify-between gap-x-3 gap-y-2 py-3 sm:py-4">
         <Link to={'/'} 
-        className="font-bold text-text-primary">raphael.dev</Link>
+        className="font-bold text-text-primary">Raphael.dev</Link>
 
         <div className="flex md:gap-6 lg:gap-8 justify-center items-center">
           <AnimatedLink 
