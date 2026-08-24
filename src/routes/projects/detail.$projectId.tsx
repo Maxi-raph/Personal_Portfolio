@@ -171,32 +171,33 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <div className="grid grid-cols-2 gap-4">
           <AnimatedLink 
-          classes={`${Number(project?.id) === 1 && 'pointer-events-none cursor-disabled bg-surface-elevated/60'}
+          classes={`${Number(project?.id) <= 1 && 'opacity-50 cursor-not-allowed'}
           flex flex-col gap-2 p-4 bg-surface-elevated 
           border border-border-default rounded-3xl`}
           route='/projects/detail/$projectId'
           params={{projectId: String(Number(project?.id) - 1) }}
-          func={()=>undefined} >
+          func={()=>undefined}
+          disabled={Number(project?.id) <= 1}>
             <div className="flex gap-2 items-center">
               <ArrowLeft size={16} className='text-accent-primary'/>
               <div className='flex flex-col gap-4'>
                 <h4 className="font-bold text-[11px] text-text-muted">Previous</h4>
-                <p className="text-accent-text text-[14px]">{}</p>
+                <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) - 1 === Number(p.id))?.title || '— No previous project'}</p>
               </div>
             </div>
           </AnimatedLink>
           <AnimatedLink 
-          classes={`${Number(project?.id) === projectsArr.length -1 && 'pointer-events-none cursor-disabled bg-surface-elevated/60'}
+          classes={`${Number(project?.id) >= projectsArr.length && 'opacity-50 cursor-not-allowed'}
           flex flex-col items-end gap-2 p-4 bg-surface-elevated 
           border border-border-default rounded-3xl`}
           route='/projects/detail/$projectId'
           params={{projectId: String(Number(project?.id) + 1) }}
           func={()=>undefined}
-          >
+          disabled={Number(project?.id) >= projectsArr.length}>
             <div className="flex gap-2 items-center">
-              <div className='flex flex-col gap-4'>
+              <div className='flex flex-col items-end gap-4'>
                 <h4 className="font-bold text-[11px] text-text-muted">Next</h4>
-                <p className="text-accent-text text-[14px]">{}</p>
+                <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) + 1 === Number(p.id))?.title || '— No next project'}</p>
               </div>
               <ArrowRight size={16} className='text-accent-primary'/>
             </div>
