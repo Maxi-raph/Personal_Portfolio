@@ -1,5 +1,6 @@
 import AnimatedLink from '#/components/AnimatedLink'
 import TechStack from '#/components/TechStack'
+import { useNav } from '#/context/navContext'
 import { projectsArr } from '#/services/projectsArr'
 import { createFileRoute } from '@tanstack/react-router'
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
@@ -12,8 +13,12 @@ export const Route = createFileRoute('/projects/detail/$projectId')({
 function ProjectDetailsPage() {
    const{projectId} = Route.useParams()
    const project = projectsArr.find((p) =>p.id === projectId)
+   const {isOpen, setIsOpen} = useNav()
+
   return(
-    <section>
+    <section className='relative'>
+      <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
+      onClick={()=>setIsOpen(false)}></div>
       <div className="page-wrap mt-28">
         <AnimatedLink 
         classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
@@ -169,7 +174,7 @@ function ProjectDetailsPage() {
           </div>
         </div>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <AnimatedLink 
           classes={`${Number(project?.id) <= 1 && 'opacity-50 cursor-not-allowed'}
           flex flex-col gap-2 p-4 bg-surface-elevated 
@@ -182,7 +187,7 @@ function ProjectDetailsPage() {
               <ArrowLeft size={16} className='text-accent-primary'/>
               <div className='flex flex-col gap-4'>
                 <h4 className="font-bold text-[11px] text-text-muted">Previous</h4>
-                <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) - 1 === Number(p.id))?.title || '— No previous project'}</p>
+                <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) - 1 === Number(p.id))?.title || '— None'}</p>
               </div>
             </div>
           </AnimatedLink>
@@ -197,7 +202,7 @@ function ProjectDetailsPage() {
             <div className="flex gap-2 items-center">
               <div className='flex flex-col items-end gap-4'>
                 <h4 className="font-bold text-[11px] text-text-muted">Next</h4>
-                <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) + 1 === Number(p.id))?.title || '— No next project'}</p>
+                <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) + 1 === Number(p.id))?.title || '— None'}</p>
               </div>
               <ArrowRight size={16} className='text-accent-primary'/>
             </div>

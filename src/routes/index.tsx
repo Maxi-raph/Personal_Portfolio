@@ -4,8 +4,9 @@ import ExperimentProjects from '#/components/ExperimentProjects'
 import FeaturedProjects from '#/components/FeaturedProjects'
 import HeroSection from '#/components/HeroSection'
 import TechStack from '#/components/TechStack'
+import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
-import { ArrowRight } from 'lucide-react'
+import { useState } from 'react'
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
 import { 
   SiHtml5, 
@@ -32,10 +33,13 @@ export const Route = createFileRoute('/')(
   })
 
 function HomePage() {
+  const {isOpen, setIsOpen} = useNav()
 
-
+  
   return (
-    <main>
+    <main className='relative'>
+      <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
+      onClick={()=>setIsOpen(false)}></div>
       <HeroSection />
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <FeaturedProjects />
@@ -64,10 +68,6 @@ function HomePage() {
               transition shadow-gray-700 shadow-md bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm'
               func={()=> null}
               >Full Bio</AnimatedLink>
-              <AnimatedLink 
-              classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-110 transition'
-              route='/'
-              func={()=> undefined}>Read More <ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ const HeroSection = () => {
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
-            route='/'
+            route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16}/></AnimatedLink>
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
@@ -89,7 +89,7 @@ const HeroSection = () => {
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
              transition bg-gray-700/30 hover:bg-accent-hover text-sm'
-            route='/'
+            route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16}/></AnimatedLink>
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl

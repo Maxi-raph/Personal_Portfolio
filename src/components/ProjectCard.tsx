@@ -11,7 +11,6 @@ type ProjectProp ={
     stacks: string[],
     route: string,
     id: number,
-    featured?: boolean,
     createdAt?: string,
     params?: LinkProps['params'],
 }

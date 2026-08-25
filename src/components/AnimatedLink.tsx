@@ -12,7 +12,7 @@ type AnimatedLinkProp = {
   disabled?: boolean
 }
 
-const AnimatedLink = ({children, route, classes, func, params, disabled}:AnimatedLinkProp) => {
+const AnimatedLink = ({children, route, classes, func, params, disabled= false}:AnimatedLinkProp) => {
     const MotionLink = motion.create(Link)
     return ( 
       <MotionLink
@@ -21,7 +21,7 @@ const AnimatedLink = ({children, route, classes, func, params, disabled}:Animate
         whileTap={{ scale: 0.95 }}
         onClick={() => func}
         className={classes}
-        disabled={false}
+        disabled={disabled}
       >
         {children}
       </MotionLink>

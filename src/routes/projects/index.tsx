@@ -2,6 +2,7 @@ import AnimatedButton from '#/components/AnimatedButton'
 import AnimatedLink from '#/components/AnimatedLink'
 import ProjectCard from '#/components/ProjectCard'
 import TechStack from '#/components/TechStack'
+import { useNav } from '#/context/navContext'
 import { projectsArr } from '#/services/projectsArr'
 import { createFileRoute } from '@tanstack/react-router'
 import { ArrowRight } from 'lucide-react'
@@ -18,10 +19,13 @@ function ProjectsPage() {
     const [category, setCategory] = useState('All')
     const filteredProjects = category ===  'All' ? projects : projects.filter((project)=> project.category === category)
     const firstFeaturedProject =  projects.filter(p => p.featured)
+    const {isOpen, setIsOpen} = useNav()
 
   return (
     <section>
-        <div className="page-wrap mt-34">
+        <div className="page-wrap mt-34 relative">
+            <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
+            onClick={()=>setIsOpen(false)}></div>
             <div className="flex flex-col md:justify-between md:items-end md:flex-row gap-6">
                 <div className='flex flex-col gap-4'>
                     <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> WORK</span>

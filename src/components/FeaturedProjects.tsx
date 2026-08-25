@@ -1,8 +1,11 @@
 import AnimatedLink from '#/components/AnimatedLink'
 import { ArrowRight } from 'lucide-react'
 import ProjectCard from '#/components/ProjectCard'
+import { projectsArr } from '#/services/projectsArr';
+
 
 const FeaturedProjects = () => {
+  const featuredProjects = projectsArr.filter((p) => p.featured).slice(0,3).sort((a,b) => Number(new Date(b.createdAt).getTime()) -  Number(new Date(a.createdAt).getTime()))
     return ( 
     <>
       <section className='page-wrap'>
@@ -15,9 +18,9 @@ const FeaturedProjects = () => {
         func={()=> undefined}>All Projects <ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
        </div>
        <div className="mt-10 mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-         <ProjectCard title='Folio Motion' img={undefined} id={1} route='/' stacks={['React', 'Framer Motion', 'GSAP', 'CSS']} desc='A portfolio template with cinematic scroll effects and smooth transitions.' featured={true} createdAt={new Date().toISOString()}/>
-         <ProjectCard title='Folio Motion' img={undefined} id={1} route='/' stacks={['React', 'Framer Motion', 'GSAP', 'CSS']} desc='A portfolio template with cinematic scroll effects and smooth transitions.' featured={true} createdAt={new Date().toISOString()}/>
-         <ProjectCard title='Folio Motion' img={undefined} id={1} route='/' stacks={['React', 'Framer Motion', 'GSAP', 'CSS']} desc='A portfolio template with cinematic scroll effects and smooth transitions.' featured={true} createdAt={new Date().toISOString()}/>
+         {featuredProjects.map((project) =>(
+         <ProjectCard key={project.title} title={project.title} img={undefined} id={Number(project.id)} route={project.route} params={{projectId:String(Number(project?.id)) }} stacks={project.stacks} desc={project.desc}/>
+         ))}
        </div>
       </section>
     </>
