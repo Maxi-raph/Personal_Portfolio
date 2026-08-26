@@ -1,11 +1,33 @@
 import AnimatedLink from '#/components/AnimatedLink'
 import { ArrowRight } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react';
 
 const HeroSection = () => {
+ const HeroRef = useRef<HTMLElement | null>(null)
+ const [isVisible, setIsVisible] = useState(true) 
+
+useEffect(() => {
+  if (!HeroRef.current) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        setIsVisible(entry.isIntersecting);
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(HeroRef.current);
+
+  return () => observer.disconnect();
+}, []);
+
     return ( 
     <>
      {/* Desktop Hero Section */}
-      <section className="hidden md:flex gap-3 mt-34 page-wrap">
+      <section className={`hidden md:flex gap-3 mt-34 page-wrap transition duration-1000  
+        ${isVisible ?  'opacity-0 translate-y-20' : 'opacity-100 translate-y-0'}`} ref={HeroRef}>
         <div className='md:w-[58%] lg:w-[65%]'>
           <div className="flex gap-2 w-full items-center">
             <span className="block rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
@@ -63,7 +85,7 @@ const HeroSection = () => {
       </section>
 
     {/* Mobile Hero Section */}
-      <section className="flex flex-col items-center md:hidden gap-4 mt-32 page-wrap">
+      <section className="flex flex-col items-center md:hidden gap-4 mt-32 page-wrap" ref={HeroRef}>
           <div className="flex gap-2  w-full justify-center sm:justify-start items-center">
             <span className="block rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
             <p className="text-[12px] text-text-muted leading-relaxed tracking-widest">AVAILABLE FOR WORK - LAGOS, NIGERIA</p>

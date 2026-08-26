@@ -83,7 +83,7 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-[90%] mx-auto h-0.5 mt-6" />
         <hr className="text-text-muted w-full h-0.5 mt-6 mb-10" />
         <div className="flex flex-col md:flex-row gap-4 justify-between">
-          <span className="w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> CHALLENGE</span>
+          <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> CHALLENGE</span>
           <div className="flex-1 flex flex-col gap-4">
             <h3 className="text-text-primary text-xl font-bold">
               Building a consistent UI foundation at scale
