@@ -29,7 +29,7 @@ function AboutPage ()  {
                 </p>
               </div>
               <div className="flex flex-col md:flex-row gap-6 md:gap-13 lg:gap-18 mt-14">
-                <div className="w-100 mx-auto sm:w-[50%] md:w-[24%] lg:w-[21%]">
+                <div className="w-[65%] mx-auto sm:w-[50%] md:w-[26%] lg:w-[21%]">
                     <div className="w-full h-64 rounded-3xl mb-3">
                         <img src={undefined} alt="" className="w-full h-full object-cover rounded-3xl"/>
                     </div>
@@ -48,19 +48,19 @@ function AboutPage ()  {
                             I care deeply about performance, usability, and the small details
                              that make a product feel alive. Every pixel is intentional.
                         </p>
-                        <div className="flex gap-4 items-center">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-center w-[86%] mx-auto md:mx-0">
                             <AnimatedLink 
-                            classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
+                            classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
                             route='/projects'
                             func={()=> undefined}><FaTwitter size={16}/> Twitter</AnimatedLink>
                             <AnimatedLink 
-                            classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
+                            classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
                             route='/projects'
                             func={()=> undefined}><FaGithub size={16}/> Github</AnimatedLink>
                             <AnimatedLink 
-                            classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
+                            classes='col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
                             route='/about'
                             func={()=> undefined}><FaLinkedin size={16}/> LinkedIn</AnimatedLink>

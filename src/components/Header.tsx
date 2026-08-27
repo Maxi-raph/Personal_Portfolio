@@ -30,7 +30,7 @@ export default function Header() {
           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur hover:rounded-lg
           data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)] 
           data-[status=active]:rounded-lg'
-          route='/about'
+          route='/about/'
           func={()=> undefined}>About</AnimatedLink>
 
           <AnimatedLink 
