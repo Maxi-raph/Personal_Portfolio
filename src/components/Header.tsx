@@ -1,10 +1,11 @@
 import { Link } from '@tanstack/react-router'
 import ThemeToggle from './ThemeToggle'
-import { FileText} from 'lucide-react';
+import { Folder, FileText, Home, Mail, User} from 'lucide-react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTimes } from 'react-icons/fa';
 import AnimatedLink from './AnimatedLink';
 import { useNav } from '#/context/navContext';
+
 
 export default function Header() {
    const {isOpen, setIsOpen} = useNav()
@@ -30,7 +31,7 @@ export default function Header() {
           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur hover:rounded-lg
           data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)] 
           data-[status=active]:rounded-lg'
-          route='/about/'
+          route='/about'
           func={()=> undefined}>About</AnimatedLink>
 
           <AnimatedLink 
@@ -46,7 +47,7 @@ export default function Header() {
           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur hover:rounded-lg
           data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)] 
           data-[status=active]:rounded-lg'
-          route='/about'
+          route='/contact'
           func={()=> undefined}>Contact</AnimatedLink>
           
         </div>
@@ -65,38 +66,38 @@ export default function Header() {
         <div className={`absolute bg-surface-elevated border border-accent-primary/50 shadow-xl w-[96%] rounded-lg max-h-content top-19 right-2 z-20 flex flex-col text-center transition-opacity duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <Link  to={'/'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 mt-2 font-bold text-sm transition py-4 px-4 
-          hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40
+          hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
           data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-          onClick={()=>setIsOpen(!isOpen)}>Home</Link>
+          onClick={()=>setIsOpen(!isOpen)}><Home size={16} className='mr-1'/> Home</Link>
 
           <Link  to={'/about'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4
-           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40
+           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-           onClick={()=>setIsOpen(!isOpen)}>About</Link>
+           onClick={()=>setIsOpen(!isOpen)}><User size={16} className='mr-1'/> About</Link>
 
           <Link  to={'/projects'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4
-           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40
+           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-           onClick={()=>setIsOpen(!isOpen)}>Projects</Link>
+           onClick={()=>setIsOpen(!isOpen)}><Folder size={16} className='mr-1'/> Projects</Link>
         
-          <Link  to={'/'} 
+          <Link  to={'/contact'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4
-           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40
+           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-           onClick={()=>setIsOpen(!isOpen)}>Contact</Link>
+           onClick={()=>setIsOpen(!isOpen)}><Mail size={16} className='mr-1'/> Contact</Link>
 
-          <Link  to={'/about'}
+          <Link  to={'/'}
            className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4 hover:bg-accent-hover/10
-            hover:text-accent-hover hover:bg-backdrop-blur/40
+            hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
             data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-            onClick={()=>setIsOpen(!isOpen)}>Resume</Link>
+            onClick={()=>setIsOpen(!isOpen)}><FileText size={16} className='mr-1'/> Resume</Link>
             
         </div>
         <div className="flex gap-2 items-center">
           <button 
-          className="hover:bg-accent-hover cursor-pointer p-2 rounded-lg text-text-muted hover:text-text-primary"
+          className="bg-text-muted hover:bg-accent-hover cursor-pointer p-2 rounded-lg text-text-primary hover:text-background "
           onClick={()=>setIsOpen(!isOpen)}>
             {!isOpen 
             ? <GiHamburgerMenu size={18}/>
