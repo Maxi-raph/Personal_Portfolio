@@ -106,7 +106,7 @@ function ProjectDetailsPage() {
         </div>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <div className="flex flex-col md:flex-row gap-4 justify-between">
-          <span className="w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> SOLUTION</span>
+          <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> SOLUTION</span>
           <div className="flex-1 flex flex-col gap-4">
             <h3 className="text-text-primary text-xl font-bold">
               A token-driven system built on accessibility primitives
@@ -141,7 +141,7 @@ function ProjectDetailsPage() {
         </div>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <div className="flex flex-col gap-4">
-          <span className="w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> GALLERY</span>
+          <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> GALLERY</span>
           <div className="grid grid-cols-12 gap-4">
             <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-12 row-span-16">
               <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
@@ -158,7 +158,7 @@ function ProjectDetailsPage() {
         </div>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <div className="flex flex-col md:flex-row gap-4 justify-between">
-          <span className="w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> CHALLENGE</span>
+          <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> RESULTS</span>
           <div className="flex-1 flex flex-col gap-4">
             <h3 className="text-text-primary text-xl font-bold">
               Shipped faster. More consistently. With confidence.
