@@ -1,4 +1,5 @@
 import AnimatedLink from "#/components/AnimatedLink";
+import TechStack from "#/components/TechStack";
 import { useNav } from "#/context/navContext";
 import { createFileRoute } from "@tanstack/react-router";
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -17,7 +18,7 @@ function AboutPage ()  {
             onClick={()=>setIsOpen(false)}></div>
             <div className="page-wrap mt-34">
               <div className="mx-auto md:mx-0">
-                <span className="md:w-[20%] text-accent-text text-[11px] mb-6"><span className="inline-block mr-2">//</span> ABOUT ME</span>
+                <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> ABOUT ME</span>
                 <h1 className="text-3xl md:text-5xl text-text-primary font-extrabold max-w-xl md:max-w-2xl mb-6 md:leading-16">
                     Frontend developer who
                     cares about the details.
@@ -29,7 +30,7 @@ function AboutPage ()  {
                 </p>
               </div>
               <div className="flex flex-col md:flex-row gap-6 md:gap-13 lg:gap-18 mt-14">
-                <div className="w-[65%] mx-auto sm:w-[50%] md:w-[26%] lg:w-[21%]">
+                <div className="w-[70%] mx-auto sm:w-[50%] md:w-[26%] lg:w-[21%]">
                     <div className="w-full h-64 rounded-3xl mb-3">
                         <img src={undefined} alt="" className="w-full h-full object-cover rounded-3xl"/>
                     </div>
@@ -69,7 +70,72 @@ function AboutPage ()  {
                 </div>
               </div>
             </div>
-            <hr className="text-text-muted w-full h-0.5 mt-6 mb-18" />
+            <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
+            <div className="page-wrap">
+                <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> EXPERIENCE</span>
+                <h2 className="text-text-primary text-2xl font-bold mb-6">
+                    Where I've worked
+                </h2>
+                <div className="flex flex-col md:flex-row gap-3">
+                    <span className="text-xs text-text-muted md:w-[16%]">2025 — present</span>
+                    <div className="flex flex-col gap-3 flex-1">
+                        <h4 className="text-sm font-bold text-text-primary">Frontend Developer (Intern)</h4>
+                        <p className="text-sm font-semibold text-accent-text">TrueMindsLtd</p>
+                        <p className="text-sm text-text-muted w-[90%]">
+                          Worked with fellow interns across different tech stacks to
+                          build a performant, pixel-perfect learning management system.</p>
+                    </div>
+                </div>
+                <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
+                <div className="flex flex-col md:flex-row gap-3">
+                    <span className="text-xs text-text-muted md:w-[16%]">2024 — 2025</span>
+                    <div className="flex flex-col gap-3 flex-1">
+                        <h4 className="text-sm font-bold text-text-primary">Frontend Developer</h4>
+                        <p className="text-sm font-semibold text-accent-text">Fintava</p>
+                        <p className="text-sm text-text-muted w-[90%]">
+                            Leading frontend architecture 
+                            for a fintech SaaS platform serving 200k+ users across West Africa.</p>
+                    </div>
+                </div>
+                <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
+                <div className="flex flex-col md:flex-row gap-3">
+                    <span className="text-xs text-text-muted md:w-[16%]">2021 — 2023</span>
+                    <div className="flex flex-col gap-3 flex-1">
+                        <h4 className="text-sm font-bold text-text-primary">Frontend Developer</h4>
+                        <p className="text-sm font-semibold text-accent-text">Raven Atlas</p>
+                        <p className="text-sm text-text-muted w-[90%]">
+                           Built and maintained the design system and core product interfaces from scratch.</p>
+                    </div>
+                </div>
+            </div>
+            <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
+            <div className="page-wrap">
+                <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> TECH STACK</span>
+                <h2 className="text-text-primary text-2xl font-bold mb-6">
+                   Tools I work With
+                </h2>   
+                <TechStack 
+                techStack={
+                    [
+                    { name: 'HTML'},
+                    { name: 'CSS / Tailwind'},
+                    { name: 'JavaScript'},
+                    { name: 'TypeScript'},
+                    { name: 'React'},
+                    { name: 'Next.js'},
+                    { name: 'Framer Motion'},
+                    { name: 'Figma'},
+                    { name: 'Git / GitHub'},
+                    { name: 'Node.js'},
+                    ]}
+                containerClass={`flex flex-wrap items-center gap-3
+                    transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] duration-500`}
+                classes='block bg-surface py-1 px-4 rounded-2xl text-text-secondary
+                    text-xs font-bold border border-text-muted shadow-gray-800 shadow-md
+                    transition-all'
+                    /> 
+            </div>
+            <hr className="text-text-muted w-full h-0.5 mt-18" />
         </section>
      );
 }
