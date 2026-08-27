@@ -73,7 +73,7 @@ function AboutPage ()  {
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
             <div className="page-wrap">
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> EXPERIENCE</span>
-                <h2 className="text-text-primary text-2xl font-bold mb-6">
+                <h2 className="text-text-primary text-2xl font-bold mb-12">
                     Where I've worked
                 </h2>
                 <div className="flex flex-col md:flex-row gap-3">
