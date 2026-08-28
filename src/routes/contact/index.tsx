@@ -55,7 +55,7 @@ function ContactPage() {
                     Send a message
                     </h3>
                     <form action="" onSubmit={()=>null} className='flex flex-col gap-6'>
-                        <div className="flex flex-col md:flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-6">
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="name" className='text-text-muted text-[11px] font-semibold'>Your name</label>
                                 <input type="text" id='name' 

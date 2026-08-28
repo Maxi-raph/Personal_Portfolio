@@ -96,6 +96,7 @@ export default function Header() {
             
         </div>
         <div className="flex gap-2 items-center">
+          <ThemeToggle />
           <button 
           className="bg-text-muted hover:bg-accent-hover cursor-pointer p-2 rounded-lg text-text-primary hover:text-background "
           onClick={()=>setIsOpen(!isOpen)}>
@@ -103,7 +104,6 @@ export default function Header() {
             ? <GiHamburgerMenu size={18}/>
             : <FaTimes size={18}/>}
           </button>
-          <ThemeToggle />
         </div>
       </nav>
     </header>

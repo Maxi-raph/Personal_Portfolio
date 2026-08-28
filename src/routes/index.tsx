@@ -1,12 +1,10 @@
 import AnimatedButton from '#/components/AnimatedButton'
 import AnimatedLink from '#/components/AnimatedLink'
-import ExperimentProjects from '#/components/ExperimentProjects'
 import FeaturedProjects from '#/components/FeaturedProjects'
 import HeroSection from '#/components/HeroSection'
 import TechStack from '#/components/TechStack'
 import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
 import { 
   SiHtml5, 
@@ -101,8 +99,6 @@ function HomePage() {
                 />
             </div>
       </section>
-      <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
-      <ExperimentProjects />
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <section className='page-wrap grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div className='flex flex-col gap-6'>
