@@ -1,0 +1,99 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/projectsArr-Bo2aMvh4.js
+var projectsArr = [
+	{
+		img: void 0,
+		category: "Web Apps",
+		title: "Pulse Dashboard",
+		desc: "Real-time analytics platform with animated charts and live data streaming.",
+		stacks: [
+			"Next.js",
+			"Recharts",
+			"WebSocket",
+			"Tailwind"
+		],
+		route: "/projects/detail/$projectId",
+		id: "1",
+		featured: true,
+		createdAt: (/* @__PURE__ */ new Date()).toISOString()
+	},
+	{
+		img: void 0,
+		category: "Landing Pages",
+		title: "Folio Motion",
+		desc: "A portfolio template with cinematic scroll effects and smooth transitions.",
+		stacks: [
+			"React",
+			"Framer Motion",
+			"GSAP",
+			"CSS"
+		],
+		route: "/projects/detail/$projectId",
+		id: "2",
+		featured: true,
+		createdAt: (/* @__PURE__ */ new Date()).toISOString()
+	},
+	{
+		img: void 0,
+		category: "Dashboards",
+		title: "Northlight SaaS",
+		desc: "Landing page for a B2B SaaS product, conversion-optimised with animated sections.",
+		stacks: [
+			"Next.js",
+			"Tailwind",
+			"Motion"
+		],
+		route: "/projects/detail/$projectId",
+		id: "3",
+		featured: false,
+		createdAt: (/* @__PURE__ */ new Date()).toISOString()
+	},
+	{
+		img: void 0,
+		category: "Web Apps",
+		title: "Forma Table",
+		desc: "Advanced data table UI with inline editing, sorting, filtering and virtual scroll.",
+		stacks: [
+			"React.js",
+			"TanstackTable",
+			"TypeScript"
+		],
+		route: "/projects/detail/$projectId",
+		id: "4",
+		featured: false,
+		createdAt: (/* @__PURE__ */ new Date()).toISOString()
+	},
+	{
+		img: void 0,
+		category: "Experiments",
+		title: "Haze Notes",
+		desc: "Advanced data table UI with inline editing, sorting, filtering and virtual scroll.",
+		stacks: [
+			"React.js",
+			"MDS",
+			"Zustand",
+			"CSS"
+		],
+		route: "/projects/detail/$projectId",
+		id: "5",
+		featured: false,
+		createdAt: (/* @__PURE__ */ new Date()).toISOString()
+	},
+	{
+		img: void 0,
+		category: "Dashboards",
+		title: "Orbit Calendar",
+		desc: "A beautiful drag-and-drop scheduling calendar with smart conflict resolution.",
+		stacks: [
+			"React.js",
+			"DnD Kit",
+			"TypeScript",
+			"Tailwind"
+		],
+		route: "/projects/detail/$projectId",
+		id: "6",
+		featured: true,
+		createdAt: (/* @__PURE__ */ new Date()).toISOString()
+	}
+];
+//#endregion
+export { projectsArr as t };

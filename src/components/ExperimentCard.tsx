@@ -27,7 +27,7 @@ const ExperimentCard = ({title,desc,label, icon}:ExperimentCardProp) => {
             <h4 className="text-text-primary font-bold text-md">{title}</h4>
             <p className="text-text-secondary text-sm">{desc}</p>
             <span className="block w-fit py-1 px-2 rounded-xl border border-border-default
-            bg-surface text-text-secondary text-xs shadow-gray-800 shadow-md">{label}</span>
+            bg-surface text-text-secondary text-xs shadow-shadow-heavy shadow-lg">{label}</span>
         </motion.div>
      );
 }

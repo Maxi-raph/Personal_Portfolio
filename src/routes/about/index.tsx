@@ -52,17 +52,17 @@ function AboutPage ()  {
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-center w-[86%] mx-auto md:mx-0">
                             <AnimatedLink 
                             classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
-                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-heavy shadow-lg'
                             route='/projects'
                             func={()=> undefined}><FaTwitter size={16}/> Twitter</AnimatedLink>
                             <AnimatedLink 
                             classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
-                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-heavy shadow-lg'
                             route='/projects'
                             func={()=> undefined}><FaGithub size={16}/> Github</AnimatedLink>
                             <AnimatedLink 
                             classes='col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
-                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-heavy shadow-lg'
                             route='/about'
                             func={()=> undefined}><FaLinkedin size={16}/> LinkedIn</AnimatedLink>
                         </div>
@@ -131,7 +131,7 @@ function AboutPage ()  {
                 containerClass={`flex flex-wrap items-center gap-3
                     transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] duration-500`}
                 classes='block bg-surface py-1 px-4 rounded-2xl text-text-secondary
-                    text-xs font-bold border border-text-muted shadow-gray-800 shadow-md
+                    text-xs font-bold border border-text-muted shadow-shadow-heavy shadow-lg
                     transition-all'
                     /> 
             </div>

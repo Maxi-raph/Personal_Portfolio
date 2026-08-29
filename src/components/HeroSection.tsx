@@ -11,7 +11,8 @@ const HeroSection = () => {
       <motion.section
       initial={{opacity:0 , y:30}}
       animate={{ opacity: 1, y: 0 }}
-      transition={{duration: 0.5, ease: [0.22, 1, 0.36, 1]}}
+      transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
+      suppressHydrationWarning
       className={`hidden md:flex gap-3 mt-34 page-wrap`}>
         <div className='md:w-[58%] lg:w-[65%]'>
           <div className="flex gap-2 w-full items-center">
@@ -26,12 +27,12 @@ const HeroSection = () => {
           <div className="flex items-center gap-4 mt-6">
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-heavy shadow-lg'
             route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16}/></AnimatedLink>
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-heavy shadow-lg'
             route='/about'
             func={()=> undefined}>Contact Me</AnimatedLink>
           </div>
