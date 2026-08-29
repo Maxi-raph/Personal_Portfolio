@@ -58,7 +58,7 @@ function ProjectsPage() {
                         <div className="flex items-center text-xs gap-2">
                             <span className="text-text-secondary font-semibold">01</span>
                             <span className="inline-block py-1 px-2 rounded-xl bg-surface-elevated text-accent-text
-                            shadow-shadow-heavy shadow-md">
+                            shadow-shadow-medium shadow-md">
                                 Featured
                             </span>
                         </div>
@@ -74,7 +74,7 @@ function ProjectsPage() {
                         } 
                         containerClass='flex flex-wrap items-center gap-4'
                         classes='text-accent-text py-1 px-2 text-xs rounded-lg
-                        text-[10px] font-semibold bg-surface-elevated shadow-shadow-heavy shadow-md'
+                        text-[10px] font-semibold bg-surface-elevated shadow-shadow-medium shadow-md'
                         />
                         <AnimatedLink 
                         classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'

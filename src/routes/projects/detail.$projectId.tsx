@@ -27,7 +27,7 @@ function ProjectDetailsPage() {
         <div className="flex gap-2 items-center mt-4">
           <p className="text-sm text-accent-text">{Number(project?.id) > 10 ? project?.id : '0' + Number(project?.id)} </p>
           <span className="block w-fit py-1 px-2 rounded-xl border border-border-default
-          bg-[color-mix(in_oklab,var(--accent-primary)28%,transparent)] text-text-primary text-[11px] shadow-gray-800 shadow-md">{project?.category.slice(0,project?.category.length -1)}</span>
+          bg-[color-mix(in_oklab,var(--accent-primary)28%,transparent)] text-text-primary text-[11px] shadow-shadow-medium shadow-lg">{project?.category.slice(0,project?.category.length -1)}</span>
         </div>
         <h1 className='text-2xl md:text-4xl lg:text-5xl w-84 md:w-auto md:max-w-xl lg:max-w-4xl font-extrabold text-text-primary leading-snug mt-6'>{project?.title}</h1>
         <p className="text-text-muted text-sm md:text-[16px]! font-normal mt-6 max-w-lg md:max-w-xl! leading-relaxed">
@@ -36,12 +36,12 @@ function ProjectDetailsPage() {
         <div className="flex items-center gap-4 mt-6">
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
           route='/'
           func={()=> undefined}><ExternalLink size={16} className='mr-1'/>Live Site</AnimatedLink>
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
           route='/about'
           func={()=> undefined}><FaGithub size={16} className='mr-1'/> Github</AnimatedLink>
         </div>
@@ -75,7 +75,7 @@ function ProjectDetailsPage() {
             <TechStack
               containerClass='flex flex-wrap items-center justify-end md:justify-start gap-4'
               classes='text-accent-text py-1 px-2 text-xs rounded-lg
-              text-[10px] font-semibold bg-surface-elevated shadow-gray-700 shadow-md'
+              text-[10px] font-semibold bg-surface-elevated shadow-shadow-medium shadow-lg'
               techStack={(project?.stacks?.map(name => ({name})) || [])}
             />
           </div>
@@ -178,7 +178,7 @@ function ProjectDetailsPage() {
           <AnimatedLink 
           classes={`${Number(project?.id) <= 1 && 'opacity-50 cursor-not-allowed'}
           flex flex-col gap-2 p-4 bg-surface-elevated 
-          border border-border-default rounded-3xl`}
+          border border-border-default rounded-3xl shadow-shadow-medium shadow-lg`}
           route='/projects/detail/$projectId'
           params={{projectId: String(Number(project?.id) - 1) }}
           func={()=>undefined}
@@ -194,7 +194,7 @@ function ProjectDetailsPage() {
           <AnimatedLink 
           classes={`${Number(project?.id) >= projectsArr.length && 'opacity-50 cursor-not-allowed'}
           flex flex-col items-end gap-2 p-4 bg-surface-elevated 
-          border border-border-default rounded-3xl`}
+          border border-border-default rounded-3xl shadow-shadow-medium shadow-lg`}
           route='/projects/detail/$projectId'
           params={{projectId: String(Number(project?.id) + 1) }}
           func={()=>undefined}

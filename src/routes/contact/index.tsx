@@ -42,7 +42,7 @@ function ContactPage() {
                     </p>
                 </div>
                 <div className='md:pt-16'>
-                    <div className="bg-surface-elevated inline-flex justify-center items-center gap-2 py-2 px-3 md:py-3 md:px-5 rounded-2xl border border-text-muted shadow-shadow-heavy shadow-md">
+                    <div className="bg-surface-elevated inline-flex justify-center items-center gap-2 py-2 px-3 md:py-3 md:px-5 rounded-2xl border border-text-muted shadow-shadow-medium shadow-md">
                         <span className="inline-block w-3 h-3 rounded-full bg-success"></span>
                         <h3 className="text-xs md:text-sm text-text-primary font-semibold">Available for new projects</h3>
                     </div>
@@ -60,14 +60,14 @@ function ContactPage() {
                                 <label htmlFor="name" className='text-text-muted text-[11px] font-semibold'>Your name</label>
                                 <input type="text" id='name' 
                                 className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
-                                 h-11 rounded-xl text-md text-text-primary font-bold placeholder:text-text-muted placeholder:font-bold' 
+                                 h-11 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  Raphael  Onwujekwe'/>
                             </div>
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="email" className='text-text-muted text-[11px] font-semibold'>Email address</label>
                                 <input type="text" id='email' 
                                 className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
-                                 h-11 rounded-xl text-md text-text-primary font-bold placeholder:text-text-muted placeholder:font-bold' 
+                                 h-11 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  chibuzor@gmail.com'/>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ function ContactPage() {
                             <div  className='
                                 bg-surface-elevated border border-text-muted 
                                 outline-0 focus:ring focus:ring-accent-hover
-                                h-11 rounded-xl text-md text-text-primary font-bold'>
+                                h-11 rounded-xl text-md text-text-primary font-normal'>
                                 <select name="subject" ref={selectRef} id="subject" className='w-full h-full cursor-pointer rounded-xl bg-surface-elevated outline-none'>
                                     <option value="" disabled className='text-text-muted!'>Select subject...</option>
                                     <option value="contract-work">Contract Work</option>
@@ -92,13 +92,13 @@ function ContactPage() {
                             className='
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4
                                 outline-0 focus:ring focus:ring-accent-hover
-                                rounded-xl text-sm text-text-primary font-bold 
-                                placeholder:text-text-muted placeholder:font-bold cursor-pointer'
+                                rounded-xl text-sm text-text-primary font-normal 
+                                placeholder:text-text-muted placeholder:font-normal cursor-pointer'
                                 placeholder="Hi Raphael, I'd love to discuss..."/>
                         </div>
                         <AnimatedButton 
                         classes='flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full md:w-fit  cursor-pointer
-                        transition bg-accent-primary hover:bg-accent-hover text-text-primary text-sm shadow-shadow-heavy shadow-lg'
+                        transition bg-accent-primary hover:bg-accent-hover text-text-primary text-sm shadow-shadow-medium shadow-lg'
                         func={()=> undefined}><SendIcon size={16} className='shrink-0'/>Send Message</AnimatedButton>
                     </form>
                 </div>
