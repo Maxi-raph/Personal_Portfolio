@@ -37,7 +37,7 @@ const ProjectCard = ({img, title, desc, stacks, route, id, params}:ProjectProp) 
                 <div className="flex flex-col h-[45%] gap-4 mt-6 px-6">
                     <span className="md:hidden block top-4 left-5 text-accent-text text-sm">{id < 10 && 0}{id}</span>
                     <h3 className="font-semibold text-text-primary text-md">{title}</h3>
-                    <p className="text-text-muted text-sm">{desc}</p>
+                    <p className="text-text-secondary text-sm">{desc}</p>
                     <div className="flex flex-wrap gap-4 w-full">
                         {stacks.length > 0 && stacks.map(stack =>(
                             <div key={stack} className="py-1 px-2 rounded-lg text-[10px] lg:text-nowrap text-text-primary bg-surface shadow-shadow-medium shadow-md">

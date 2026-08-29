@@ -50,7 +50,7 @@ function ProjectsPage() {
             <div className="flex flex-col gap-6">
                 <div className="flex gap-2 w-full items-center">
                     <span className="block rounded-full w-1.5 h-1.5 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
-                    <p className="text-[10px] text-text-muted font-semibold leading-relaxed tracking-widest">FEATURED</p>
+                    <p className="text-[10px] text-text-secondary font-semibold leading-relaxed tracking-widest">FEATURED</p>
                 </div>
                 <div className="flex flex-col md:flex-row w-full min-h-fit rounded-2xl bg-surface border border-border-default">
                     <img src="i.png" alt="" className='h-82 md:h-102! lg:h-86! xl:h-82! w-full flex-1 shrink-0 rounded-tl-2xl rounded-tr-2xl md:rounded-bl-2xl'/>
@@ -125,10 +125,12 @@ function ProjectsPage() {
                 : (<div 
                     className='flex justify-center items-center
                     w-full h-70 rounded-2xl bg-surface border border-border-default'>
-
+                        <p className="text-text-muted flex justify-center items-center">
+                            No {category} found...
+                        </p>
                  </div>)}
             </div>
-            <div className="my-8 flex justify-center items-center w-full h-70 rounded-3xl bg-surface border border-border-default">
+            <div className="my-8 flex justify-center items-center py-2 px-6 w-full h-70 rounded-3xl bg-surface border border-border-default">
                 <div className="flex justify-center items-center flex-col gap-4">
                     <div className="rounded-full w-12 h-12 flex justify-center items-center bg-surface-elevated border border-border-default">
                         <ClipLoader

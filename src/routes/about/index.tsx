@@ -77,33 +77,33 @@ function AboutPage ()  {
                     Where I've worked
                 </h2>
                 <div className="flex flex-col md:flex-row gap-3">
-                    <span className="text-xs text-text-muted md:w-[16%]">2025 — present</span>
+                    <span className="text-xs text-text-secondary md:w-[16%]">2025 — present</span>
                     <div className="flex flex-col gap-3 flex-1">
                         <h4 className="text-sm font-bold text-text-primary">Frontend Developer (Intern)</h4>
                         <p className="text-sm font-semibold text-accent-text">TrueMindsLtd</p>
-                        <p className="text-sm text-text-muted w-[90%]">
+                        <p className="text-sm text-text-secondary w-[90%]">
                           Worked with fellow interns across different tech stacks to
                           build a performant, pixel-perfect learning management system.</p>
                     </div>
                 </div>
                 <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
                 <div className="flex flex-col md:flex-row gap-3">
-                    <span className="text-xs text-text-muted md:w-[16%]">2024 — 2025</span>
+                    <span className="text-xs text-text-secondary md:w-[16%]">2024 — 2025</span>
                     <div className="flex flex-col gap-3 flex-1">
                         <h4 className="text-sm font-bold text-text-primary">Frontend Developer</h4>
                         <p className="text-sm font-semibold text-accent-text">Fintava</p>
-                        <p className="text-sm text-text-muted w-[90%]">
+                        <p className="text-sm text-text-secondary w-[90%]">
                             Leading frontend architecture 
                             for a fintech SaaS platform serving 200k+ users across West Africa.</p>
                     </div>
                 </div>
                 <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
                 <div className="flex flex-col md:flex-row gap-3">
-                    <span className="text-xs text-text-muted md:w-[16%]">2021 — 2023</span>
+                    <span className="text-xs text-text-secondary md:w-[16%]">2021 — 2023</span>
                     <div className="flex flex-col gap-3 flex-1">
                         <h4 className="text-sm font-bold text-text-primary">Frontend Developer</h4>
                         <p className="text-sm font-semibold text-accent-text">Raven Atlas</p>
-                        <p className="text-sm text-text-muted w-[90%]">
+                        <p className="text-sm text-text-secondary w-[90%]">
                            Built and maintained the design system and core product interfaces from scratch.</p>
                     </div>
                 </div>

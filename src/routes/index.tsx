@@ -51,11 +51,11 @@ function HomePage() {
             </h2>
           </div>
           <div className='flex flex-col gap-4 mt-4 md:mt-0'>
-            <p className="text-text-muted text-sm">
+            <p className="text-text-secondary text-sm">
               I'm Raphael Onwujekwe — a frontend engineer based in Lagos with 2+ years building fast, accessible, and carefully crafted web products.
               I believe the best interfaces are invisible: they guide users naturally without getting in the way.
             </p>
-            <p className="text-text-muted text-sm">
+            <p className="text-text-secondary text-sm">
               Currently exploring: generative UI, React Server Components, and pushing the edges of what CSS can do. 
               When I'm not coding, I sketch UI concepts, and collect design references obsessively.
             </p>
