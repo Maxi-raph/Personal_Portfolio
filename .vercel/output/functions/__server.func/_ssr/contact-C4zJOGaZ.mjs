@@ -2,9 +2,9 @@ import { r as __toESM } from "../_runtime.mjs";
 import { I as require_react, _ as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as MapPin, o as Mail, r as Send } from "../_libs/lucide-react.mjs";
 import { d as FaGithub, f as FaLinkedin, m as FaTwitter } from "../_libs/react-icons.mjs";
-import { i as useNav } from "./router-rR48cy_p.mjs";
+import { i as useNav } from "./router-CfvuSJSL.mjs";
 import { t as AnimatedButton } from "./AnimatedButton-CADEhydd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact-Drza222P.js
+//#region node_modules/.nitro/vite/services/ssr/assets/contact-C4zJOGaZ.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function ContactPage() {
@@ -40,7 +40,7 @@ function ContactPage() {
 				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "md:pt-16",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "bg-surface-elevated inline-flex justify-center items-center gap-2 py-2 px-3 md:py-3 md:px-5 rounded-2xl border border-text-muted shadow-lg shadow-gray-700",
+						className: "bg-surface-elevated inline-flex justify-center items-center gap-2 py-2 px-3 md:py-3 md:px-5 rounded-2xl border border-text-muted shadow-shadow-medium shadow-md",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "inline-block w-3 h-3 rounded-full bg-success" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							className: "text-xs md:text-sm text-text-primary font-semibold",
 							children: "Available for new projects"
@@ -73,7 +73,7 @@ function ContactPage() {
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
 											type: "text",
 											id: "name",
-											className: "bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover\n                                 h-11 rounded-xl text-md text-text-primary font-bold placeholder:text-text-muted placeholder:font-bold",
+											className: "bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover\n                                 h-11 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal",
 											placeholder: "e.g  Raphael  Onwujekwe"
 										})]
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -85,7 +85,7 @@ function ContactPage() {
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
 											type: "text",
 											id: "email",
-											className: "bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover\n                                 h-11 rounded-xl text-md text-text-primary font-bold placeholder:text-text-muted placeholder:font-bold",
+											className: "bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover\n                                 h-11 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal",
 											placeholder: "e.g  chibuzor@gmail.com"
 										})]
 									})]
@@ -97,7 +97,7 @@ function ContactPage() {
 										className: "text-text-muted text-[11px] font-semibold",
 										children: "Subject"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "\n                                bg-surface-elevated border border-text-muted \n                                outline-0 focus:ring focus:ring-accent-hover\n                                h-11 rounded-xl text-md text-text-primary font-bold",
+										className: "\n                                bg-surface-elevated border border-text-muted \n                                outline-0 focus:ring focus:ring-accent-hover\n                                h-11 rounded-xl text-md text-text-primary font-normal",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
 											name: "subject",
 											ref: selectRef,
@@ -140,12 +140,12 @@ function ContactPage() {
 										name: "message",
 										id: "message",
 										rows: 6,
-										className: "\n                                bg-surface-elevated border border-text-muted py-2 pl-6 pr-4\n                                outline-0 focus:ring focus:ring-accent-hover\n                                rounded-xl text-md text-text-primary font-bold \n                                placeholder:text-text-muted placeholder:font-bold cursor-pointer",
+										className: "\n                                bg-surface-elevated border border-text-muted py-2 pl-6 pr-4\n                                outline-0 focus:ring focus:ring-accent-hover\n                                rounded-xl text-sm text-text-primary font-normal \n                                placeholder:text-text-muted placeholder:font-normal cursor-pointer",
 										placeholder: "Hi Raphael, I'd love to discuss..."
 									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-									classes: "flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full md:w-fit  cursor-pointer\n                        transition bg-accent-primary hover:bg-accent-hover text-text-primary text-sm shadow-gray-700 shadow-md",
+									classes: "flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full md:w-fit  cursor-pointer\n                        transition bg-accent-primary hover:bg-accent-hover text-text-primary text-sm shadow-shadow-medium shadow-lg",
 									func: () => void 0,
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, {
 										size: 16,

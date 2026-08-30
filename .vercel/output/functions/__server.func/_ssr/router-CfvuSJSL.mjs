@@ -3,7 +3,7 @@ import { I as require_react, _ as require_jsx_runtime, f as createRouter, g as L
 import { t as motion } from "../_libs/framer-motion+[...].mjs";
 import { c as Folder, d as FileQuestionMark, i as Moon, l as FolderOpen, n as Sun, o as Mail, s as House, t as User, u as FileText } from "../_libs/lucide-react.mjs";
 import { d as FaGithub, f as FaLinkedin, h as GiHamburgerMenu, m as FaTwitter, p as FaTimes } from "../_libs/react-icons.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-rR48cy_p.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CfvuSJSL.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -23,7 +23,7 @@ function Footer() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "flex flex-col md:flex-row gap-4 page-wrap",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h5", {
-				className: "max-w-md flex-1 font-bold text-text-primary text-[12px]",
+				className: "md:w-48 lg:w-76 font-bold text-text-primary text-[12px]",
 				children: "Raphael.dev"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "flex-1 flex flex-col md:flex-row-reverse justify-between items-center gap-4",
@@ -255,7 +255,7 @@ function Header() {
 		})]
 	});
 }
-var styles_default = "/assets/styles-Cax35sVk.css";
+var styles_default = "/assets/styles-D2_l7jaR.css";
 var THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'auto';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;}catch(e){}})();`;
 var notFoundPage = () => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -336,7 +336,7 @@ function RootDocument({ children }) {
 		}) })]
 	});
 }
-var $$splitComponentImporter$3 = () => import("./routes-BsRhuOAi.mjs");
+var $$splitComponentImporter$3 = () => import("./routes-SdJ0q3y4.mjs");
 var Route$4 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$3, "component"),
 	head: () => ({ meta: [{ title: "Where your dreams come to life" }] })
@@ -435,19 +435,19 @@ function AboutPage() {
 									className: "grid grid-cols-2 md:grid-cols-3 gap-4 items-center w-[86%] mx-auto md:mx-0",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-											classes: "flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl\r\n                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+											classes: "flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl\r\n                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 											route: "/projects",
 											func: () => void 0,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaTwitter, { size: 16 }), " Twitter"]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-											classes: "flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl\r\n                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+											classes: "flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl\r\n                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 											route: "/projects",
 											func: () => void 0,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaGithub, { size: 16 }), " Github"]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-											classes: "col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl\r\n                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+											classes: "col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl\r\n                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 											route: "/about",
 											func: () => void 0,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaLinkedin, { size: 16 }), " LinkedIn"]
@@ -477,7 +477,7 @@ function AboutPage() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col md:flex-row gap-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs text-text-muted md:w-[16%]",
+							className: "text-xs text-text-secondary md:w-[16%]",
 							children: "2025 — present"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex flex-col gap-3 flex-1",
@@ -491,7 +491,7 @@ function AboutPage() {
 									children: "TrueMindsLtd"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-sm text-text-muted w-[90%]",
+									className: "text-sm text-text-secondary w-[90%]",
 									children: "Worked with fellow interns across different tech stacks to build a performant, pixel-perfect learning management system."
 								})
 							]
@@ -501,7 +501,7 @@ function AboutPage() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col md:flex-row gap-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs text-text-muted md:w-[16%]",
+							className: "text-xs text-text-secondary md:w-[16%]",
 							children: "2024 — 2025"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex flex-col gap-3 flex-1",
@@ -515,7 +515,7 @@ function AboutPage() {
 									children: "Fintava"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-sm text-text-muted w-[90%]",
+									className: "text-sm text-text-secondary w-[90%]",
 									children: "Leading frontend architecture for a fintech SaaS platform serving 200k+ users across West Africa."
 								})
 							]
@@ -525,7 +525,7 @@ function AboutPage() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex flex-col md:flex-row gap-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs text-text-muted md:w-[16%]",
+							className: "text-xs text-text-secondary md:w-[16%]",
 							children: "2021 — 2023"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex flex-col gap-3 flex-1",
@@ -539,7 +539,7 @@ function AboutPage() {
 									children: "Raven Atlas"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-sm text-text-muted w-[90%]",
+									className: "text-sm text-text-secondary w-[90%]",
 									children: "Built and maintained the design system and core product interfaces from scratch."
 								})
 							]
@@ -577,7 +577,7 @@ function AboutPage() {
 						],
 						containerClass: `flex flex-wrap items-center gap-3
                     transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] duration-500`,
-						classes: "block bg-surface py-1 px-4 rounded-2xl text-text-secondary\r\n                    text-xs font-bold border border-text-muted shadow-gray-800 shadow-md\r\n                    transition-all"
+						classes: "block bg-surface py-1 px-4 rounded-2xl text-text-secondary\r\n                    text-xs font-bold border border-text-muted shadow-shadow-medium shadow-lg\r\n                    transition-all"
 					})
 				]
 			}),
@@ -585,14 +585,14 @@ function AboutPage() {
 		]
 	});
 }
-var $$splitComponentImporter$2 = () => import("./contact-Drza222P.mjs");
+var $$splitComponentImporter$2 = () => import("./contact-C4zJOGaZ.mjs");
 var Route$2 = createFileRoute("/contact/")({
 	component: lazyRouteComponent($$splitComponentImporter$2, "component"),
 	head: () => ({ meta: [{ title: "Contact Me" }] })
 });
-var $$splitComponentImporter$1 = () => import("./projects-jcgPjca5.mjs");
+var $$splitComponentImporter$1 = () => import("./projects-BqHJrjF6.mjs");
 var Route$1 = createFileRoute("/projects/")({ component: lazyRouteComponent($$splitComponentImporter$1, "component") });
-var $$splitComponentImporter = () => import("./detail._projectId-CZEIB_f6.mjs");
+var $$splitComponentImporter = () => import("./detail._projectId-CZAGgcsb.mjs");
 var Route = createFileRoute("/projects/detail/$projectId")({ component: lazyRouteComponent($$splitComponentImporter, "component") });
 var rootRouteChildren = {
 	IndexRoute: Route$4.update({

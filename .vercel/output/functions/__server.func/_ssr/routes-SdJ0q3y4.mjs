@@ -3,11 +3,11 @@ import { I as require_react, _ as require_jsx_runtime } from "../_libs/@tanstack
 import { t as motion } from "../_libs/framer-motion+[...].mjs";
 import { p as ArrowRight } from "../_libs/lucide-react.mjs";
 import { a as SiNextdotjs, c as SiTailwindcss, d as FaGithub, i as SiJavascript, l as SiTypescript, m as FaTwitter, n as SiGit, o as SiNodedotjs, r as SiHtml5, s as SiReact, t as SiFigma, u as FaEnvelope } from "../_libs/react-icons.mjs";
-import { a as AnimatedLink, i as useNav, r as TechStack } from "./router-rR48cy_p.mjs";
+import { a as AnimatedLink, i as useNav, r as TechStack } from "./router-CfvuSJSL.mjs";
 import { t as AnimatedButton } from "./AnimatedButton-CADEhydd.mjs";
 import { t as projectsArr } from "./projectsArr-Bo2aMvh4.mjs";
-import { t as ProjectCard } from "./ProjectCard-Dbg6WFah.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BsRhuOAi.js
+import { t as ProjectCard } from "./ProjectCard-DXOJ8DSe.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-SdJ0q3y4.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var FeaturedProjects = () => {
@@ -74,7 +74,7 @@ var HeroSection = () => {
 			y: 0
 		},
 		transition: {
-			duration: .5,
+			duration: 1,
 			ease: [
 				.22,
 				1,
@@ -82,6 +82,7 @@ var HeroSection = () => {
 				1
 			]
 		},
+		suppressHydrationWarning: true,
 		className: `hidden md:flex gap-3 mt-34 page-wrap`,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "md:w-[58%] lg:w-[65%]",
@@ -98,18 +99,18 @@ var HeroSection = () => {
 					children: "I build modern, fast and beautiful web experiences."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-text-muted text-sm font-normal mt-6 max-w-md leading-relaxed",
+					className: "text-text-secondary text-sm font-normal mt-6 max-w-md leading-relaxed",
 					children: "I'm Raphael — a frontend engineer crafting smooth, accessible and pixel-perfect interfaces. I care deeply about performance, usability, and the small details that make a product feel alive."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex items-center gap-4 mt-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 						route: "/projects",
 						func: () => void 0,
 						children: ["View Work ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { size: 16 })]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedLink, {
-						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 						route: "/about",
 						func: () => void 0,
 						children: "Contact Me"
@@ -220,12 +221,12 @@ var HeroSection = () => {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "flex items-center gap-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-					classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover text-sm",
+					classes: "flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm",
 					route: "/projects",
 					func: () => void 0,
 					children: ["View Work ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { size: 16 })]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedLink, {
-					classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover text-sm",
+					classes: "flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl\r\n             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm",
 					route: "/about",
 					func: () => void 0,
 					children: "Contact Me"
@@ -305,18 +306,18 @@ function HomePage() {
 						className: "flex flex-col gap-4 mt-4 md:mt-0",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-text-muted text-sm",
+								className: "text-text-secondary text-sm",
 								children: "I'm Raphael Onwujekwe — a frontend engineer based in Lagos with 2+ years building fast, accessible, and carefully crafted web products. I believe the best interfaces are invisible: they guide users naturally without getting in the way."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "text-text-muted text-sm",
+								className: "text-text-secondary text-sm",
 								children: "Currently exploring: generative UI, React Server Components, and pushing the edges of what CSS can do. When I'm not coding, I sketch UI concepts, and collect design references obsessively."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "flex items-center gap-6",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedLink, {
 									route: "/",
-									classes: "py-2 px-4 text-xs font-semibold rounded-xl shadow-md\n              transition shadow-gray-700 shadow-md bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm",
+									classes: "py-2 px-6 text-sm font-semibold rounded-xl\n              transition shadow-shadow-medium shadow-lg bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm",
 									func: () => null,
 									children: "Full Bio"
 								})
@@ -397,7 +398,7 @@ function HomePage() {
 							],
 							containerClass: `flex flex-wrap items-center gap-3 mt-9
                 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] duration-500`,
-							classes: "block bg-surface py-2 px-4 rounded-xl text-text-secondary\n                text-sm font-bold border border-text-muted shadow-gray-800 shadow-md\n                transition-all"
+							classes: "block bg-surface py-2 px-4 rounded-xl text-text-secondary\n                text-sm font-bold border border-text-muted shadow-shadow-medium shadow-lg\n                transition-all"
 						})
 					})
 				]
@@ -431,7 +432,7 @@ function HomePage() {
 										href: "",
 										target: "_blank",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-											classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer\n              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+											classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer\n              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 											func: () => null,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaEnvelope, { className: "shrink-0" }), " Get In Touch"]
 										})
@@ -440,7 +441,7 @@ function HomePage() {
 										href: "",
 										target: "_blank",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-											classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer\n              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+											classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer\n              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 											func: () => null,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaTwitter, { className: "shrink-0" }), " Twitter"]
 										})
@@ -449,7 +450,7 @@ function HomePage() {
 										href: "",
 										target: "_blank",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-											classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer\n              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+											classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer\n              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 											func: () => null,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaGithub, { className: "shrink-0" }), " Github"]
 										})
@@ -503,7 +504,7 @@ function HomePage() {
 								target: "_blank",
 								className: "col-span-12",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-									classes: "w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+									classes: "w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 									func: () => null,
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaEnvelope, { className: "shrink-0" }), " Get In Touch"]
 								})
@@ -513,7 +514,7 @@ function HomePage() {
 								target: "_blank",
 								className: "col-span-6",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-									classes: "w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+									classes: "w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 									func: () => null,
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaTwitter, { className: "shrink-0" }), " Twitter"]
 								})
@@ -523,7 +524,7 @@ function HomePage() {
 								target: "_blank",
 								className: "col-span-6",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedButton, {
-									classes: "w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+									classes: "w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 									func: () => null,
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaGithub, { className: "shrink-0" }), " Github"]
 								})

@@ -1,9 +1,9 @@
 import { _ as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { f as ExternalLink, m as ArrowLeft, p as ArrowRight } from "../_libs/lucide-react.mjs";
 import { d as FaGithub } from "../_libs/react-icons.mjs";
-import { a as AnimatedLink, i as useNav, n as Route, r as TechStack } from "./router-rR48cy_p.mjs";
+import { a as AnimatedLink, i as useNav, n as Route, r as TechStack } from "./router-CfvuSJSL.mjs";
 import { t as projectsArr } from "./projectsArr-Bo2aMvh4.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/detail._projectId-CZEIB_f6.js
+//#region node_modules/.nitro/vite/services/ssr/assets/detail._projectId-CZAGgcsb.js
 var import_jsx_runtime = require_jsx_runtime();
 function ProjectDetailsPage() {
 	const { projectId } = Route.useParams();
@@ -32,7 +32,7 @@ function ProjectDetailsPage() {
 						className: "text-sm text-accent-text",
 						children: [Number(project?.id) > 10 ? project?.id : "0" + Number(project?.id), " "]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "block w-fit py-1 px-2 rounded-xl border border-border-default\r\n          bg-[color-mix(in_oklab,var(--accent-primary)28%,transparent)] text-text-primary text-[11px] shadow-gray-800 shadow-md",
+						className: "block w-fit py-1 px-2 rounded-xl border border-border-default\r\n          bg-[color-mix(in_oklab,var(--accent-primary)28%,transparent)] text-text-primary text-[11px] shadow-shadow-medium shadow-lg",
 						children: project?.category.slice(0, project?.category.length - 1)
 					})]
 				}),
@@ -47,7 +47,7 @@ function ProjectDetailsPage() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex items-center gap-4 mt-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 						route: "/",
 						func: () => void 0,
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
@@ -55,7 +55,7 @@ function ProjectDetailsPage() {
 							className: "mr-1"
 						}), "Live Site"]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
-						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md",
+						classes: "flex gap-2 items-center py-2.5 px-6 rounded-xl\r\n            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg",
 						route: "/about",
 						func: () => void 0,
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaGithub, {
@@ -115,7 +115,7 @@ function ProjectDetailsPage() {
 								children: "Stack"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TechStack, {
 								containerClass: "flex flex-wrap items-center justify-end md:justify-start gap-4",
-								classes: "text-accent-text py-1 px-2 text-xs rounded-lg\r\n              text-[10px] font-semibold bg-surface-elevated shadow-gray-700 shadow-md",
+								classes: "text-accent-text py-1 px-2 text-xs rounded-lg\r\n              text-[10px] font-semibold bg-surface-elevated shadow-shadow-medium shadow-lg",
 								techStack: project?.stacks?.map((name) => ({ name })) || []
 							})]
 						})
@@ -301,7 +301,7 @@ function ProjectDetailsPage() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedLink, {
 						classes: `${Number(project?.id) <= 1 && "opacity-50 cursor-not-allowed"}
           flex flex-col gap-2 p-4 bg-surface-elevated 
-          border border-border-default rounded-3xl`,
+          border border-border-default rounded-3xl shadow-shadow-medium shadow-lg`,
 						route: "/projects/detail/$projectId",
 						params: { projectId: String(Number(project?.id) - 1) },
 						func: () => void 0,
@@ -325,7 +325,7 @@ function ProjectDetailsPage() {
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedLink, {
 						classes: `${Number(project?.id) >= projectsArr.length && "opacity-50 cursor-not-allowed"}
           flex flex-col items-end gap-2 p-4 bg-surface-elevated 
-          border border-border-default rounded-3xl`,
+          border border-border-default rounded-3xl shadow-shadow-medium shadow-lg`,
 						route: "/projects/detail/$projectId",
 						params: { projectId: String(Number(project?.id) + 1) },
 						func: () => void 0,

@@ -1,12 +1,12 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { I as require_react, _ as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { p as ArrowRight } from "../_libs/lucide-react.mjs";
-import { a as AnimatedLink, i as useNav, r as TechStack } from "./router-rR48cy_p.mjs";
+import { a as AnimatedLink, i as useNav, r as TechStack } from "./router-CfvuSJSL.mjs";
 import { t as AnimatedButton } from "./AnimatedButton-CADEhydd.mjs";
 import { t as projectsArr } from "./projectsArr-Bo2aMvh4.mjs";
-import { t as ProjectCard } from "./ProjectCard-Dbg6WFah.mjs";
+import { t as ProjectCard } from "./ProjectCard-DXOJ8DSe.mjs";
 import { t as ClipLoader } from "../_libs/react-spinners.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/projects-jcgPjca5.js
+//#region node_modules/.nitro/vite/services/ssr/assets/projects-BqHJrjF6.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function ProjectsPage() {
@@ -64,7 +64,7 @@ function ProjectsPage() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex gap-2 w-full items-center",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "block rounded-full w-1.5 h-1.5 bg-accent-primary shadow-3xl shadow-accent-primary" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "text-[10px] text-text-muted font-semibold leading-relaxed tracking-widest",
+						className: "text-[10px] text-text-secondary font-semibold leading-relaxed tracking-widest",
 						children: "FEATURED"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -82,7 +82,7 @@ function ProjectsPage() {
 									className: "text-text-secondary font-semibold",
 									children: "01"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "inline-block py-1 px-2 rounded-xl bg-surface-elevated text-accent-text\n                            shadow-gray-700 shadow-md",
+									className: "inline-block py-1 px-2 rounded-xl bg-surface-elevated text-accent-text\n                            shadow-shadow-medium shadow-md",
 									children: "Featured"
 								})]
 							}),
@@ -97,7 +97,7 @@ function ProjectsPage() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TechStack, {
 								techStack: firstFeaturedProject[0]?.stacks?.map((name) => ({ name })) || [],
 								containerClass: "flex flex-wrap items-center gap-4",
-								classes: "text-accent-text py-1 px-2 text-xs rounded-lg\n                        text-[10px] font-semibold bg-surface-elevated shadow-gray-700 shadow-md"
+								classes: "text-accent-text py-1 px-2 text-xs rounded-lg\n                        text-[10px] font-semibold bg-surface-elevated shadow-shadow-medium shadow-md"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedLink, {
 								classes: "text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition",
@@ -118,8 +118,8 @@ function ProjectsPage() {
 				className: "flex flex-wrap gap-4 whitespace-nowrap",
 				children: categoryArr.map((cat) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatedButton, {
 					classes: `
-                    py-2 px-4 text-xs font-semibold rounded-xl shadow-md
-                    transition shadow-gray-700 shadow-md 
+                    py-2 px-4 text-xs font-semibold rounded-xl
+                    transition shadow-shadow-heavy shadow-lg 
                     hover:bg-accent-hover hover:text-background text-sm 
                     cursor-pointer ${category === cat ? "bg-accent-hover text-background" : "bg-gray-700/30 text-text-secondary"}`,
 					func: () => setCategory(cat),
@@ -143,10 +143,20 @@ function ProjectsPage() {
 						params: { projectId: project.id },
 						id: Number(project.id)
 					}, project.id))
-				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex justify-center items-center\n                    w-full h-70 rounded-2xl bg-surface border border-border-default" })]
+				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex justify-center items-center\n                    w-full h-70 rounded-2xl bg-surface border border-border-default",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+						className: "text-text-muted flex justify-center items-center",
+						children: [
+							"No ",
+							category,
+							" found..."
+						]
+					})
+				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "my-8 flex justify-center items-center w-full h-70 rounded-3xl bg-surface border border-border-default",
+				className: "my-8 flex justify-center items-center py-2 px-6 w-full h-70 rounded-3xl bg-surface border border-border-default",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex justify-center items-center flex-col gap-4",
 					children: [

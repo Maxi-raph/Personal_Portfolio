@@ -1,8 +1,8 @@
 import { _ as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as AnimatePresence, t as motion } from "../_libs/framer-motion+[...].mjs";
 import { p as ArrowRight } from "../_libs/lucide-react.mjs";
-import { a as AnimatedLink } from "./router-rR48cy_p.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/ProjectCard-Dbg6WFah.js
+import { a as AnimatedLink } from "./router-CfvuSJSL.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/ProjectCard-DXOJ8DSe.js
 var import_jsx_runtime = require_jsx_runtime();
 var ProjectCard = ({ img, title, desc, stacks, route, id, params }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AnimatePresence, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
@@ -43,13 +43,13 @@ var ProjectCard = ({ img, title, desc, stacks, route, id, params }) => {
 					children: title
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-text-muted text-sm",
+					className: "text-text-secondary text-sm",
 					children: desc
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "flex flex-wrap gap-4 w-full",
 					children: stacks.length > 0 && stacks.map((stack) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "py-1 px-2 rounded-lg text-[10px] lg:text-nowrap text-text-primary bg-surface shadow-gray-700 shadow-md",
+						className: "py-1 px-2 rounded-lg text-[10px] lg:text-nowrap text-text-primary bg-surface shadow-shadow-medium shadow-md",
 						children: stack
 					}, stack))
 				}),
