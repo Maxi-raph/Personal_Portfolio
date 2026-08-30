@@ -96,12 +96,12 @@ const HeroSection = () => {
           <div className="flex items-center gap-4">
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover text-sm shadow-shadow-medium shadow-lg'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
             route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16}/></AnimatedLink>
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover text-sm shadow-shadow-medium shadow-lg'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
             route='/about'
             func={()=> undefined}>Contact Me</AnimatedLink>
           </div>
