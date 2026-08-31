@@ -1,6 +1,6 @@
 import AnimatedButton from '#/components/AnimatedButton'
 import AnimatedLink from '#/components/AnimatedLink'
-import FeaturedProjects from '#/components/FeaturedProjects'
+import LatestProjects from '#/components/LatestProjects'
 import HeroSection from '#/components/HeroSection'
 import TechStack from '#/components/TechStack'
 import { useNav } from '#/context/navContext'
@@ -14,7 +14,7 @@ import {
   SiTypescript, 
   SiReact, 
   SiNextdotjs, 
-  SiFigma, 
+  SiFigma,
   SiGit, 
   SiNodedotjs 
 } from 'react-icons/si'
@@ -41,7 +41,7 @@ function HomePage() {
       onClick={()=>setIsOpen(false)}></div>
       <HeroSection />
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
-      <FeaturedProjects />
+      <LatestProjects />
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <section className="page-wrap">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
