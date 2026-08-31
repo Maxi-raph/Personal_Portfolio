@@ -130,7 +130,7 @@ function ProjectsPage() {
                         </p>
                  </div>)}
             </div>
-            <div className="my-8 flex justify-center items-center py-2 px-6 w-full h-70 rounded-3xl bg-surface border border-border-default">
+            <div className="my-8 flex justify-center items-center py-2 px-2 w-full h-70 rounded-3xl bg-surface border border-border-default">
                 <div className="flex justify-center items-center flex-col gap-4">
                     <div className="rounded-full w-12 h-12 flex justify-center items-center bg-surface-elevated border border-border-default">
                         <ClipLoader
@@ -139,8 +139,8 @@ function ProjectsPage() {
                             speedMultiplier={0.8}
                         />
                     </div>
-                    <h3 className="font-bold text-text-primary text-2xl">More Projects Incoming</h3>
-                    <p className="text-text-secondary text-xs">Currently building more case studies. Check back soon.</p>
+                    <h3 className="font-bold text-text-primary text-center text-2xl">More Projects Incoming</h3>
+                    <p className="text-text-secondary text-center text-xs">Currently building more case studies. Check back soon.</p>
                 </div>
             </div>
         </div>

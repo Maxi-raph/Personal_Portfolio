@@ -76,7 +76,7 @@ function ContactPage() {
                             <div  className='
                                 bg-surface-elevated border border-text-muted 
                                 outline-0 focus:ring focus:ring-accent-hover
-                                h-11 rounded-xl text-md text-text-primary font-normal'>
+                                h-11 rounded-xl text-md text-text-primary font-normal px-1'>
                                 <select name="subject" ref={selectRef} id="subject" className='w-full h-full cursor-pointer rounded-xl bg-surface-elevated outline-none'>
                                     <option value="" disabled className='text-text-muted!'>Select subject...</option>
                                     <option value="contract-work">Contract Work</option>
@@ -92,8 +92,7 @@ function ContactPage() {
                             className='
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4
                                 outline-0 focus:ring focus:ring-accent-hover
-                                rounded-xl text-sm text-text-primary font-normal 
-                                placeholder:text-text-muted placeholder:font-normal cursor-pointer'
+                                rounded-xl text-md text-text-primary font-normal'
                                 placeholder="Hi Raphael, I'd love to discuss..."/>
                         </div>
                         <AnimatedButton 

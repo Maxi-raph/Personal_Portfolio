@@ -1,1 +1,0 @@
-import{f as e,i as t}from"./navContext-DmNt5BRd.js";var n=e(),r=({classes:e,func:r,children:i})=>(0,n.jsx)(t.button,{whileTap:{scale:.95},onClick:r,className:e,children:i});export{r as t};

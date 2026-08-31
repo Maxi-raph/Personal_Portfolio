@@ -89,7 +89,7 @@ const HeroSection = () => {
             </span>
           </div>
           <h1 className='text-4xl sm:text-[38px] font-extrabold  text-text-primary leading-snug sm:tracking-wide max-w-xs sm:max-w-sm'>I build modern, fast and beautiful web experiences.</h1>
-          <p className="text-text-muted text-md font-normal mt-3 max-w-sm leading-relaxed">
+          <p className="text-text-muted text-sm font-normal mt-3 max-w-sm leading-relaxed">
             I'm Raphael — a frontend engineer crafting smooth, accessible and pixel-perfect interfaces. I care deeply about performance,
              usability, and the small details that make a product feel alive.
           </p>
