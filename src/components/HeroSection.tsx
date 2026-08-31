@@ -27,12 +27,12 @@ const HeroSection = () => {
           <div className="flex items-center gap-4 mt-6">
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
             route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16}/></AnimatedLink>
             <AnimatedLink 
             classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
             route='/contact'
             func={()=> undefined}>Contact Me</AnimatedLink>
           </div>
@@ -96,12 +96,12 @@ const HeroSection = () => {
           <div className="flex items-center gap-4">
             <AnimatedLink 
             classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm'
             route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16}/></AnimatedLink>
             <AnimatedLink 
             classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
-             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm'
+             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm'
             route='/contact'
             func={()=> undefined}>Contact Me</AnimatedLink>
           </div>

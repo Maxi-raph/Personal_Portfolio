@@ -36,12 +36,12 @@ function ProjectDetailsPage() {
         <div className="flex items-center gap-4 mt-6">
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
           route='/'
           func={()=> undefined}><ExternalLink size={16} className='mr-1'/>Live Site</AnimatedLink>
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
           route='/about'
           func={()=> undefined}><FaGithub size={16} className='mr-1'/> Github</AnimatedLink>
         </div>

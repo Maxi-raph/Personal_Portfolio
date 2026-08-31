@@ -52,17 +52,17 @@ function AboutPage ()  {
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-center w-[86%] mx-auto md:mx-0">
                             <AnimatedLink 
                             classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
-                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
                             route='/projects'
                             func={()=> undefined}><FaTwitter size={16}/> Twitter</AnimatedLink>
                             <AnimatedLink 
                             classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
-                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
                             route='/projects'
                             func={()=> undefined}><FaGithub size={16}/> Github</AnimatedLink>
                             <AnimatedLink 
                             classes='col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
-                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-shadow-medium shadow-lg'
+                                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
                             route='/about'
                             func={()=> undefined}><FaLinkedin size={16}/> LinkedIn</AnimatedLink>
                         </div>

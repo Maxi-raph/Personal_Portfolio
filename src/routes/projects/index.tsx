@@ -93,7 +93,7 @@ function ProjectsPage() {
                         classes={`
                     py-2 px-4 text-xs font-semibold rounded-xl
                     transition shadow-shadow-heavy shadow-lg 
-                    hover:bg-accent-hover hover:text-background text-sm 
+                    hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm 
                     cursor-pointer ${category === cat ? 'bg-accent-hover text-background' : 'bg-gray-700/30 text-text-secondary'}`}
                     func={()=> setCategory(cat)}
                     >

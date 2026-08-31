@@ -29,12 +29,12 @@ const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getIte
         <div className="flex items-center justify-center gap-4 mt-6">
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-gray-700 shadow-md'
           route='/'
           func={()=> undefined}><Home size={16}/> Back To Home</AnimatedLink>
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm shadow-gray-700 shadow-md'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-gray-700 shadow-md'
           route='/projects'
           func={()=> undefined}><FolderOpen size={16}/> View Projects</AnimatedLink>
         </div>
