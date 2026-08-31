@@ -5,6 +5,7 @@ import HeroSection from '#/components/HeroSection'
 import TechStack from '#/components/TechStack'
 import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
+import { ArrowRight } from 'lucide-react'
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
 import { 
   SiHtml5, 
@@ -60,12 +61,11 @@ function HomePage() {
               When I'm not coding, I sketch UI concepts, and collect design references obsessively.
             </p>
             <div className="flex items-center gap-6">
-              <AnimatedLink
-              route='/'
-              classes='py-2 px-6 text-sm font-semibold rounded-xl
-              transition shadow-shadow-medium shadow-lg bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm'
-              func={()=> null}
-              >Full Bio</AnimatedLink>
+              <AnimatedLink 
+              classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
+                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm'
+              route='/projects'
+              func={()=> undefined}>Full Bio <ArrowRight size={16}/></AnimatedLink>
             </div>
           </div>
         </div>

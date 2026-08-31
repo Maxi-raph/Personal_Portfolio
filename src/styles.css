@@ -20,52 +20,52 @@
   --border-default: #d0d0dc;   
   --border-subtle: #dcdce8;    
   --success: #16a34a;           
-  --error: #dc2626;  
-  --shadow-light: rgba(0, 0, 0, 0.12);
-  --shadow-medium: rgba(0, 0, 0, 0.20);
-  --shadow-heavy: rgba(0, 0, 0, 0.30);
-  --shadow-glow: rgba(155, 114, 243, 0.25);           
+  --error: #dc2626;     
+  --shadow-light: rgba(155, 114, 243, 0.35);
+  --shadow-medium: rgba(155, 114, 243, 0.5);
+  --shadow-heavy: rgba(155, 114, 243, 0.65);
+  --shadow-glow: rgba(155, 114, 243, 0.4);     
 }
 
 :root[data-theme="dark"] {
- --background:#0b0b10;
- --surface: #111118;
- --surface-elevated: #181822;
- --text-primary: #f2f2f7;
+  --background:#0b0b10;
+  --surface: #111118;
+  --surface-elevated: #181822;
+  --text-primary: #f2f2f7;
   --text-secondary: #f5f5fa;   
   --text-muted: #e0e0ee; 
- --accent-primary: #9b72f3;
+  --accent-primary: #9b72f3;
   --accent-hover: #a987ff;
   --accent-text: #b99bff;
   --border-default: #242430;
   --border-subtle: rgba(255, 255, 255, 0.05);
   --success: #32d583;
   --error: #ef6b6b;
-  --shadow-light: rgba(0, 0, 0, 0.3);
-  --shadow-medium: rgba(0, 0, 0, 0.4);
-  --shadow-heavy: rgba(0, 0, 0, 0.5);
-  --shadow-glow: rgba(155, 114, 243, 0.15);
+  --shadow-light: rgba(155, 114, 243, 0.1);
+  --shadow-medium: rgba(155, 114, 243, 0.2);
+  --shadow-heavy: rgba(155, 114, 243, 0.3);
+  --shadow-glow: rgba(155, 114, 243, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
- --background:#0b0b10;
- --surface: #111118;
- --surface-elevated: #181822;
- --text-primary: #f2f2f7;
+  --background:#0b0b10;
+  --surface: #111118;
+  --surface-elevated: #181822;
+  --text-primary: #f2f2f7;
   --text-secondary: #f5f5fa;   
   --text-muted: #e0e0ee; 
- --accent-primary: #9b72f3;
+  --accent-primary: #9b72f3;
   --accent-hover: #a987ff;
   --accent-text: #b99bff;
   --border-default: #242430;
   --border-subtle: rgba(255, 255, 255, 0.05);
   --success: #32d583;
   --error: #ef6b6b;
-  --shadow-light: rgba(0, 0, 0, 0.3);
-  --shadow-medium: rgba(0, 0, 0, 0.4);
-  --shadow-heavy: rgba(0, 0, 0, 0.5);
-  --shadow-glow: rgba(155, 114, 243, 0.15);
+  --shadow-light: rgba(155, 114, 243, 0.1);
+  --shadow-medium: rgba(155, 114, 243, 0.2);
+  --shadow-heavy: rgba(155, 114, 243, 0.3);
+  --shadow-glow: rgba(155, 114, 243, 0.4);
   }
 }
 
