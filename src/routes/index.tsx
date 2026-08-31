@@ -61,7 +61,7 @@ function HomePage() {
             </p>
             <div className="flex items-center gap-6">
               <AnimatedLink
-              route='/'
+              route='/about'
               classes='py-2 px-6 text-sm font-semibold rounded-xl
               transition shadow-shadow-medium shadow-lg bg-gray-700/30 hover:bg-accent-hover hover:text-background text-sm'
               func={()=> null}
