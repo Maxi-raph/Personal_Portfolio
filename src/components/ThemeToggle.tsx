@@ -49,7 +49,6 @@ export default function ThemeToggle() {
       whileTap={{ scale: 0.95 }}
       onClick={toggleMode}
       aria-label={label}
-      title={label}
       className="text-sm text-text-muted hover:text-text-primary transition cursor-pointer bg-backdrop-blur rounded-full border bg-background w-7 h-7 p-2 flex justify-center items-center font-semibold shadow-[0_8px_22px_rgba(30,90,72,0.08)]"
     >
       {mode === 'dark' ?  <Sun size={18} className='shrink-0'/> : <Moon size={18} className='shrink-0'/>}

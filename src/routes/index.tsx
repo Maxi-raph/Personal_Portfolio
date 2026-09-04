@@ -65,7 +65,7 @@ function HomePage() {
               classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm'
               route='/projects'
-              func={()=> undefined}>Full Bio <ArrowRight size={16}/></AnimatedLink>
+              func={()=> undefined}>Full Bio <ArrowRight size={16} className='shrink-0'/></AnimatedLink>
             </div>
           </div>
         </div>

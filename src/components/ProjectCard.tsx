@@ -50,7 +50,7 @@ const ProjectCard = ({img, title, desc, stacks, route, id, params}:ProjectProp) 
                     classes='text-accent-primary text-sm hover:text-accent-hover mb-4 hover:scale-90 transition w-fit'
                     route={route}
                     params={params}
-                    func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
+                    func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1 shrink-0' size={14} /></AnimatedLink>
                 </div>
             </motion.div>
         </AnimatePresence>

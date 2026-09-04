@@ -23,7 +23,7 @@ function ProjectDetailsPage() {
         <AnimatedLink 
         classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
         route='/projects'
-        func={()=> undefined}><ArrowLeft className='inline-block mr-1' size={14}/>Back To Projects</AnimatedLink>
+        func={()=> undefined}><ArrowLeft className='inline-block mr-1 shrink-0' size={14}/>Back To Projects</AnimatedLink>
         <div className="flex gap-2 items-center mt-4">
           <p className="text-sm text-accent-text">{Number(project?.id) > 10 ? project?.id : '0' + Number(project?.id)} </p>
           <span className="block w-fit py-1 px-2 rounded-xl border border-border-default
@@ -38,12 +38,12 @@ function ProjectDetailsPage() {
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
           route='/'
-          func={()=> undefined}><ExternalLink size={16} className='mr-1'/>Live Site</AnimatedLink>
+          func={()=> undefined}><ExternalLink size={16} className='mr-1 shrink-0'/>Live Site</AnimatedLink>
           <AnimatedLink 
           classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
           route='/about'
-          func={()=> undefined}><FaGithub size={16} className='mr-1'/> Github</AnimatedLink>
+          func={()=> undefined}><FaGithub size={16} className='mr-1 shrink-0'/> Github</AnimatedLink>
         </div>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <div className='bg-surface-elevated border border-border-default rounded-3xl w-full h-108'>
@@ -184,7 +184,7 @@ function ProjectDetailsPage() {
           func={()=>undefined}
           disabled={Number(project?.id) <= 1}>
             <div className="flex gap-2 items-center">
-              <ArrowLeft size={16} className='text-accent-primary'/>
+              <ArrowLeft size={16} className='text-accent-primary shrink-0'/>
               <div className='flex flex-col gap-4'>
                 <h4 className="font-bold text-[11px] text-text-muted">Previous</h4>
                 <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) - 1 === Number(p.id))?.title || '— None'}</p>
@@ -204,7 +204,7 @@ function ProjectDetailsPage() {
                 <h4 className="font-bold text-[11px] text-text-muted">Next</h4>
                 <p className="text-accent-text text-[14px]">{projectsArr?.find(p => Number(project?.id) + 1 === Number(p.id))?.title || '— None'}</p>
               </div>
-              <ArrowRight size={16} className='text-accent-primary'/>
+              <ArrowRight size={16} className='text-accent-primary shrink-0'/>
             </div>
           </AnimatedLink>
         </div>

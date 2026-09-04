@@ -54,17 +54,17 @@ function AboutPage ()  {
                             classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
                             route='/projects'
-                            func={()=> undefined}><FaTwitter size={16}/> Twitter</AnimatedLink>
+                            func={()=> undefined}><FaTwitter size={16} className='shrink-0'/> Twitter</AnimatedLink>
                             <AnimatedLink 
                             classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
                             route='/projects'
-                            func={()=> undefined}><FaGithub size={16}/> Github</AnimatedLink>
+                            func={()=> undefined}><FaGithub size={16} className='shrink-0'/> Github</AnimatedLink>
                             <AnimatedLink 
                             classes='col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
                             route='/about'
-                            func={()=> undefined}><FaLinkedin size={16}/> LinkedIn</AnimatedLink>
+                            func={()=> undefined}><FaLinkedin size={16} className='shrink-0'/> LinkedIn</AnimatedLink>
                         </div>
                     </div>
                 </div>

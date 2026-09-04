@@ -80,7 +80,7 @@ function ProjectsPage() {
                         classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
                         route='/projects/detail/$projectId'
                         params={{projectId: firstFeaturedProject[0]?.id}}
-                        func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
+                        func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1 shrink-0' size={14}/></AnimatedLink>
                     </div>
                 </div>
             </div>
@@ -130,13 +130,14 @@ function ProjectsPage() {
                         </p>
                  </div>)}
             </div>
-            <div className="my-8 flex justify-center items-center py-2 px-2 w-full h-70 rounded-3xl bg-surface border border-border-default">
+            <div className="my-8 flex justify-center items-center py-2 px-1 w-full h-70 rounded-3xl bg-surface border border-border-default">
                 <div className="flex justify-center items-center flex-col gap-4">
                     <div className="rounded-full w-12 h-12 flex justify-center items-center bg-surface-elevated border border-border-default">
                         <ClipLoader
                             color="var(--accent-primary)"
                             size={24}
                             speedMultiplier={0.8}
+                            className='shrink-0'
                         />
                     </div>
                     <h3 className="font-bold text-text-primary text-center text-2xl">More Projects Incoming</h3>

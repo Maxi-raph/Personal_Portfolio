@@ -146,6 +146,12 @@ body::after {
   margin-inline: auto;
 }
 
+@media (max-width: 768px) {
+  .page-wrap {
+    width: min(760px, calc(100% - 1.2rem));
+  }
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

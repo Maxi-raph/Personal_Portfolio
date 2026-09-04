@@ -17,7 +17,7 @@ const ExperimentProjects = () => {
                     <AnimatedLink 
                     classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-110 transition'
                     route='/'
-                    func={()=> undefined}>All  Experiments<ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
+                    func={()=> undefined}>All  Experiments<ArrowRight className='inline-block ml-1 shrink-0' size={14}/></AnimatedLink>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <ExperimentCard 

@@ -26,9 +26,9 @@ function ContactPage() {
 
   return(
     <section>
-        <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
-        onClick={()=>setIsOpen(false)}></div>
         <div className="page-wrap mt-34">
+            <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
+            onClick={()=>setIsOpen(false)}></div>
             <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-2 lg:gap-6">
                 <div>
                     <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span>CONTACT</span>
@@ -50,33 +50,33 @@ function ContactPage() {
             </div>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
             <div className="flex flex-col lg:flex-row gap-8">
-                <div className="flex flex-col gap-4 lg:w-[70%]">
+                <div className="flex flex-col gap-4 lg:w-[70%] bg-surface-elevated p-7 lg:h-fit rounded-xl">
                     <h3 className="text-text-primary text-xl font-bold">
                     Send a message
                     </h3>
                     <form action="" onSubmit={()=>null} className='flex flex-col gap-6'>
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className='flex flex-1 flex-col gap-1'>
-                                <label htmlFor="name" className='text-text-muted text-[11px] font-semibold'>Your name</label>
+                                <label htmlFor="name" className='text-text-muted text-[12px] font-semibold'>Your name</label>
                                 <input type="text" id='name' 
                                 className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
-                                 h-11 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
+                                 h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  Raphael  Onwujekwe'/>
                             </div>
                             <div className='flex flex-1 flex-col gap-1'>
-                                <label htmlFor="email" className='text-text-muted text-[11px] font-semibold'>Email address</label>
+                                <label htmlFor="email" className='text-text-muted text-[12px] font-semibold'>Email address</label>
                                 <input type="text" id='email' 
                                 className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
-                                 h-11 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
+                                 h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  chibuzor@gmail.com'/>
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
-                            <label htmlFor="subject" className='text-text-muted text-[11px] font-semibold'>Subject</label>
+                            <label htmlFor="subject" className='text-text-muted text-[12px] font-semibold'>Subject</label>
                             <div  className='
                                 bg-surface-elevated border border-text-muted 
                                 outline-0 focus:ring focus:ring-accent-hover
-                                h-11 rounded-xl text-md text-text-primary font-normal px-1'>
+                                h-10 rounded-xl text-md text-text-primary font-normal px-1'>
                                 <select name="subject" ref={selectRef} id="subject" className='w-full h-full cursor-pointer rounded-xl bg-surface-elevated outline-none'>
                                     <option value="" disabled className='text-text-muted!'>Select subject...</option>
                                     <option value="contract-work">Contract Work</option>
@@ -87,7 +87,7 @@ function ContactPage() {
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
-                            <label htmlFor="message" className='text-text-muted text-[11px] font-semibold'>Message</label>
+                            <label htmlFor="message" className='text-text-muted text-[12px] font-semibold'>Message</label>
                             <textarea name="message" id="message" rows={6}
                             className='
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4
@@ -96,7 +96,7 @@ function ContactPage() {
                                 placeholder="Hi Raphael, I'd love to discuss..."/>
                         </div>
                         <AnimatedButton 
-                        classes='flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full md:w-fit  cursor-pointer
+                        classes='flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full cursor-pointer
                         transition bg-accent-primary hover:bg-accent-hover text-text-primary text-sm shadow-shadow-medium shadow-lg'
                         func={()=> undefined}><SendIcon size={16} className='shrink-0'/>Send Message</AnimatedButton>
                     </form>

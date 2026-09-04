@@ -42,7 +42,7 @@ useEffect(() => {
         <AnimatedLink 
         classes='flex items-center text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-110 transition'
         route='/projects'
-        func={()=> undefined}>All Projects <ArrowRight className='inline-block ml-1' size={14}/></AnimatedLink>
+        func={()=> undefined}>All Projects <ArrowRight className='inline-block ml-1 shrink-0' size={14} /></AnimatedLink>
        </div>
        <div className="mt-10 mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
          {latestProjects.map((project) =>(

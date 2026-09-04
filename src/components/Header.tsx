@@ -56,7 +56,7 @@ export default function Header() {
           classes='flex gap-2 items-center text-text-muted text-sm transition py-1 px-2 
           bg-accent-hover/10 hover:text-accent-hover bg-backdrop-blur rounded-lg'
           route='/resume'
-          func={()=> undefined}><FileText size={16}/> Resume</AnimatedLink>
+          func={()=> undefined}><FileText size={16} className='shrink-0'/> Resume</AnimatedLink>
           <ThemeToggle />
         </div>
       </nav>
@@ -68,31 +68,31 @@ export default function Header() {
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 mt-2 font-bold text-sm transition py-4 px-4 
           hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
           data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-          onClick={()=>setIsOpen(!isOpen)}><Home size={16} className='mr-1'/> Home</Link>
+          onClick={()=>setIsOpen(!isOpen)}><Home size={16} className='mr-1 shrink-0'/> Home</Link>
 
           <Link  to={'/about'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4
            hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-           onClick={()=>setIsOpen(!isOpen)}><User size={16} className='mr-1'/> About</Link>
+           onClick={()=>setIsOpen(!isOpen)}><User size={16} className='mr-1 shrink-0'/> About</Link>
 
           <Link  to={'/projects'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4
            hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-           onClick={()=>setIsOpen(!isOpen)}><Folder size={16} className='mr-1'/> Projects</Link>
+           onClick={()=>setIsOpen(!isOpen)}><Folder size={16} className='mr-1 shrink-0'/> Projects</Link>
         
           <Link  to={'/contact'} 
           className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4
            hover:bg-accent-hover/10 hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
            data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-           onClick={()=>setIsOpen(!isOpen)}><Mail size={16} className='mr-1'/> Contact</Link>
+           onClick={()=>setIsOpen(!isOpen)}><Mail size={16} className='mr-1 shrink-0'/> Contact</Link>
 
           <Link  to={'/resume'}
            className="text-text-muted w-[94%] mx-auto rounded-3xl mb-2 font-bold text-sm transition py-4 px-4 hover:bg-accent-hover/10
             hover:text-accent-hover hover:bg-backdrop-blur/40 flex justify-center items-center
             data-[status=active]:text-accent-primary data-[status=active]:bg-[color-mix(in_oklab,var(--accent-primary)_12%,transparent)]"
-            onClick={()=>setIsOpen(!isOpen)}><FileText size={16} className='mr-1'/> Resume</Link>
+            onClick={()=>setIsOpen(!isOpen)}><FileText size={16} className='mr-1 shrink-0'/> Resume</Link>
             
         </div>
         <div className="flex gap-2 items-center">
