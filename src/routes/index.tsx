@@ -52,11 +52,11 @@ function HomePage() {
             </h2>
           </div>
           <div className='flex flex-col gap-4 mt-4 md:mt-0'>
-            <p className="text-text-secondary text-sm">
+            <p className="text-text-secondary text-sm leading-relaxed">
               I'm Raphael Onwujekwe — a frontend engineer based in Lagos with 2+ years building fast, accessible, and carefully crafted web products.
               I believe the best interfaces are invisible: they guide users naturally without getting in the way.
             </p>
-            <p className="text-text-secondary text-sm">
+            <p className="text-text-secondary text-sm leading-relaxed">
               Currently exploring: generative UI, React Server Components, and pushing the edges of what CSS can do. 
               When I'm not coding, I sketch UI concepts, and collect design references obsessively.
             </p>
@@ -106,7 +106,7 @@ function HomePage() {
           <h2 className="text-2xl md:text-3xl! font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-lg">
             Have a project in mind? Let's build something great.
           </h2>
-          <p className="text-text-secondary text-sm leading-6">
+          <p className="text-text-secondary text-sm leading-relaxed">
             I'm currently open to freelance and full-time opportunities. Whether it's a new product,
             a UI overhaul, or a collaboration — I'd love to hear from you.
           </p>

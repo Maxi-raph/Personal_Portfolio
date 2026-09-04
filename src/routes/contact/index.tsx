@@ -26,7 +26,7 @@ function ContactPage() {
 
   return(
     <section>
-        <div className="page-wrap mt-34">
+        <div className="page-wrap mt-34 relative">
             <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
             onClick={()=>setIsOpen(false)}></div>
             <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-2 lg:gap-6">
@@ -58,42 +58,135 @@ function ContactPage() {
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="name" className='text-text-primary text-[12px] font-semibold'>Your name</label>
-                                <input type="text" id='name' 
-                                className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
-                                 h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
-                                 placeholder='e.g  Raphael  Onwujekwe'/>
+                                <div className='relative w-full h-10 input-wrapper'>
+                                 <input type="text" id='name' 
+                                 className='absolute top-0 left-0 w-full bg-surface-elevated border border-text-muted py-2 px-6 outline-0
+                                  h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
+                                  placeholder='e.g  Raphael  Onwujekwe'/>
+                                 <svg 
+                                 className='absolute inset-0 w-full h-full text-accent-text
+                                 pointer-events-none'
+                                 viewBox='0 0 200 20'
+                                 preserveAspectRatio='none'>
+                                   <rect 
+                                    x="1"
+                                    y="1"
+                                    width="198"
+                                    height="18"
+                                    rx="5"
+                                    ry="5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth='0.8'
+                                    pathLength={100}
+                                    strokeDasharray={100}
+                                    strokeDashoffset={100}
+                                    className='rotate-border'
+                                   />
+                                 </svg>
+                                </div>
                             </div>
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="email" className='text-text-primary text-[12px] font-semibold'>Email address</label>
+                                <div className='relative w-full h-10 input-wrapper'>
                                 <input type="text" id='email' 
-                                className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
+                                className='absolute top-0 left-0 w-full bg-surface-elevated border border-text-muted py-2 px-6 outline-0
                                  h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  chibuzor@gmail.com'/>
+                                <svg
+                                className='absolute inset-0 w-full h-full text-accent-hover
+                                pointer-events-none'
+                                viewBox='0 0 200 20'
+                                preserveAspectRatio='none'>
+                                <rect
+                                x='1'
+                                y='1'
+                                width='198'
+                                height='18'
+                                rx='5'
+                                ry='5'
+                                fill='none'
+                                stroke='currentColor'
+                                strokeWidth='0.8'
+                                pathLength={100}
+                                strokeDasharray={100}
+                                strokeDashoffset={100}
+                                className='rotate-border'
+                                />
+                                </svg>
+                                </div>
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
                             <label htmlFor="subject" className='text-text-primary text-[12px] font-semibold'>Subject</label>
-                            <div  className='
-                                bg-surface-elevated border border-text-muted 
-                                outline-0 focus:ring focus:ring-accent-hover
+                            <div  className='relative w-full h-10 input-wrapper
+                                bg-surface-elevated border border-text-muted outline-0
                                 h-10 rounded-xl text-md text-text-primary font-normal px-1'>
-                                <select name="subject" ref={selectRef} id="subject" className='w-full h-full cursor-pointer rounded-xl bg-surface-elevated outline-none'>
+                                <select name="subject" ref={selectRef} id="subject" className='
+                                absolute top-0 left-0 w-full h-full cursor-pointer 
+                                rounded-xl bg-surface-elevated outline-none'>
                                     <option value="" disabled className='text-text-muted!'>Select subject...</option>
                                     <option value="contract-work">Contract Work</option>
                                     <option value="project-inquiry">Project Inquiry</option>
                                     <option value="collaboration">Collaboration</option>
                                     <option value="other">Other</option>
                                 </select>
+                                <svg
+                                className='absolute inset-0 w-full h-full text-accent-hover
+                                pointer-events-none'
+                                viewBox='0 0 200 20'
+                                preserveAspectRatio='none'>
+                                <rect
+                                 x='1'
+                                 y='1'
+                                 width='198'
+                                 height='18'
+                                 rx='6'
+                                 ry='6'
+                                 fill='none'
+                                 stroke='currentColor'
+                                 strokeWidth='0.8'
+                                 pathLength={100}
+                                 strokeDasharray={100}
+                                 strokeDashoffset={100}
+                                 className='rotate-border'
+                                />
+                                </svg>
+                                
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
                             <label htmlFor="message" className='text-text-primary text-[12px] font-semibold'>Message</label>
+                            <div
+                            className='relative w-full h-40 input-wrapper'>
                             <textarea name="message" id="message" rows={6}
                             className='
-                                bg-surface-elevated border border-text-muted py-2 pl-6 pr-4
-                                outline-0 focus:ring focus:ring-accent-hover
+                                absolute top-0 left-0 w-full h-full
+                                bg-surface-elevated border border-text-muted py-2 pl-6 pr-4 outline-0
                                 rounded-xl text-md text-text-primary font-normal'
                                 placeholder="Hi Raphael, I'd love to discuss..."/>
+                            <svg 
+                            className='absolute bg-green-300/40 inset-0 w-full h-full text-accent-hover
+                            pointer-events-none'
+                            viewBox='0 0 200 20'
+                            preserveAspectRatio='none'
+                            >
+                            <rect
+                            x='1'
+                            y='1'
+                            width='198'
+                            height='18'
+                            rx='1'
+                            ry='1'
+                            stroke='currentColor'
+                            strokeWidth='0.8'
+                            pathLength={100}
+                            strokeDasharray={100}
+                            strokeDashoffset={100}
+                            className='rotate-border bg-transparent'
+                            />
+                            </svg>
+                            </div>
                         </div>
                         <AnimatedButton 
                         classes='flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full cursor-pointer

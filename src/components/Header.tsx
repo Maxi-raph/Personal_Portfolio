@@ -98,7 +98,7 @@ export default function Header() {
         <div className="flex gap-2 items-center">
           <ThemeToggle />
           <button 
-          className="bg-text-muted hover:bg-accent-hover cursor-pointer p-2 rounded-lg text-background hover:text-text-primary"
+          className="bg-gray-500/60 hover:bg-accent-hover cursor-pointer p-2 rounded-lg text-text-primary hover:text-text-primary"
           onClick={()=>setIsOpen(!isOpen)}>
             {!isOpen 
             ? <GiHamburgerMenu size={18}/>
