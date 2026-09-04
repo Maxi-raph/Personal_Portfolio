@@ -110,29 +110,29 @@ function HomePage() {
             I'm currently open to freelance and full-time opportunities. Whether it's a new product,
             a UI overhaul, or a collaboration — I'd love to hear from you.
           </p>
-          <div className='hidden md:flex flex-wrap items-center gap-4'>
-            <a href="" target='_blank'>
+          <div className='hidden md:grid grid-cols-2 items-center gap-4 w-fit'>
+            <a href="" target='_blank' className='col-span-1'>
               <AnimatedButton 
-              classes='flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
-              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background ext-sm shadow-shadow-medium shadow-lg'
+              classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
+              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
               func={()=>null}
               >
                 <FaEnvelope className='shrink-0'/> Get In Touch
               </AnimatedButton>
             </a>
-            <a href="" target='_blank'>
+            <a href="" target='_blank' className='col-span-1'>
               <AnimatedButton 
-              classes='flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
-              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background ext-sm shadow-shadow-medium shadow-lg'
+              classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
+              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
               func={()=>null}
               >
                 <FaTwitter className='shrink-0'/> Twitter
               </AnimatedButton>
             </a>
-            <a href="" target='_blank'>
+            <a href="" target='_blank' className='col-span-2'>
               <AnimatedButton 
-              classes='flex gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
-              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background ext-sm shadow-shadow-medium shadow-lg'
+              classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
+              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
               func={()=>null}
               >
                 <FaGithub className='shrink-0'/> Github
@@ -163,7 +163,7 @@ function HomePage() {
           <a href="" target='_blank' className='col-span-12'>
             <AnimatedButton 
             classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background ext-sm shadow-shadow-medium shadow-lg'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
             func={()=>null}
             >
               <FaEnvelope className='shrink-0'/> Get In Touch
@@ -172,7 +172,7 @@ function HomePage() {
           <a href="" target='_blank' className='col-span-6'>
             <AnimatedButton 
             classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background ext-sm shadow-shadow-medium shadow-lg'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
             func={()=>null}
             >
               <FaTwitter className='shrink-0'/> Twitter
@@ -181,7 +181,7 @@ function HomePage() {
           <a href="" target='_blank' className='col-span-6'>
             <AnimatedButton 
             classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background ext-sm shadow-shadow-medium shadow-lg'
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
             func={()=>null}
             >
               <FaGithub className='shrink-0'/> Github

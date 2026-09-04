@@ -50,21 +50,21 @@ function ContactPage() {
             </div>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
             <div className="flex flex-col lg:flex-row gap-8">
-                <div className="flex flex-col gap-4 lg:w-[70%] bg-surface-elevated p-7 lg:h-fit rounded-xl">
+                <div className="flex flex-col gap-4 lg:w-[70%] bg-surface-elevated border border-text-muted p-7 lg:h-fit rounded-xl">
                     <h3 className="text-text-primary text-xl font-bold">
                     Send a message
                     </h3>
                     <form action="" onSubmit={()=>null} className='flex flex-col gap-6'>
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className='flex flex-1 flex-col gap-1'>
-                                <label htmlFor="name" className='text-text-muted text-[12px] font-semibold'>Your name</label>
+                                <label htmlFor="name" className='text-text-primary text-[12px] font-semibold'>Your name</label>
                                 <input type="text" id='name' 
                                 className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
                                  h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  Raphael  Onwujekwe'/>
                             </div>
                             <div className='flex flex-1 flex-col gap-1'>
-                                <label htmlFor="email" className='text-text-muted text-[12px] font-semibold'>Email address</label>
+                                <label htmlFor="email" className='text-text-primary text-[12px] font-semibold'>Email address</label>
                                 <input type="text" id='email' 
                                 className='bg-surface-elevated border border-text-muted py-2 px-6 outline-0 focus:ring focus:ring-accent-hover
                                  h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
@@ -72,7 +72,7 @@ function ContactPage() {
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
-                            <label htmlFor="subject" className='text-text-muted text-[12px] font-semibold'>Subject</label>
+                            <label htmlFor="subject" className='text-text-primary text-[12px] font-semibold'>Subject</label>
                             <div  className='
                                 bg-surface-elevated border border-text-muted 
                                 outline-0 focus:ring focus:ring-accent-hover
@@ -87,7 +87,7 @@ function ContactPage() {
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
-                            <label htmlFor="message" className='text-text-muted text-[12px] font-semibold'>Message</label>
+                            <label htmlFor="message" className='text-text-primary text-[12px] font-semibold'>Message</label>
                             <textarea name="message" id="message" rows={6}
                             className='
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4
@@ -115,7 +115,7 @@ function ContactPage() {
                                 <div className="flex flex-col gap-2">
                                     <h4 className="text-text-primary text-sm">Email</h4>
                                     <p className="text-accent-text text-[11px] font-semibold">onwujekwechibuzor@gmail.com</p>
-                                    <p className="text-text-muted text-[11px] lg:w-[70%] leading-6 font-semibold">
+                                    <p className="text-text-primary text-[11px] lg:w-[70%] leading-6 font-semibold">
                                         Best for project inquiries and collaborations.</p>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@ function ContactPage() {
                                 <div className="flex flex-col gap-2">
                                     <h4 className="text-text-primary text-sm">Twitter</h4>
                                     <p className="text-accent-text text-[11px] font-semibold">@raph_maxi</p>
-                                    <p className="text-text-muted text-[11px] leading-6 font-semibold">My DM is always open.</p>
+                                    <p className="text-text-primary text-[11px] leading-6 font-semibold">My DM is always open.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ function ContactPage() {
                                 <div className="flex flex-col gap-2">
                                     <h4 className="text-text-primary text-sm">LinkedIn</h4>
                                     <p className="text-accent-text text-[11px] font-semibold">Chibuzor Onwujekwe</p>
-                                    <p className="text-text-muted text-[11px] lg:w-[70%] leading-6 font-semibold">
+                                    <p className="text-text-primary text-[11px] lg:w-[70%] leading-6 font-semibold">
                                         Professional background and endorsements.</p>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ function ContactPage() {
                                 <div className="flex flex-col gap-2">
                                     <h4 className="text-text-primary text-sm">Github</h4>
                                     <p className="text-accent-text text-[11px] font-semibold">github.com/Maxi-Raph</p>
-                                    <p className="text-text-muted text-[11px] lg:w-[70%] leading-6 font-semibold">
+                                    <p className="text-text-primary text-[11px] lg:w-[70%] leading-6 font-semibold">
                                         Browse my open source contributions.</p>
                                 </div>
                             </div>
