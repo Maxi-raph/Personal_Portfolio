@@ -30,21 +30,7 @@ function ContactPage() {
 
 
     const handleSubmit = async(e:React.SyntheticEvent<HTMLFormElement>)=>{
-        e.preventDefault()
-
-        const emptyForm = Object.entries(formData)
-        .filter(([_, value]) => value === '')
-        .map(([key]) => key)
-        
-        if(emptyForm.length == 1){
-         window.alert(`${emptyForm[0]} field is empty`)
-         return
-        }else if(emptyForm.length > 1){
-         window.alert(`${emptyForm.join(', ')} fields are empty`)
-         return
-        }
-
-        setIsPending(true)
+        e.preventDefault() 
 
         const data = new FormData(e.currentTarget)
 
@@ -53,7 +39,19 @@ function ContactPage() {
         const subject = data.get('subject') as string
         const message = data.get('message') as string
 
-        const { error } = await supabase
+        if(!name || !email ||! subject || !message ){
+            toast.error('Please fill in all fields.')
+            return
+        }
+
+        if(!email.includes('@') ){
+            toast.error('Please enter a valid email address.')
+            return
+        }
+
+        setIsPending(true)
+
+        const { error:dbError } = await supabase
         .from('Contact-messages')
         .insert({
             name,
@@ -62,13 +60,33 @@ function ContactPage() {
             message,
         })
 
-        setIsPending(false)
-
-        if(error){
+        if (dbError) {
+            console.error(dbError)
             toast.error('Something went wrong. Please try again.')
+            setIsPending(false)
             return
         }
+
+        const { error: emailError } = await supabase.functions.invoke(
+        'send-contact-email',
+        {
+            body: {
+            name,
+            email,
+            subject,
+            message,
+            },
+        }
+        )
+
+        if (emailError) {
+        console.error(emailError)
+        toast.error('Message saved, but email notification failed.')
+        setIsPending(false)
+        return
+        }
         
+        setIsPending(false)
         setFormData({name:'', email:'', subject:'', message:''})
           toast.success('Message sent successfully')
     }
@@ -108,7 +126,7 @@ function ContactPage() {
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="name" className='text-text-primary text-[12px] font-semibold'>Your name</label>
                                 <div className='relative w-full h-10 input-wrapper'>
-                                 <input type="text" name='name' id='name' value={formData.name} onChange={(e)=>setFormData(prev =>({...prev, 'name':e.target.value}))}
+                                 <input type="text" name='name' id='name' maxLength={100} value={formData.name} onChange={(e)=>setFormData(prev =>({...prev, 'name':e.target.value}))}
                                  className='absolute top-0 left-0 w-full bg-surface-elevated border border-text-muted py-2 px-6 outline-0
                                   h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                   placeholder='e.g  Raphael  Onwujekwe'/>
@@ -138,7 +156,7 @@ function ContactPage() {
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="email" className='text-text-primary text-[12px] font-semibold'>Email address</label>
                                 <div className='relative w-full h-10 input-wrapper'>
-                                <input type="text" name='email' id='email' value={formData.email} onChange={(e)=>setFormData(prev =>({...prev, 'email':e.target.value}))}
+                                <input type="text" name='email' id='email' maxLength={100} value={formData.email} onChange={(e)=>setFormData(prev =>({...prev, 'email':e.target.value}))}
                                 className='absolute top-0 left-0 w-full bg-surface-elevated border border-text-muted py-2 px-6 outline-0
                                  h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  chibuzor@gmail.com'/>
@@ -186,7 +204,7 @@ function ContactPage() {
                             <label htmlFor="message" className='text-text-primary text-[12px] font-semibold'>Message</label>
                             <div
                             className='w-full focus:ring focus:ring-accent-hover'>
-                            <textarea name="message" id="message" rows={6} value={formData.message} onChange={(e)=>setFormData(prev =>({...prev, 'message':e.target.value}))}
+                            <textarea name="message" id="message" maxLength={2000} rows={6} value={formData.message} onChange={(e)=>setFormData(prev =>({...prev, 'message':e.target.value}))}
                             className='w-full focus:ring focus:ring-accent-hover
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4 outline-0
                                 rounded-xl text-md text-text-primary font-normal'
