@@ -142,28 +142,6 @@ function ContactPage() {
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4 outline-0
                                 rounded-xl text-md text-text-primary font-normal'
                                 placeholder="Hi Raphael, I'd love to discuss..."/>
-                            <svg 
-                            className='absolute inset-0 w-full h-full text-accent-hover
-                            pointer-events-none'
-                            viewBox='0 0 200 160'
-                            preserveAspectRatio='none'
-                            >
-                            <rect
-                            x='1'
-                            y='1'
-                            width='198'
-                            height='158'
-                            rx='5'
-                            ry='5'
-                            fill='none'
-                            stroke='currentColor'
-                            strokeWidth='0.8'
-                            pathLength={100}
-                            strokeDasharray={100}
-                            strokeDashoffset={100}
-                            className='rotate-border'
-                            />
-                            </svg>
                             </div>
                         </div>
                         <AnimatedButton 
@@ -179,7 +157,7 @@ function ContactPage() {
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
                         <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex gap-4">
+                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <Mail size={19} className='shrink-0'/>
                                 </div>
@@ -192,7 +170,7 @@ function ContactPage() {
                             </div>
                         </div>
                         <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex gap-4">
+                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaTwitter size={19} className='shrink-0'/>
                                 </div>
@@ -204,7 +182,7 @@ function ContactPage() {
                             </div>
                         </div>
                         <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex gap-4">
+                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaLinkedin size={19} className='shrink-0'/>
                                 </div>
@@ -217,7 +195,7 @@ function ContactPage() {
                             </div>
                         </div>
                         <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex gap-4">
+                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaGithub size={19} className='shrink-0'/>
                                 </div>
@@ -231,7 +209,7 @@ function ContactPage() {
                         </div>
                     </div>
                     <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                        <div className="flex gap-4 items-center">
+                        <div className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
                             <MapPin size={19} className='shrink-0 text-gray-600'/>
                             <div className="flex flex-col gap-1">
                                 <h4 className="text-text-primary text-sm">Lagos, Nigeria</h4>
