@@ -94,7 +94,7 @@ function HomePage() {
               containerClass={`flex flex-wrap items-center gap-3 mt-9
                 transition-transform ease-[cubic-bezier(0.22,1,0.36,1)] duration-500`}
               classes='block bg-surface py-2 px-4 rounded-xl text-text-secondary
-                text-sm font-bold border border-text-muted shadow-shadow-medium shadow-lg
+                text-xs font-bold border border-text-muted shadow-shadow-medium shadow-lg
                 transition-all'
                 />
             </div>
@@ -110,6 +110,7 @@ function HomePage() {
             I'm currently open to freelance and full-time opportunities. Whether it's a new product,
             a UI overhaul, or a collaboration — I'd love to hear from you.
           </p>
+          {/* Desktop external links */}
           <div className='hidden md:grid grid-cols-2 items-center gap-4 w-fit'>
             <a href="" target='_blank' className='col-span-1'>
               <AnimatedButton 
@@ -159,28 +160,29 @@ function HomePage() {
           </div>
           <hr className="block md:hidden text-text-muted w-full h-0.5 mt-4" />
         </div>
-        <div className='grid grid-cols-12 md:hidden w-full gap-6'>
-          <a href="" target='_blank' className='col-span-12'>
+        {/*Mobile external links*/}
+        <div className='grid grid-cols-10 md:hidden w-full gap-4'>
+          <a href="" target='_blank' className='col-span-10'>
             <AnimatedButton 
-            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer
+            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
             func={()=>null}
             >
               <FaEnvelope className='shrink-0'/> Get In Touch
             </AnimatedButton>
           </a>
-          <a href="" target='_blank' className='col-span-6'>
+          <a href="" target='_blank' className='col-span-5'>
             <AnimatedButton 
-            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer
+            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
             func={()=>null}
             >
               <FaTwitter className='shrink-0'/> Twitter
             </AnimatedButton>
           </a>
-          <a href="" target='_blank' className='col-span-6'>
+          <a href="" target='_blank' className='col-span-5'>
             <AnimatedButton 
-            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer
+            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
             transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
             func={()=>null}
             >

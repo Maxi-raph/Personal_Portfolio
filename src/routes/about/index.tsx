@@ -35,8 +35,8 @@ function AboutPage ()  {
                         <img src={undefined} alt="" className="w-full h-full object-cover rounded-3xl"/>
                     </div>
                     <div className="flex gap-2 w-full items-center">
-                        <span className="block rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
-                        <p className="text-[12px] text-text-muted leading-relaxed tracking-widest">Open to opportunities</p>
+                        <span className="flex shrink-0 rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
+                        <p className="text-[12px] text-text-muted leading-relaxed tracking-widest whitespace-nowrap">Open to opportunities</p>
                     </div>
                 </div>
                 <div className="flex-1">

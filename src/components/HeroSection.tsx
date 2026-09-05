@@ -73,7 +73,7 @@ const HeroSection = () => {
     {/* Mobile Hero Section */}
       <section className="flex flex-col items-center md:hidden gap-4 mt-32 page-wrap">
           <div className="flex gap-2  w-full justify-center sm:justify-start items-center">
-            <span className="block rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
+            <span className="flex shrink-0  rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
             <p className="text-[12px] text-text-muted leading-relaxed tracking-widest">AVAILABLE FOR WORK - LAGOS, NIGERIA</p>
           </div>
           <div className="relative shadow-xl rounded-3xl">
@@ -88,38 +88,38 @@ const HeroSection = () => {
               bg-success shadow-3xl shadow-accent-primary"></span>{' Open to opportunities'}
             </span>
           </div>
-          <h1 className='text-4xl sm:text-[38px] font-extrabold  text-text-primary leading-snug sm:tracking-wide max-w-xs sm:max-w-sm'>I build modern, fast and beautiful web experiences.</h1>
+          <h1 className='text-4xl sm:text-[38px] font-extrabold text-text-primary leading-snug sm:tracking-wide max-w-xs sm:max-w-sm'>I build modern, fast and beautiful web experiences.</h1>
           <p className="text-text-secondary text-sm font-normal mt-3 max-w-sm leading-relaxed">
             I'm Raphael — a frontend engineer crafting smooth, accessible and pixel-perfect interfaces. I care deeply about performance,
              usability, and the small details that make a product feel alive.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-4">
             <AnimatedLink 
-            classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
+            classes='flex flex-1 sm:flex-0 justify-center items-center gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl whitespace-nowrap
              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm'
             route='/projects'
             func={()=> undefined}>View Work <ArrowRight size={16} className='shrink-0'/></AnimatedLink>
             <AnimatedLink 
-            classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
+            classes='flex flex-1 sm:flex-0 justify-center items-center gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl whitespace-nowrap
              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm'
             route='/contact'
             func={()=> undefined}>Contact Me</AnimatedLink>
           </div>
           <hr className="text-text-muted w-full h-0.5 mt-4" />
-          <div className='flex items-center mt-4'>
+          <div className='flex gap-4 items-center mt-4'>
             <div className="flex flex-col gap-1 ml-2">
-              <h2 className="font-bold text-text-primary text-3xl">2+</h2>
-              <p className="text-text-muted text-xs">Years experience</p>
+              <h2 className="font-bold text-text-primary text-2xl sm:text-3xl">2+</h2>
+              <p className="text-text-muted text-[11px] sm:text-xs">Years experience</p>
             </div>
-            <span className="block w-[0.1px] h-10 ml-6 mr-6 bg-text-muted"></span>
+            <span className="block w-px h-10 sm:mx-6 bg-text-muted"></span>
             <div className="flex flex-col gap-1 ml-2">
-              <h2 className="font-bold text-text-primary text-3xl">30+</h2>
-              <p className="text-text-muted text-xs">Projects shipped</p>
+              <h2 className="font-bold text-text-primary text-2xl sm:text-3xl">30+</h2>
+              <p className="text-text-muted text-[11px] sm:text-xs">Projects shipped</p>
             </div>
-            <span className="block w-[0.1px] h-10 ml-6 mr-6 bg-text-muted"></span>
+            <span className="block w-px h-10 sm:mx-6 bg-text-muted"></span>
             <div className="flex flex-col gap-1 ml-2">
-              <h2 className="font-bold text-text-primary text-3xl">2+</h2>
-              <p className="text-text-muted text-xs">Happy clients</p>
+              <h2 className="font-bold text-text-primary text-2xl sm:text-3xl">2+</h2>
+              <p className="text-text-muted text-[11px] sm:text-xs">Happy clients</p>
             </div>
           </div>
       </section>

@@ -1,4 +1,5 @@
 import AnimatedButton from '#/components/AnimatedButton'
+import TechStack from '#/components/TechStack'
 import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
 import { DownloadIcon, Globe, Mail, MapPin } from 'lucide-react'
@@ -63,15 +64,160 @@ function ResumePage() {
               </AnimatedButton>
             </div>
           </div>
-          <hr className="block lg:hidden text-text-muted w-full h-0.5 mt-18 mb-18" />
-          <div className="flex flex-col md:flex-row gap-4">
-            <span className="md:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EXPERIENCE</span>
-            <div className="flex-col gap-4">
+          <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
+          <div className="flex flex-col md:flex-row gap-10">
+            <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EXPERIENCE</span>
+            <div className="flex flex-col gap-10 flex-1">
               <div className='flex flex-col gap-3'>
-                <h3 className="text-text-primary font-bold">Fron</h3>
+                <div className="flex justify-between gap-4 flex-wrap">
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-md font-bold text-text-primary">Frontend Developer (Intern)</h4>
+                    <p className="text-sm font-semibold text-accent-text">TrueMindsLtd</p>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-text-muted text-sm">2023 — Present</p>
+                    <p className="text-text-muted text-xs">Lagos, Nigeria</p>
+                  </div>
+                </div>
+                <p className="text-text-secondary text-sm w-[93%] leading-relaxed">
+                 Worked with fellow interns across different tech stacks to
+                 build a performant, pixel-perfect learning management system.
+                </p>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-surface shadow-shadow-medium shadow-md'
+                 techStack={[{name:'React'}, {name:'TypeScript'}, {name:'Framer Motion'}]}
+                />
+              </div>      
+              <div className='flex flex-col gap-3'>
+                <div className="flex justify-between gap-4 flex-wrap">
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-md font-bold text-text-primary">Frontend Developer (Intern)</h4>
+                    <p className="text-sm font-semibold text-accent-text">Fintava</p>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-text-muted text-sm">2024 — 2025</p>
+                    <p className="text-text-muted text-xs">Lagos, Nigeria</p>
+                  </div>
+                </div>
+                <p className="text-text-secondary text-sm w-[93%] leading-relaxed">
+                 Leading frontend architecture for a fintech SaaS platform 
+                 serving 200k+ users across West Africa.
+                </p>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-surface shadow-shadow-medium shadow-md'
+                 techStack={[{name:'React'}, {name:'TypeScript'}, {name:'Framer Motion'}]}
+                />
+              </div>              
+              <div className='flex flex-col gap-3'>
+                <div className="flex justify-between gap-4 flex-wrap">
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-md font-bold text-text-primary">Frontend Developer (Intern)</h4>
+                    <p className="text-sm font-semibold text-accent-text">Raven Atlas</p>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-text-muted text-sm">2023 — 2024</p>
+                    <p className="text-text-muted text-xs">Lagos, Nigeria</p>
+                  </div>
+                </div>
+                <p className="text-text-secondary text-sm w-[93%] leading-relaxed">
+                 Built and maintained the design system and core product interfaces from scratch.
+                </p>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-surface shadow-shadow-medium shadow-md'
+                 techStack={[{name:'React'}, {name:'TypeScript'}, {name:'Framer Motion'}]}
+                />
+              </div>              
+            </div>
+          </div>
+          <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+            <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>SKILLS</span>
+            {/*Desktop version for skills*/}
+            <div className="hidden flex-1 md:grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-text-muted font-bold text-sm mb-3">FRONTEND</h3>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-background shadow-shadow-medium shadow-md'
+                 techStack={
+                  [{name:'React.js'}, {name:'TypeScript'}, {name:'TailwindCSS'}, 
+                  {name:'React Router v7'}, {name:'Tanstack Start'}, {name:'Framer Motion'}]}
+                />
+              </div>
+              <div>
+                <h3 className="text-text-muted font-bold text-sm mb-3">API & DATA TOOLS</h3>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-background shadow-shadow-medium shadow-md'
+                 techStack={[{name:'Supabase (BaaS)'}, {name:'Strapi (CMS)'}, {name:'REST APIs'}]}
+                />
+              </div>
+              <div>
+                <h3 className="text-text-muted font-bold text-sm mb-3">TOOLING</h3>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-background shadow-shadow-medium shadow-md'
+                 techStack={[{name:'Git'}, {name:'Figma'}, {name:'Vite'}, {name:'Vercel'}, {name:'Render'}]}
+                />
+              </div>
+              <div>
+                <h3 className="text-text-muted font-bold text-sm mb-3">FRONTEND</h3>
+                <TechStack 
+                 containerClass='flex flex-wrap gap-3 w-full'
+                 classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+                 text-text-primary bg-background shadow-shadow-medium shadow-md'
+                 techStack={[{name:'Vitest'}, {name:'Jest'}]}
+                />
+              </div>
+            </div>
+            {/*Mobile version for skills*/}
+            <TechStack 
+              containerClass='md:hidden flex flex-wrap gap-3 w-full'
+              classes='py-1 px-2 rounded-lg text-[10px] lg:text-nowrap 
+              text-text-primary bg-background shadow-shadow-medium shadow-md'
+              techStack={
+                [{name:'React.js'}, {name:'TypeScript'}, {name:'TailwindCSS'},
+                 {name:'React Router v7'}, {name:'Tanstack Start'}, {name:'Framer Motion'},
+                 {name:'Supabase (BaaS)'}, {name:'Strapi (CMS)'}, {name:'REST APIs'},
+                 {name:'Git'}, {name:'Figma'}, {name:'Vite'}, {name:'Vercel'}, 
+                 {name:'Render'}, {name:'Vitest'}, {name:'Jest'}]}
+            />
+          </div>
+          <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
+          <div className="flex flex-col md:flex-row gap-10">
+            <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EDUCATION</span>
+            <div className="flex flex-col gap-10 flex-1">
+              <div className='flex flex-col gap-3'>
+                <div className="flex justify-between gap-4 flex-wrap">
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-md font-bold text-text-primary">B.sc. Estate Management</h4>
+                    <p className="text-sm font-semibold text-accent-text">Nnamdi Azikiwe University</p>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-text-muted text-sm">2019 — 2026</p>
+                  </div>
+                </div>
+                <p className="text-text-secondary text-sm sm:w-[96%] leading-relaxed">
+                  Graduated with Second Class Upper Honours in Estate Management from Nnamdi Azikiwe University. 
+                  The program gave me a strong foundation in property valuation, real estate development finance, 
+                  and feasibility appraisal. I also gained practical experience in building analysis, 
+                  land surveying, and data-driven decision making — skills that helped shape my analytical 
+                  approach to frontend development today.
+                </p>
               </div>
             </div>
           </div>
+          <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
+
         </div>
     </section>
   )

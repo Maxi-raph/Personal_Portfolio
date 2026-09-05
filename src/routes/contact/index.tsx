@@ -43,7 +43,7 @@ function ContactPage() {
                 </div>
                 <div className='md:pt-16'>
                     <div className="bg-surface-elevated inline-flex justify-center items-center gap-2 py-2 px-3 md:py-3 md:px-5 rounded-2xl border border-text-muted shadow-shadow-medium shadow-md">
-                        <span className="inline-block w-3 h-3 rounded-full bg-success"></span>
+                        <span className="flex shrink-0 w-3 h-3 rounded-full bg-success"></span>
                         <h3 className="text-xs md:text-sm text-text-primary font-semibold">Available for new projects</h3>
                     </div>
                 </div>
@@ -119,11 +119,11 @@ function ContactPage() {
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
                             <label htmlFor="subject" className='text-text-primary text-[12px] font-semibold'>Subject</label>
-                            <div  className='relative w-full h-10 input-wrapper
+                            <div  className='w-full h-10
                                 bg-surface-elevated border border-text-muted outline-0
-                                h-10 rounded-xl text-md text-text-primary font-normal px-1'>
+                                rounded-xl text-md text-text-primary font-normal'>
                                 <select name="subject" ref={selectRef} id="subject" className='
-                                absolute top-0 left-0 w-full h-full cursor-pointer 
+                                w-full h-full cursor-pointer focus:ring-2 focus:ring-accent-hover
                                 rounded-xl bg-surface-elevated outline-none'>
                                     <option value="" disabled className='text-text-muted!'>Select subject...</option>
                                     <option value="contract-work">Contract Work</option>
@@ -131,59 +131,37 @@ function ContactPage() {
                                     <option value="collaboration">Collaboration</option>
                                     <option value="other">Other</option>
                                 </select>
-                                <svg
-                                className='absolute inset-0 w-full h-full text-accent-hover
-                                pointer-events-none'
-                                viewBox='0 0 200 20'
-                                preserveAspectRatio='none'>
-                                <rect
-                                 x='1'
-                                 y='1'
-                                 width='198'
-                                 height='18'
-                                 rx='6'
-                                 ry='6'
-                                 fill='none'
-                                 stroke='currentColor'
-                                 strokeWidth='0.8'
-                                 pathLength={100}
-                                 strokeDasharray={100}
-                                 strokeDashoffset={100}
-                                 className='rotate-border'
-                                />
-                                </svg>
-                                
                             </div>
                         </div>
                         <div className='flex flex-1 flex-col gap-1'>
                             <label htmlFor="message" className='text-text-primary text-[12px] font-semibold'>Message</label>
                             <div
-                            className='relative w-full h-40 input-wrapper'>
+                            className='w-full focus:ring focus:ring-accent-hover'>
                             <textarea name="message" id="message" rows={6}
-                            className='
-                                absolute top-0 left-0 w-full h-full
+                            className='w-full focus:ring focus:ring-accent-hover
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4 outline-0
                                 rounded-xl text-md text-text-primary font-normal'
                                 placeholder="Hi Raphael, I'd love to discuss..."/>
                             <svg 
-                            className='absolute bg-green-300/40 inset-0 w-full h-full text-accent-hover
+                            className='absolute inset-0 w-full h-full text-accent-hover
                             pointer-events-none'
-                            viewBox='0 0 200 20'
+                            viewBox='0 0 200 160'
                             preserveAspectRatio='none'
                             >
                             <rect
                             x='1'
                             y='1'
                             width='198'
-                            height='18'
-                            rx='1'
-                            ry='1'
+                            height='158'
+                            rx='5'
+                            ry='5'
+                            fill='none'
                             stroke='currentColor'
                             strokeWidth='0.8'
                             pathLength={100}
                             strokeDasharray={100}
                             strokeDashoffset={100}
-                            className='rotate-border bg-transparent'
+                            className='rotate-border'
                             />
                             </svg>
                             </div>
