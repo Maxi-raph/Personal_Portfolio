@@ -2,8 +2,10 @@ import AnimatedButton from '#/components/AnimatedButton'
 import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
 import { Mail, MapPin, SendIcon } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { supabase } from '#/lib/supabase'
+import { toast } from 'sonner'
 
 export const Route = createFileRoute('/contact/')({
   component: ContactPage,
@@ -16,6 +18,8 @@ export const Route = createFileRoute('/contact/')({
 
 function ContactPage() {
     const {isOpen, setIsOpen} = useNav()
+    const [formData, setFormData] = useState({name:'', email:'', subject:'', message:''})
+    const [isPending, setIsPending] = useState(false)
     const selectRef = useRef<HTMLSelectElement|null>(null)
 
     useEffect(()=>{
@@ -23,6 +27,51 @@ function ContactPage() {
             selectRef.current.selectedIndex = 0
         }
     },[])
+
+
+    const handleSubmit = async(e:React.SyntheticEvent<HTMLFormElement>)=>{
+        e.preventDefault()
+
+        const emptyForm = Object.entries(formData)
+        .filter(([_, value]) => value === '')
+        .map(([key]) => key)
+        
+        if(emptyForm.length == 1){
+         window.alert(`${emptyForm[0]} field is empty`)
+         return
+        }else if(emptyForm.length > 1){
+         window.alert(`${emptyForm.join(', ')} fields are empty`)
+         return
+        }
+
+        setIsPending(true)
+
+        const data = new FormData(e.currentTarget)
+
+        const name = data.get('name') as string
+        const email = data.get('email') as string
+        const subject = data.get('subject') as string
+        const message = data.get('message') as string
+
+        const { error } = await supabase
+        .from('Contact-messages')
+        .insert({
+            name,
+            email,
+            subject,
+            message,
+        })
+
+        setIsPending(false)
+
+        if(error){
+            toast.error('Something went wrong. Please try again.')
+            return
+        }
+        
+        setFormData({name:'', email:'', subject:'', message:''})
+          toast.success('Message sent successfully')
+    }
 
   return(
     <section>
@@ -54,12 +103,12 @@ function ContactPage() {
                     <h3 className="text-text-primary text-xl font-bold">
                     Send a message
                     </h3>
-                    <form action="" onSubmit={()=>null} className='flex flex-col gap-6'>
+                    <form action="" onSubmit={handleSubmit} className='flex flex-col gap-6'>
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="name" className='text-text-primary text-[12px] font-semibold'>Your name</label>
                                 <div className='relative w-full h-10 input-wrapper'>
-                                 <input type="text" id='name' 
+                                 <input type="text" name='name' id='name' value={formData.name} onChange={(e)=>setFormData(prev =>({...prev, 'name':e.target.value}))}
                                  className='absolute top-0 left-0 w-full bg-surface-elevated border border-text-muted py-2 px-6 outline-0
                                   h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                   placeholder='e.g  Raphael  Onwujekwe'/>
@@ -89,7 +138,7 @@ function ContactPage() {
                             <div className='flex flex-1 flex-col gap-1'>
                                 <label htmlFor="email" className='text-text-primary text-[12px] font-semibold'>Email address</label>
                                 <div className='relative w-full h-10 input-wrapper'>
-                                <input type="text" id='email' 
+                                <input type="text" name='email' id='email' value={formData.email} onChange={(e)=>setFormData(prev =>({...prev, 'email':e.target.value}))}
                                 className='absolute top-0 left-0 w-full bg-surface-elevated border border-text-muted py-2 px-6 outline-0
                                  h-10 rounded-xl text-md text-text-primary font-normal placeholder:text-text-muted placeholder:font-normal' 
                                  placeholder='e.g  chibuzor@gmail.com'/>
@@ -122,8 +171,8 @@ function ContactPage() {
                             <div  className='w-full h-10
                                 bg-surface-elevated border border-text-muted outline-0
                                 rounded-xl text-md text-text-primary font-normal'>
-                                <select name="subject" ref={selectRef} id="subject" className='
-                                w-full h-full cursor-pointer focus:ring-2 focus:ring-accent-hover
+                                <select name="subject" ref={selectRef} id="subject" value={formData.subject} onChange={(e)=>setFormData(prev =>({...prev, 'subject':e.target.value}))}
+                                className='w-full h-full cursor-pointer focus:ring-2 focus:ring-accent-hover
                                 rounded-xl bg-surface-elevated outline-none'>
                                     <option value="" disabled className='text-text-muted!'>Select subject...</option>
                                     <option value="contract-work">Contract Work</option>
@@ -137,7 +186,7 @@ function ContactPage() {
                             <label htmlFor="message" className='text-text-primary text-[12px] font-semibold'>Message</label>
                             <div
                             className='w-full focus:ring focus:ring-accent-hover'>
-                            <textarea name="message" id="message" rows={6}
+                            <textarea name="message" id="message" rows={6} value={formData.message} onChange={(e)=>setFormData(prev =>({...prev, 'message':e.target.value}))}
                             className='w-full focus:ring focus:ring-accent-hover
                                 bg-surface-elevated border border-text-muted py-2 pl-6 pr-4 outline-0
                                 rounded-xl text-md text-text-primary font-normal'
@@ -145,9 +194,15 @@ function ContactPage() {
                             </div>
                         </div>
                         <AnimatedButton 
-                        classes='flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full cursor-pointer
-                        transition bg-accent-primary hover:bg-accent-hover text-text-primary text-sm shadow-shadow-medium shadow-lg'
-                        func={()=> undefined}><SendIcon size={16} className='shrink-0'/>Send Message</AnimatedButton>
+                        classes={`flex gap-2 items-center py-3 px-6 rounded-xl flex justify-center items-center w-full 
+                        transition hover:bg-accent-hover text-text-primary text-sm shadow-shadow-medium shadow-lg ${isPending ? 'bg-accent-hover cursor-not-allowed' : 'bg-accent-primary cursor-pointer'}`}
+                        func={()=> undefined}
+                        disabled={isPending}
+                        type='submit'>{isPending ? 'Sending Message...' :
+                         ( <>
+                            <SendIcon size={16} className='shrink-0'/>  Send Message
+                          </> )}
+                        </AnimatedButton>
                     </form>
                 </div>
                 <hr className="block lg:hidden text-text-muted w-full h-0.5 mt-18 mb-18" />

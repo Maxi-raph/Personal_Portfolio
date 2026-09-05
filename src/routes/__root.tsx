@@ -7,6 +7,7 @@ import { NavProvider } from '#/context/navContext'
 import appCss from '../styles.css?url'
 import { FileQuestionMark, FolderOpen, Home } from 'lucide-react';
 import AnimatedLink from '#/components/AnimatedLink'
+import { Toaster } from 'sonner'
 
 
 
@@ -77,6 +78,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           </head>
           <NavProvider>
             <body className="overflow-x-clip">
+              <Toaster 
+                position='top-right'
+                toastOptions={{
+                  className: 'bg-surface-elevated text-text-primary border border-text-muted rounded-xl shadow-lg',
+                }}
+              />
               <Header />
               <main className='px-4'>
                 {children}
