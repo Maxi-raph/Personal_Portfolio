@@ -68,7 +68,7 @@ function ContactPage() {
         }
 
         const { error: emailError } = await supabase.functions.invoke(
-        'send-contact-email',
+        'portfolio-contact-form',
         {
             body: {
             name,
