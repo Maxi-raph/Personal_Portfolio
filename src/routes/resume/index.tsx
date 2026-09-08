@@ -5,12 +5,14 @@ import { createFileRoute } from '@tanstack/react-router'
 import { DownloadIcon, Globe, Mail, MapPin } from 'lucide-react'
 import { useRef, useEffect } from 'react'
 import html2pdf from 'html2pdf.js'
+import ResumePDF from '#/components/ResumePDF'
+import { toast } from 'sonner'
 
 export const Route = createFileRoute('/resume/')({
   component: ResumePage,
   head:()=>({
     meta:[
-      {title: 'My Resume'}
+      {title: "View Raph's Resume"}
     ]
   })
 })
@@ -26,34 +28,47 @@ function ResumePage() {
         }
     },[])
 
-    const downloadPDF = () => {
+    const downloadPDF = async () => {
       const resume = document.getElementById('resume-pdf')
-      
-        if (!resume) return         
 
-      html2pdf()
-        .set({
-          margin: 0,
-          filename: 'Raph-Resume.pdf',
-          image: {
-            type: 'jpeg',
-            quality: 0.98,
-          },
-          html2canvas: {
-            scale: 2,
-          },
-          jsPDF: {
-            unit: 'mm',
-            format: 'a4',
-            orientation: 'portrait',
-          },
-        })
-        .from(resume)
-        .save()
+      if (!resume) {
+        toast.error('Unable to generate resume PDF.')
+        return
+      }
+
+      try {
+        await html2pdf()
+          .set({
+            margin: 0,
+            filename: 'Raph-Resume.pdf',
+            image: {
+              type: 'jpeg',
+              quality: 0.98,
+            },
+            html2canvas: {
+              scale: 2,
+            },
+            jsPDF: {
+              unit: 'mm',
+              format: 'a4',
+              orientation: 'portrait',
+            },
+          })
+          .from(resume)
+          .save()
+
+        toast.success('Resume downloaded successfully!')
+      } catch (error) {
+        console.error(error)
+        toast.error('Failed to download resume.')
+      }
     }
 
   return(
     <section >
+        <div className="absolute left-[-9999px]">
+          <ResumePDF />
+        </div>
         <div className="page-wrap mt-34">
           <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
           onClick={()=>setIsOpen(false)}></div>
