@@ -17,7 +17,7 @@ type TechStackProp = {
   extended?: boolean
 }
 
-const TechStack = ({techStack, styles, classes, extended,speed = 20, containerClass='flex flex-wrap items-center gap-3 mt-9'}:TechStackProp) =>{
+const TechStack = ({techStack, styles, classes, extended, speed = 20, containerClass='flex flex-wrap items-center gap-3 mt-9'}:TechStackProp) =>{
    
   const extendedStack = [...techStack, ...techStack]
    const stack = extended ? extendedStack : techStack

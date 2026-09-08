@@ -4,14 +4,21 @@ import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
 import { DownloadIcon, Globe, Mail, MapPin } from 'lucide-react'
 import { useRef, useEffect } from 'react'
+import html2pdf from 'html2pdf.js'
 
 export const Route = createFileRoute('/resume/')({
   component: ResumePage,
+  head:()=>({
+    meta:[
+      {title: 'My Resume'}
+    ]
+  })
 })
 
 function ResumePage() {
     const {isOpen, setIsOpen} = useNav()
     const selectRef = useRef<HTMLSelectElement|null>(null)
+  
 
     useEffect(()=>{
         if (selectRef.current) {
@@ -19,8 +26,34 @@ function ResumePage() {
         }
     },[])
 
+    const downloadPDF = () => {
+      const resume = document.getElementById('resume-pdf')
+      
+        if (!resume) return         
+
+      html2pdf()
+        .set({
+          margin: 0,
+          filename: 'Raph-Resume.pdf',
+          image: {
+            type: 'jpeg',
+            quality: 0.98,
+          },
+          html2canvas: {
+            scale: 2,
+          },
+          jsPDF: {
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'portrait',
+          },
+        })
+        .from(resume)
+        .save()
+    }
+
   return(
-    <section>
+    <section >
         <div className="page-wrap mt-34">
           <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
           onClick={()=>setIsOpen(false)}></div>
@@ -58,7 +91,7 @@ function ResumePage() {
               classes='w-full md:w-fit bg-accent-primary text-text-primary text-xs hover:bg-accent-hover
               focus:bg-accent-hover active:bg-accent-hover
               py-3 px-4 rounded-4xl flex justify-center items-center gap-2 cursor-pointer'
-              func={()=>null}>
+              func={downloadPDF}>
                 <DownloadIcon size={16} className='shrink-0' />
                 Download PDF
               </AnimatedButton>
