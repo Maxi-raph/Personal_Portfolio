@@ -1,6 +1,6 @@
 import AnimatedLink from '#/components/AnimatedLink'
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react'
+import AnimatedContainer from './AnimatedContainer';
 
 
 const HeroSection = () => {
@@ -8,11 +8,11 @@ const HeroSection = () => {
     return ( 
     <>
      {/* Desktop Hero Section */}
-      <motion.section
-      initial={{opacity:0 , y:30}}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-      suppressHydrationWarning
+      <AnimatedContainer 
+      containerType='section'
+      initial={{ opacity: 0, y:30 }}
+      animate={{ opacity: 1, y:0 }}
+      delay={0.2}
       className={`hidden md:flex gap-3 mt-34 page-wrap`}>
         <div className='md:w-[58%] lg:w-[65%]'>
           <div className="flex gap-2 w-full items-center">
@@ -68,10 +68,15 @@ const HeroSection = () => {
             </span>
           </div>
         </div>
-      </motion.section>
+      </AnimatedContainer >
 
     {/* Mobile Hero Section */}
-      <section className="flex flex-col items-center md:hidden gap-4 mt-32 page-wrap">
+      <AnimatedContainer
+        containerType='section'
+        initial={{ opacity: 0, y:30 }}
+        animate={{ opacity: 1, y:0 }}
+        delay={0.2}
+        className="flex flex-col items-center md:hidden gap-4 mt-32 page-wrap">
           <div className="flex gap-2  w-full justify-center sm:justify-start items-center">
             <span className="flex shrink-0  rounded-full w-2 h-2 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
             <p className="text-[12px] text-text-muted leading-relaxed tracking-widest">AVAILABLE FOR WORK - LAGOS, NIGERIA</p>
@@ -122,7 +127,7 @@ const HeroSection = () => {
               <p className="text-text-muted text-[11px] sm:text-xs">Happy clients</p>
             </div>
           </div>
-      </section>
+      </AnimatedContainer>
     </>
      );
 }

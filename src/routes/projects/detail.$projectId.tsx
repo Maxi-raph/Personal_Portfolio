@@ -1,3 +1,4 @@
+import AnimatedContainer from '#/components/AnimatedContainer'
 import AnimatedLink from '#/components/AnimatedLink'
 import TechStack from '#/components/TechStack'
 import { useNav } from '#/context/navContext'
@@ -20,36 +21,53 @@ function ProjectDetailsPage() {
       <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
       onClick={()=>setIsOpen(false)}></div>
       <div className="page-wrap mt-28">
-        <AnimatedLink 
-        classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
-        route='/projects'
-        func={()=> undefined}><ArrowLeft className='inline-block mr-1 shrink-0' size={14}/>Back To Projects</AnimatedLink>
-        <div className="flex gap-2 items-center mt-4">
-          <p className="text-sm text-accent-text">{Number(project?.id) > 10 ? project?.id : '0' + Number(project?.id)} </p>
-          <span className="block w-fit py-1 px-2 rounded-xl border border-border-default
-          bg-[color-mix(in_oklab,var(--accent-primary)28%,transparent)] text-text-primary text-[11px] shadow-shadow-medium shadow-lg">{project?.category.slice(0,project?.category.length -1)}</span>
-        </div>
-        <h1 className='text-2xl md:text-4xl lg:text-5xl w-84 md:w-auto md:max-w-xl lg:max-w-4xl font-extrabold text-text-primary leading-snug mt-6'>{project?.title}</h1>
-        <p className="text-text-muted text-sm md:text-[16px]! font-normal mt-6 max-w-lg md:max-w-xl! leading-relaxed">
-        {project?.desc}
-        </p>
-        <div className="flex items-center gap-4 mt-6">
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          animate={{ opacity: 1, y:0 }}
+          delay={0.2}>
           <AnimatedLink 
-          classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
-          route='/'
-          func={()=> undefined}><ExternalLink size={16} className='mr-1 shrink-0'/>Live Site</AnimatedLink>
-          <AnimatedLink 
-          classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
-          route='/about'
-          func={()=> undefined}><FaGithub size={16} className='mr-1 shrink-0'/> Github</AnimatedLink>
-        </div>
+          classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
+          route='/projects'
+          func={()=> undefined}><ArrowLeft className='inline-block mr-1 shrink-0' size={14}/>Back To Projects</AnimatedLink>
+          <div className="flex gap-2 items-center mt-4">
+            <p className="text-sm text-accent-text">{Number(project?.id) > 10 ? project?.id : '0' + Number(project?.id)} </p>
+            <span className="block w-fit py-1 px-2 rounded-xl border border-border-default
+            bg-[color-mix(in_oklab,var(--accent-primary)28%,transparent)] text-text-primary text-[11px] shadow-shadow-medium shadow-lg">{project?.category.slice(0,project?.category.length -1)}</span>
+          </div>
+          <h1 className='text-2xl md:text-4xl lg:text-5xl w-84 md:w-auto md:max-w-xl lg:max-w-4xl font-extrabold text-text-primary leading-snug mt-6'>{project?.title}</h1>
+          <p className="text-text-muted text-sm md:text-[16px]! font-normal mt-6 max-w-lg md:max-w-xl! leading-relaxed">
+          {project?.desc}
+          </p>
+
+          <div className="flex items-center gap-4 mt-6">
+            <AnimatedLink 
+            classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
+              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
+            route='/'
+            func={()=> undefined}><ExternalLink size={16} className='mr-1 shrink-0'/>Live Site</AnimatedLink>
+            <AnimatedLink 
+            classes='flex gap-2 items-center py-2.5 px-6 rounded-xl
+              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
+            route='/about'
+            func={()=> undefined}><FaGithub size={16} className='mr-1 shrink-0'/> Github</AnimatedLink>
+          </div>
+        </AnimatedContainer>      
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-        <div className='bg-surface-elevated border border-border-default rounded-3xl w-full h-108'>
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          animate={{ opacity: 1, y:0 }}
+          delay={0.4}
+          className='bg-surface-elevated border border-border-default rounded-3xl w-full h-108'>
           <img src={project?.img} alt={project?.title} className="w-full h-full bg-cover rounded-3xl" />
-        </div>
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-6" />
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}>
         <hr className="text-text-muted w-[90%] mx-auto h-0.5 mb-6" />
         <div className="w-[90%] mx-auto grid gap-3 space-y-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="flex flex-col gap-2">
@@ -81,8 +99,14 @@ function ProjectDetailsPage() {
           </div>
         </div>
         <hr className="text-text-muted w-[90%] mx-auto h-0.5 mt-6" />
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-6 mb-10" />
-        <div className="flex flex-col md:flex-row gap-4 justify-between">
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}
+          className="flex flex-col md:flex-row gap-4 justify-between">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> CHALLENGE</span>
           <div className="flex-1 flex flex-col gap-4">
             <h3 className="text-text-primary text-xl font-bold">
@@ -103,9 +127,14 @@ function ProjectDetailsPage() {
               <li>Developers spending hours re-implementing the same UI patterns</li>
             </ul>
           </div>
-        </div>
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-        <div className="flex flex-col md:flex-row gap-4 justify-between">
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}        
+          className="flex flex-col md:flex-row gap-4 justify-between">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> SOLUTION</span>
           <div className="flex-1 flex flex-col gap-4">
             <h3 className="text-text-primary text-xl font-bold">
@@ -119,7 +148,7 @@ function ProjectDetailsPage() {
               Every component is documented in Storybook with interactive controls, accessibility annotations, and code snippets.
               The system is fully themeable via CSS variables and ships a dark and light mode out of the box.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-2 p-4 bg-surface-elevated border border-border-default rounded-xl">
                 <h4 className="font-bold text-[14px]">40+ components</h4>
                 <p className="text-accent-text text-[11px]">Fully documented and tested</p>
@@ -138,26 +167,51 @@ function ProjectDetailsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-        <div className="flex flex-col gap-4">
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}
+          className="flex flex-col gap-4">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> GALLERY</span>
           <div className="grid grid-cols-12 gap-4">
-            <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-12 row-span-16">
+            <AnimatedContainer
+              containerType='div'
+              initial={{ opacity: 0, y:20 }}
+              whileInView={{ opacity: 1, y:0 }}
+              delay={0.3}
+              className="bg-surface-elevated border border-border-default rounded-3xl col-span-12 row-span-16">
               <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
-            </div>
+            </AnimatedContainer>
             <div className="col-span-12 row-span-12 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
+              <AnimatedContainer
+                containerType='div'
+                initial={{ opacity: 0, y:20 }}
+                whileInView={{ opacity: 1, y:0 }}
+                delay={0.6}
+                className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
                 <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
-              </div>
-              <div className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
+              </AnimatedContainer>
+              <AnimatedContainer
+                containerType='div'
+                initial={{ opacity: 0, y:20 }}
+                whileInView={{ opacity: 1, y:0 }}
+                delay={0.9}        
+                className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
                 <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
-              </div>
+              </AnimatedContainer>
             </div>
           </div>
-        </div>
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-        <div className="flex flex-col md:flex-row gap-4 justify-between">
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}
+          className="flex flex-col md:flex-row gap-4 justify-between">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> RESULTS</span>
           <div className="flex-1 flex flex-col gap-4">
             <h3 className="text-text-primary text-xl font-bold">
@@ -172,9 +226,14 @@ function ProjectDetailsPage() {
               it's infrastructure you maintain. The most important work was writing great documentation and making contributors feel welcome.
             </p>
           </div>
-        </div>
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <AnimatedLink 
           classes={`${Number(project?.id) <= 1 && 'opacity-50 cursor-not-allowed'}
           flex flex-col gap-2 p-4 bg-surface-elevated 
@@ -207,7 +266,7 @@ function ProjectDetailsPage() {
               <ArrowRight size={16} className='text-accent-primary shrink-0'/>
             </div>
           </AnimatedLink>
-        </div>
+        </AnimatedContainer>
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
       </div>
     </section>

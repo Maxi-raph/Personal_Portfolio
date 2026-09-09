@@ -1,3 +1,4 @@
+import AnimatedContainer from "#/components/AnimatedContainer";
 import AnimatedLink from "#/components/AnimatedLink";
 import TechStack from "#/components/TechStack";
 import { useNav } from "#/context/navContext";
@@ -13,11 +14,16 @@ function AboutPage ()  {
     const {isOpen, setIsOpen} = useNav()
     
     return (
-        <section className='relative'>
+        <section className='relative page-wrap'>
             <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
             onClick={()=>setIsOpen(false)}></div>
-            <div className="page-wrap mt-34">
-              <div className="mx-auto md:mx-0">
+            <div className="mt-34">
+              <AnimatedContainer
+               containerType='div'
+               initial={{ opacity: 0, x:50 }}
+               whileInView={{ opacity: 1, x:0 }}
+               delay={0.2}
+               className="mx-auto md:mx-0">
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> ABOUT ME</span>
                 <h1 className="text-3xl md:text-5xl text-text-primary font-extrabold max-w-xl md:max-w-2xl mb-6 md:leading-16">
                     Frontend developer who
@@ -28,8 +34,13 @@ function AboutPage ()  {
                     and carefully crafted web products. I believe the best interfaces to be
                     invisible: they should be able to guide users naturally without getting in the way.
                 </p>
-              </div>
-              <div className="flex flex-col md:flex-row gap-6 md:gap-13 lg:gap-18 mt-14">
+              </AnimatedContainer>
+              <AnimatedContainer
+               containerType='div'
+               initial={{ opacity: 0, x:-50 }}
+               whileInView={{ opacity: 1, x:0 }}
+               delay={0.6}              
+               className="flex flex-col md:flex-row gap-6 md:gap-13 lg:gap-18 mt-14">
                 <div className="w-[70%] mx-auto sm:w-[50%] md:w-[26%] lg:w-[21%]">
                     <div className="w-full h-64 rounded-3xl mb-3">
                         <img src={undefined} alt="" className="w-full h-full object-cover rounded-3xl"/>
@@ -68,15 +79,24 @@ function AboutPage ()  {
                         </div>
                     </div>
                 </div>
-              </div>
+              </AnimatedContainer>
             </div>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
-            <div className="page-wrap">
+            <AnimatedContainer
+             containerType='section'
+             initial={{ opacity: 0, y:20 }}
+             whileInView={{ opacity: 1, y:0 }}
+             delay={0.2}>
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> EXPERIENCE</span>
                 <h2 className="text-text-primary text-2xl font-bold mb-12">
                     Where I've worked
                 </h2>
-                <div className="flex flex-col md:flex-row gap-3">
+                <AnimatedContainer
+                 containerType='div'
+                 initial={{ opacity: 0, x:150 }}
+                 whileInView={{ opacity: 1, x:0 }}
+                 delay={0.2}            
+                 className="flex flex-col md:flex-row gap-3">
                     <span className="text-xs text-text-secondary md:w-[16%]">2025 — present</span>
                     <div className="flex flex-col gap-3 flex-1">
                         <h4 className="text-sm font-bold text-text-primary">Frontend Developer (Intern)</h4>
@@ -85,9 +105,14 @@ function AboutPage ()  {
                           Worked with fellow interns across different tech stacks to
                           build a performant, pixel-perfect learning management system.</p>
                     </div>
-                </div>
+                </AnimatedContainer>
                 <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-                <div className="flex flex-col md:flex-row gap-3">
+                <AnimatedContainer
+                 containerType='div'
+                 initial={{ opacity: 0, x:150 }}
+                 whileInView={{ opacity: 1, x:0 }}
+                 delay={0.4}               
+                 className="flex flex-col md:flex-row gap-3">
                     <span className="text-xs text-text-secondary md:w-[16%]">2024 — 2025</span>
                     <div className="flex flex-col gap-3 flex-1">
                         <h4 className="text-sm font-bold text-text-primary">Frontend Developer</h4>
@@ -96,9 +121,14 @@ function AboutPage ()  {
                             Leading frontend architecture 
                             for a fintech SaaS platform serving 200k+ users across West Africa.</p>
                     </div>
-                </div>
+                </AnimatedContainer>
                 <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
-                <div className="flex flex-col md:flex-row gap-3">
+                <AnimatedContainer
+                 containerType='div'
+                 initial={{ opacity: 0, x:150 }}
+                 whileInView={{ opacity: 1, x:0 }}
+                 delay={0.6}               
+                 className="flex flex-col md:flex-row gap-3">
                     <span className="text-xs text-text-secondary md:w-[16%]">2021 — 2023</span>
                     <div className="flex flex-col gap-3 flex-1">
                         <h4 className="text-sm font-bold text-text-primary">Frontend Developer</h4>
@@ -106,10 +136,14 @@ function AboutPage ()  {
                         <p className="text-sm text-text-secondary w-[90%]">
                            Built and maintained the design system and core product interfaces from scratch.</p>
                     </div>
-                </div>
-            </div>
+                </AnimatedContainer>
+            </AnimatedContainer>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
-            <div className="page-wrap">
+            <AnimatedContainer
+             containerType='div'
+             initial={{ opacity: 0, x:150 }}
+             whileInView={{ opacity: 1, x:0 }}
+             delay={0.2}>
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> TECH STACK</span>
                 <h2 className="text-text-primary text-2xl font-bold mb-6">
                    Tools I work With
@@ -134,7 +168,7 @@ function AboutPage ()  {
                     text-xs font-bold border border-text-muted shadow-shadow-medium shadow-lg
                     transition-all'
                     /> 
-            </div>
+            </AnimatedContainer>
             <hr className="text-text-muted w-full h-0.5 mt-18" />
         </section>
      );

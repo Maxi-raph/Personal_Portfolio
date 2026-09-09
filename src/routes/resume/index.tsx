@@ -4,9 +4,9 @@ import { useNav } from '#/context/navContext'
 import { createFileRoute } from '@tanstack/react-router'
 import { DownloadIcon, Globe, Mail, MapPin } from 'lucide-react'
 import { useRef, useEffect } from 'react'
-import html2pdf from 'html2pdf.js'
 import ResumePDF from '#/components/ResumePDF'
-import { toast } from 'sonner'
+import { downloadPdf } from '#/services/DownloadPdf'
+import AnimatedContainer from '#/components/AnimatedContainer'
 
 export const Route = createFileRoute('/resume/')({
   component: ResumePage,
@@ -28,53 +28,6 @@ function ResumePage() {
         }
     },[])
 
- const downloadPDF = async () => {
-  const resume = document.getElementById('resume-pdf')
-
-  if (!resume) {
-    toast.error('Unable to generate resume PDF.')
-    return
-  }
-
-  try {
-    const pdfBlob = await html2pdf()
-      .set({
-        margin: 0,
-        filename: 'Raph-Resume.pdf',
-        image: {
-          type: 'jpeg',
-          quality: 0.98,
-        },
-        html2canvas: {
-          scale: 2,
-        },
-        jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait',
-        },
-      })
-      .from(resume)
-      .outputPdf('blob')
-
-    const url = URL.createObjectURL(pdfBlob)
-
-    const link = document.createElement('a')
-    link.href = url
-    link.download = 'Raph-Resume.pdf'
-
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-
-    URL.revokeObjectURL(url)
-
-    toast.success('Resume downloaded successfully!')
-  } catch (error) {
-    console.error(error)
-    toast.error('Failed to download resume.')
-  }
-}
 
   return(
     <section >
@@ -84,7 +37,13 @@ function ResumePage() {
         <div className="page-wrap mt-34">
           <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
           onClick={()=>setIsOpen(false)}></div>
-          <div className="flex flex-col md:flex-row justify-between gap-4">
+          <AnimatedContainer 
+           type='load'
+           containerType={'section'}
+           initial={{ opacity: 0, y: 50 }}
+           animate={{ opacity: 1, y: 0 }}
+           delay={0}
+           className="flex flex-col md:flex-row justify-between gap-4">
             <div className='md:w-[78%]'>
               <span className="md:w-[20%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>RESUME</span>
               <h1 className="text-4xl lg:text-5xl text-text-primary font-extrabold md:max-w-md lg:max-w-xl mb-2 md:leading-13 lg:leading-16">
@@ -118,14 +77,19 @@ function ResumePage() {
               classes='w-full md:w-fit bg-accent-primary text-text-primary text-xs hover:bg-accent-hover
               focus:bg-accent-hover active:bg-accent-hover
               py-3 px-4 rounded-4xl flex justify-center items-center gap-2 cursor-pointer'
-              func={downloadPDF}>
+              func={downloadPdf}>
                 <DownloadIcon size={16} className='shrink-0' />
                 Download PDF
               </AnimatedButton>
             </div>
-          </div>
+          </AnimatedContainer>
           <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
-          <div className="flex flex-col md:flex-row gap-10">
+          <AnimatedContainer 
+           containerType={'section'}
+           delay={0.3}
+           initial={{ opacity: 0, x: 150 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           className="flex flex-col md:flex-row gap-10">
             <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EXPERIENCE</span>
             <div className="flex flex-col gap-10 flex-1">
               <div className='flex flex-col gap-3'>
@@ -194,9 +158,14 @@ function ResumePage() {
                 />
               </div>              
             </div>
-          </div>
+          </AnimatedContainer>
           <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
-          <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+          <AnimatedContainer
+           containerType={'section'}
+           delay={0.3}
+           initial={{ opacity: 0, x: -150 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           className="flex flex-col md:flex-row gap-6 md:gap-10">
             <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>SKILLS</span>
             {/*Desktop version for skills*/}
             <div className="hidden flex-1 md:grid md:grid-cols-2 gap-8">
@@ -251,9 +220,14 @@ function ResumePage() {
                  {name:'Git'}, {name:'Figma'}, {name:'Vite'}, {name:'Vercel'}, 
                  {name:'Render'}, {name:'Vitest'}, {name:'Jest'}]}
             />
-          </div>
+          </AnimatedContainer>
           <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
-          <div className="flex flex-col md:flex-row gap-10">
+          <AnimatedContainer
+           containerType={'section'}
+           delay={0.3}
+           initial={{ opacity: 0, x: 150 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           className="flex flex-col md:flex-row gap-10">
             <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EDUCATION</span>
             <div className="flex flex-col gap-10 flex-1">
               <div className='flex flex-col gap-3'>
@@ -275,7 +249,7 @@ function ResumePage() {
                 </p>
               </div>
             </div>
-          </div>
+          </AnimatedContainer>
           <hr className="block text-text-muted w-full h-0.5 mt-18 mb-18" />
 
         </div>

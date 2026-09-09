@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { supabase } from '#/lib/supabase'
 import { toast } from 'sonner'
+import AnimatedContainer from '#/components/AnimatedContainer'
 
 export const Route = createFileRoute('/contact/')({
   component: ContactPage,
@@ -61,7 +62,6 @@ function ContactPage() {
         })
 
         if (dbError) {
-            console.error(dbError)
             toast.error('Something went wrong. Please try again.')
             setIsPending(false)
             return
@@ -80,7 +80,6 @@ function ContactPage() {
         )
 
         if (emailError) {
-        console.error(emailError)
         toast.error('Message saved, but email notification failed.')
         setIsPending(false)
         return
@@ -96,7 +95,13 @@ function ContactPage() {
         <div className="page-wrap mt-34 relative">
             <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
             onClick={()=>setIsOpen(false)}></div>
-            <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-2 lg:gap-6">
+            <AnimatedContainer
+             type='load'
+             containerType={'section'}
+             initial={{ opacity: 0, y: 50 }}
+             animate={{ opacity: 1, y: 0 }}
+             delay={0}
+             className="flex flex-col md:flex-row justify-between gap-6 md:gap-2 lg:gap-6">
                 <div>
                     <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span>CONTACT</span>
                     <h1 className="text-4xl lg:text-5xl text-text-primary font-extrabold md:max-w-md lg:max-w-xl mb-6 md:leading-13 lg:leading-16">
@@ -114,10 +119,15 @@ function ContactPage() {
                         <h3 className="text-xs md:text-sm text-text-primary font-semibold">Available for new projects</h3>
                     </div>
                 </div>
-            </div>
+            </AnimatedContainer>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
             <div className="flex flex-col lg:flex-row gap-8">
-                <div className="flex flex-col gap-4 lg:w-[70%] bg-surface-elevated border border-text-muted p-7 lg:h-fit rounded-xl">
+                <AnimatedContainer
+                 containerType={'section'}
+                 initial={{ opacity: 0, y: 50 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 delay={0}                
+                 className="flex flex-col gap-4 lg:w-[70%] bg-surface-elevated border border-text-muted p-7 lg:h-fit rounded-xl">
                     <h3 className="text-text-primary text-xl font-bold">
                     Send a message
                     </h3>
@@ -222,14 +232,24 @@ function ContactPage() {
                           </> )}
                         </AnimatedButton>
                     </form>
-                </div>
+                </AnimatedContainer>
                 <hr className="block lg:hidden text-text-muted w-full h-0.5 mt-18 mb-18" />
-                <div className="flex flex-col gap-4 lg:w-[30%]">
+                <AnimatedContainer
+                 containerType='section'
+                 initial={{ opacity: 0, y:20 }}
+                 animate={{ opacity: 1, y:0 }}
+                 delay={0.2}
+                 className="flex flex-col gap-4 lg:w-[30%]">
                     <h3 className="text-text-primary text-xl font-bold">
                      Other ways to reach me
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-                        <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
+                        <AnimatedContainer
+                         containerType='div'
+                         initial={{ opacity: 0, x:150 }}
+                         whileInView={{ opacity: 1, x:0 }}
+                         delay={0.2}
+                         className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <Mail size={19} className='shrink-0'/>
@@ -241,8 +261,13 @@ function ContactPage() {
                                         Best for project inquiries and collaborations.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
+                        </AnimatedContainer>
+                        <AnimatedContainer
+                         containerType='div'
+                         initial={{ opacity: 0, x:150 }}
+                         whileInView={{ opacity: 1, x:0 }}
+                         delay={0.4}
+                         className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaTwitter size={19} className='shrink-0'/>
@@ -253,8 +278,13 @@ function ContactPage() {
                                     <p className="text-text-primary text-[11px] leading-6 font-semibold">My DM is always open.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
+                        </AnimatedContainer>
+                        <AnimatedContainer
+                         containerType='div'
+                         initial={{ opacity: 0, x:150 }}
+                         whileInView={{ opacity: 1, x:0 }}
+                         delay={0.6}
+                         className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaLinkedin size={19} className='shrink-0'/>
@@ -266,8 +296,13 @@ function ContactPage() {
                                         Professional background and endorsements.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
+                        </AnimatedContainer>
+                        <AnimatedContainer
+                         containerType='div'
+                         initial={{ opacity: 0, x:150 }}
+                         whileInView={{ opacity: 1, x:0 }}
+                         delay={0.8}
+                         className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <div className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaGithub size={19} className='shrink-0'/>
@@ -279,9 +314,14 @@ function ContactPage() {
                                         Browse my open source contributions.</p>
                                 </div>
                             </div>
-                        </div>
+                        </AnimatedContainer>
                     </div>
-                    <div className="bg-surface-elevated border border-text-muted rounded-xl p-3">
+                    <AnimatedContainer
+                     containerType='div'
+                     initial={{ opacity: 0, x:150 }}
+                     whileInView={{ opacity: 1, x:0 }}
+                     delay={1}                    
+                     className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                         <div className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
                             <MapPin size={19} className='shrink-0 text-gray-600'/>
                             <div className="flex flex-col gap-1">
@@ -290,8 +330,8 @@ function ContactPage() {
                                     WAT — UTC+1</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </AnimatedContainer>
+                </AnimatedContainer>
             </div>
             <hr className="text-text-muted w-full h-0.5 mt-18" />
         </div>

@@ -1,4 +1,5 @@
 import AnimatedButton from '#/components/AnimatedButton'
+import AnimatedContainer from '#/components/AnimatedContainer'
 import AnimatedLink from '#/components/AnimatedLink'
 import ProjectCard from '#/components/ProjectCard'
 import TechStack from '#/components/TechStack'
@@ -26,7 +27,12 @@ function ProjectsPage() {
         <div className="page-wrap mt-34 relative">
             <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
             onClick={()=>setIsOpen(false)}></div>
-            <div className="flex flex-col md:justify-between md:items-end md:flex-row gap-6">
+            <AnimatedContainer
+                containerType='div'
+                initial={{ opacity: 0, y:20 }}
+                animate={{ opacity: 1, y:0 }}
+                delay={0.2}
+                className="flex flex-col md:justify-between md:items-end md:flex-row gap-6">
                 <div className='flex flex-col gap-4'>
                     <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> WORK</span>
                     <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-md">
@@ -45,9 +51,14 @@ function ProjectsPage() {
                         projects total
                     </span>
                 </p>
-            </div>
+            </AnimatedContainer>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-6" />
-            <div className="flex flex-col gap-6">
+            <AnimatedContainer
+                containerType='div'
+                initial={{ opacity: 0, y:20 }}
+                whileInView={{ opacity: 1, y:0 }}
+                delay={0.2}
+                className="flex flex-col gap-6">
                 <div className="flex gap-2 w-full items-center">
                     <span className="block rounded-full w-1.5 h-1.5 bg-accent-primary shadow-3xl shadow-accent-primary"></span>
                     <p className="text-[10px] text-text-secondary font-semibold leading-relaxed tracking-widest">FEATURED</p>
@@ -83,10 +94,15 @@ function ProjectsPage() {
                         func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1 shrink-0' size={14}/></AnimatedLink>
                     </div>
                 </div>
-            </div>
+            </AnimatedContainer>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-6" />
             <div>
-                <div className="flex flex-wrap gap-4 whitespace-nowrap">
+                <AnimatedContainer
+                    containerType='div'
+                    initial={{ opacity: 0, y:20 }}
+                    whileInView={{ opacity: 1, y:0 }}
+                    delay={0.2}
+                    className="flex flex-wrap gap-4 whitespace-nowrap">
                 {categoryArr.map((cat)=>(
                     <AnimatedButton
                         key={cat}
@@ -100,10 +116,15 @@ function ProjectsPage() {
                         {cat}
                     </AnimatedButton>
                 ))}
-                </div>
+                </AnimatedContainer>
             </div>
             <hr className="text-text-muted w-full h-0.5 mt-6 mb-18" />
-            <div className="flex flex-col gap-4">
+            <AnimatedContainer
+                containerType='div'
+                initial={{ opacity: 0, y:20 }}
+                whileInView={{ opacity: 1, y:0 }}
+                delay={0.2}
+                className="flex flex-col gap-4">
                 <h2 className="text-text-primary text-4xl font-bold">Projects</h2>
                 {filteredProjects.length > 0
                 ? (<div 
@@ -129,8 +150,13 @@ function ProjectsPage() {
                             No {category} found...
                         </p>
                  </div>)}
-            </div>
-            <div className="my-8 flex justify-center items-center py-2 px-1 w-full h-70 rounded-3xl bg-surface border border-border-default">
+            </AnimatedContainer>
+            <AnimatedContainer
+                containerType='div'
+                initial={{ opacity: 0, y:20 }}
+                whileInView={{ opacity: 1, y:0 }}
+                delay={0.2}
+                className="my-8 flex justify-center items-center py-2 px-1 w-full h-70 rounded-3xl bg-surface border border-border-default">
                 <div className="flex justify-center items-center flex-col gap-4">
                     <div className="rounded-full w-12 h-12 flex justify-center items-center bg-surface-elevated border border-border-default">
                         <ClipLoader
@@ -143,7 +169,7 @@ function ProjectsPage() {
                     <h3 className="font-bold text-text-primary text-center text-2xl">More Projects Incoming</h3>
                     <p className="text-text-secondary text-center text-xs">Currently building more case studies. Check back soon.</p>
                 </div>
-            </div>
+            </AnimatedContainer>
         </div>
         <hr className="text-text-muted w-full h-0.5" />
     </section>

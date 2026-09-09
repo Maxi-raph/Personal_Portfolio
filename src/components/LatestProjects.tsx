@@ -2,6 +2,7 @@ import AnimatedLink from '#/components/AnimatedLink'
 import { ArrowRight } from 'lucide-react'
 import ProjectCard from '#/components/ProjectCard'
 import { projectsArr } from '#/services/projectsArr';
+import AnimatedContainer from './AnimatedContainer';
 
 
 const LatestProjects = () => {
@@ -13,7 +14,12 @@ const LatestProjects = () => {
 
     return ( 
     <>
-      <section className={`page-wrap`}>
+      <AnimatedContainer 
+       containerType='section'
+       initial={{ opacity: 0, y:20 }} 
+       whileInView={{ opacity: 1, y:0 }}
+       delay={0.6}
+       className={`page-wrap`}>
        <span className="text-accent-text mb-6 text-[11px]">// SELECTED WORK</span>
        <div className="flex flex-wrap justify-between gap-4 items-center mt-2 mb-6">
         <h2 className="font-bold text-text-primary text-2xl md:text-3xl! lg:text-4xl!">Latest Projects</h2>
@@ -27,7 +33,7 @@ const LatestProjects = () => {
          <ProjectCard key={project.title} title={project.title} img={undefined} id={Number(project.id)} route={project.route} params={{projectId:String(Number(project?.id)) }} stacks={project.stacks} desc={project.desc}/>
          ))}
        </div>
-      </section>
+      </AnimatedContainer>
     </>
      );
 }

@@ -18,6 +18,7 @@ import {
   SiGit, 
   SiNodedotjs 
 } from 'react-icons/si'
+import AnimatedContainer from '#/components/AnimatedContainer'
 
 
 export const Route = createFileRoute('/')(
@@ -43,15 +44,30 @@ function HomePage() {
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <LatestProjects />
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
-      <section className="page-wrap">
+      <AnimatedContainer
+        containerType='section'
+        initial={{ opacity: 0, y:0 }}
+        whileInView={{ opacity: 1, y:0 }}
+        delay={0.3}
+        className="page-wrap">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className='flex flex-col gap-4'>
+          <AnimatedContainer
+            containerType='div'
+            initial={{ opacity: 0, x:-50 }}
+            whileInView={{ opacity: 1, x:0 }}
+            delay={0.2} 
+            className='flex flex-col gap-4'>
             <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> ABOUT ME</span>
             <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-md">
               Good design isn't just how it looks — it's how it works, performs, and feels.
             </h2>
-          </div>
-          <div className='flex flex-col gap-4 mt-4 md:mt-0'>
+          </AnimatedContainer>
+          <AnimatedContainer
+            containerType='div'
+            initial={{ opacity: 0, x:50 }}
+            whileInView={{ opacity: 1, x:0 }}
+            delay={0.2}
+            className='flex flex-col gap-4 mt-4 md:mt-0'>
             <p className="text-text-secondary text-sm leading-relaxed">
               I'm Raphael Onwujekwe — a frontend engineer based in Lagos with 2+ years building fast, accessible, and carefully crafted web products.
               I believe the best interfaces are invisible: they guide users naturally without getting in the way.
@@ -67,11 +83,16 @@ function HomePage() {
               route='/projects'
               func={()=> undefined}>Full Bio <ArrowRight size={16} className='shrink-0'/></AnimatedLink>
             </div>
-          </div>
+          </AnimatedContainer>
         </div>
-      </section>
+      </AnimatedContainer>
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
-      <section className="page-wrap flex flex-col gap-3">
+      <AnimatedContainer
+        containerType='section'
+        initial={{ opacity: 0, y:20 }}
+        whileInView={{ opacity: 1, y:0 }}
+        delay={0.2}
+        className="page-wrap flex flex-col gap-3">
             <span className="text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> TECH STACK</span>
             <h2 className="text-3xl font-bold text-text-primary max-w-md">
               Tools I work with
@@ -98,20 +119,35 @@ function HomePage() {
                 transition-all'
                 />
             </div>
-      </section>
+      </AnimatedContainer
+      
+        >
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <section className='page-wrap grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div className='flex flex-col gap-6'>
-          <span className="text-accent-text text-[11px]"><span className="inline-block mr-2">//</span>CONTACT</span>
-          <h2 className="text-2xl md:text-3xl! font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-lg">
-            Have a project in mind? Let's build something great.
-          </h2>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            I'm currently open to freelance and full-time opportunities. Whether it's a new product,
-            a UI overhaul, or a collaboration — I'd love to hear from you.
-          </p>
+          <AnimatedContainer
+            containerType='div'
+            initial={{ opacity: 0, x:-50 }}
+            whileInView={{ opacity: 1, x:0 }}
+            delay={0.2}
+            className="flex flex-col gap-6"
+            >
+            <span className="text-accent-text text-[11px]"><span className="inline-block mr-2">//</span>CONTACT</span>
+            <h2 className="text-2xl md:text-3xl! font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-lg">
+              Have a project in mind? Let's build something great.
+            </h2>
+            <p className="text-text-secondary text-sm leading-relaxed">
+              I'm currently open to freelance and full-time opportunities. Whether it's a new product,
+              a UI overhaul, or a collaboration — I'd love to hear from you.
+            </p>
+          </AnimatedContainer>
           {/* Desktop external links */}
-          <div className='hidden md:grid grid-cols-2 items-center gap-4 w-fit'>
+          <AnimatedContainer
+            containerType='div'
+            initial={{ opacity: 0, y:20 }}
+            whileInView={{ opacity: 1, y:0 }}
+            delay={0.2}
+            className='hidden md:grid grid-cols-2 items-center gap-4 w-fit'>
             <a href="" target='_blank' className='col-span-1'>
               <AnimatedButton 
               classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
@@ -139,10 +175,15 @@ function HomePage() {
                 <FaGithub className='shrink-0'/> Github
               </AnimatedButton>
             </a>
-          </div>
+          </AnimatedContainer>
           <hr className="block md:hidden text-text-muted w-full h-0.5" />
         </div>
-        <div className='flex flex-col md:text-end gap-4'>
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, x:50 }}
+          whileInView={{ opacity: 1, x:0 }}
+          delay={0.2}
+          className='flex flex-col md:text-end gap-4'>
           <div className="flex justify-between md:flex-col md:justify-start gap-2">
             <p className="text-text-muted text-xs">Email</p>
             <p className="text-text-primary text-xs">onwujekwechibuzor@gmail.com</p>
@@ -159,9 +200,14 @@ function HomePage() {
             </p>
           </div>
           <hr className="block md:hidden text-text-muted w-full h-0.5 mt-4" />
-        </div>
+        </AnimatedContainer>
         {/*Mobile external links*/}
-        <div className='grid grid-cols-10 md:hidden w-full gap-4'>
+        <AnimatedContainer
+          containerType='div'
+          initial={{ opacity: 0, y:20 }}
+          whileInView={{ opacity: 1, y:0 }}
+          delay={0.2}
+          className='grid grid-cols-10 md:hidden w-full gap-4'>
           <a href="" target='_blank' className='col-span-10'>
             <AnimatedButton 
             classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
@@ -189,7 +235,7 @@ function HomePage() {
               <FaGithub className='shrink-0'/> Github
             </AnimatedButton>
           </a>
-        </div>
+        </AnimatedContainer>
       </section>
       <hr className="text-text-muted w-full h-0.5 mt-10" />
     </main>
