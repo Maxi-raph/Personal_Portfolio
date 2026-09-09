@@ -53,15 +53,15 @@ function ResumePage() {
                 Frontend Developer
               </p>
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-3">
-                <a href='https://' target='_blank' className="flex gap-1 items-center text-xs text-text-muted hover:text-accent-hover focus:text-accent-hover active:text-accent-hover">
+                <a href='https://www.google.com/maps?q=Lagos,Nigeria' target='_blank' rel='noopener noreferrer' className="flex gap-1 items-center text-xs text-text-muted hover:text-accent-hover focus:text-accent-hover active:text-accent-hover">
                   <MapPin size={19} className='shrink-0'/>
                   Lagos, Nigeria
                 </a>
-                <a href='mailto:onwujekwechibuzor@gmail.com' className="flex gap-1 items-center text-xs text-text-muted hover:text-accent-hover focus:text-accent-hover active:text-accent-hover">
+                <a href='https://mail.google.com/mail/?view=cm&fs=1&to=onwujekwechibuzor@gmail.com' target="_blank" rel='noopener noreferrer' className="flex gap-1 items-center text-xs text-text-muted hover:text-accent-hover focus:text-accent-hover active:text-accent-hover">
                   <Mail size={19} className='shrink-0'/>
                   onwujekwechibuzor@gmail.com
                 </a>
-                <a href='https://github.com/Maxi-raph' target='_blank' className="flex gap-1 items-center text-xs  text-text-muted  hover:text-accent-hover focus:text-accent-hover active:text-accent-hover">
+                <a href='https://github.com/Maxi-raph' target='_blank' rel='noopener noreferrer' className="flex gap-1 items-center text-xs  text-text-muted  hover:text-accent-hover focus:text-accent-hover active:text-accent-hover">
                   <Globe size={19} className='shrink-0'/>
                   github.com/Maxi-raph
                 </a>

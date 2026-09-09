@@ -250,7 +250,11 @@ function ContactPage() {
                          whileInView={{ opacity: 1, x:0 }}
                          delay={0.2}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
+                            <a
+                                href='https://mail.google.com/mail/?view=cm&fs=1&to=onwujekwechibuzor@gmail.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <Mail size={19} className='shrink-0'/>
                                 </div>
@@ -260,7 +264,7 @@ function ContactPage() {
                                     <p className="text-text-primary text-[11px] lg:w-[70%] leading-6 font-semibold">
                                         Best for project inquiries and collaborations.</p>
                                 </div>
-                            </div>
+                            </a>
                         </AnimatedContainer>
                         <AnimatedContainer
                          containerType='div'
@@ -268,7 +272,11 @@ function ContactPage() {
                          whileInView={{ opacity: 1, x:0 }}
                          delay={0.4}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
+                            <a 
+                                href='https://x.com/raph_maxi?s=11'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaTwitter size={19} className='shrink-0'/>
                                 </div>
@@ -277,7 +285,7 @@ function ContactPage() {
                                     <p className="text-accent-text text-[11px] font-semibold">@raph_maxi</p>
                                     <p className="text-text-primary text-[11px] leading-6 font-semibold">My DM is always open.</p>
                                 </div>
-                            </div>
+                            </a>
                         </AnimatedContainer>
                         <AnimatedContainer
                          containerType='div'
@@ -285,7 +293,11 @@ function ContactPage() {
                          whileInView={{ opacity: 1, x:0 }}
                          delay={0.6}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
+                            <a 
+                                href='https://www.linkedin.com/in/chibuzoronwujekwe?utm_source=share&utm_campaign=share_via&utm_content=profile'
+                                target='_blank'
+                                rel='noopener noreferrer'                
+                                className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaLinkedin size={19} className='shrink-0'/>
                                 </div>
@@ -295,7 +307,7 @@ function ContactPage() {
                                     <p className="text-text-primary text-[11px] lg:w-[70%] leading-6 font-semibold">
                                         Professional background and endorsements.</p>
                                 </div>
-                            </div>
+                            </a>
                         </AnimatedContainer>
                         <AnimatedContainer
                          containerType='div'
@@ -303,7 +315,11 @@ function ContactPage() {
                          whileInView={{ opacity: 1, x:0 }}
                          delay={0.8}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                            <div className="flex flex-wrap sm:flex-nowrap gap-4">
+                            <a 
+                                href='https://github.com/Maxi-raph'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className="flex flex-wrap sm:flex-nowrap gap-4">
                                 <div className="bg-accent-primary p-2 rounded-lg h-fit w-fit">
                                     <FaGithub size={19} className='shrink-0'/>
                                 </div>
@@ -313,7 +329,7 @@ function ContactPage() {
                                     <p className="text-text-primary text-[11px] lg:w-[70%] leading-6 font-semibold">
                                         Browse my open source contributions.</p>
                                 </div>
-                            </div>
+                            </a>
                         </AnimatedContainer>
                     </div>
                     <AnimatedContainer
@@ -322,14 +338,18 @@ function ContactPage() {
                      whileInView={{ opacity: 1, x:0 }}
                      delay={1}                    
                      className="bg-surface-elevated border border-text-muted rounded-xl p-3">
-                        <div className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
+                        <a
+                            href='https://www.google.com/maps?q=Lagos,Nigeria' 
+                            target='_blank' 
+                            rel='noopener noreferrer' 
+                            className="flex flex-wrap sm:flex-nowrap gap-4 items-center">
                             <MapPin size={19} className='shrink-0 text-gray-600'/>
                             <div className="flex flex-col gap-1">
                                 <h4 className="text-text-primary text-sm">Lagos, Nigeria</h4>
                                 <p className="text-text-muted text-[11px] leading-6 font-semibold">
                                     WAT — UTC+1</p>
                             </div>
-                        </div>
+                        </a>
                     </AnimatedContainer>
                 </AnimatedContainer>
             </div>

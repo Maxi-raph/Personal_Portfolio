@@ -1,4 +1,3 @@
-import AnimatedButton from '#/components/AnimatedButton'
 import AnimatedLink from '#/components/AnimatedLink'
 import LatestProjects from '#/components/LatestProjects'
 import HeroSection from '#/components/HeroSection'
@@ -80,7 +79,7 @@ function HomePage() {
               <AnimatedLink 
               classes='flex gap-2 shadow-shadow-medium shadow-lg items-center py-2.5 px-6 rounded-xl
                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm'
-              route='/projects'
+              route='/about'
               func={()=> undefined}>Full Bio <ArrowRight size={16} className='shrink-0'/></AnimatedLink>
             </div>
           </AnimatedContainer>
@@ -148,32 +147,33 @@ function HomePage() {
             whileInView={{ opacity: 1, y:0 }}
             delay={0.2}
             className='hidden md:grid grid-cols-2 items-center gap-4 w-fit'>
-            <a href="" target='_blank' className='col-span-1'>
-              <AnimatedButton 
-              classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
-              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
-              func={()=>null}
-              >
+            <a 
+              href='https://mail.google.com/mail/?view=cm&fs=1&to=onwujekwechibuzor@gmail.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
+                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover 
+                focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'>
                 <FaEnvelope className='shrink-0'/> Get In Touch
-              </AnimatedButton>
             </a>
-            <a href="" target='_blank' className='col-span-1'>
-              <AnimatedButton 
-              classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
-              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
-              func={()=>null}
-              >
+            <a 
+              href='https://x.com/raph_maxi?s=11'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
+                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover 
+                focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'>
                 <FaTwitter className='shrink-0'/> Twitter
-              </AnimatedButton>
             </a>
-            <a href="" target='_blank' className='col-span-2'>
-              <AnimatedButton 
-              classes='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
-              transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
-              func={()=>null}
-              >
+            <a 
+              href='https://github.com/Maxi-raph'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='w-full flex justify-center gap-2 items-center py-2.5 px-6 rounded-xl cursor-pointer
+                transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover 
+                focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
+               >
                 <FaGithub className='shrink-0'/> Github
-              </AnimatedButton>
             </a>
           </AnimatedContainer>
           <hr className="block md:hidden text-text-muted w-full h-0.5" />
@@ -208,32 +208,32 @@ function HomePage() {
           whileInView={{ opacity: 1, y:0 }}
           delay={0.2}
           className='grid grid-cols-10 md:hidden w-full gap-4'>
-          <a href="" target='_blank' className='col-span-10'>
-            <AnimatedButton 
-            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
-            func={()=>null}
-            >
+          <a 
+            href='https://mail.google.com/mail/?view=cm&fs=1&to=onwujekwechibuzor@gmail.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='col-span-10 w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background
+            active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'>
               <FaEnvelope className='shrink-0'/> Get In Touch
-            </AnimatedButton>
           </a>
-          <a href="" target='_blank' className='col-span-5'>
-            <AnimatedButton 
-            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
-            func={()=>null}
-            >
+          <a 
+           href="https://x.com/raph_maxi?s=11"
+           target='_blank' 
+           rel='noopener noreferrer'
+           className='col-span-5 w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background 
+            active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'>
               <FaTwitter className='shrink-0'/> Twitter
-            </AnimatedButton>
           </a>
-          <a href="" target='_blank' className='col-span-5'>
-            <AnimatedButton 
-            classes='w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
-            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'
-            func={()=>null}
-            >
+          <a 
+            href="https://github.com/Maxi-raph"
+            target='_blank'
+            rel='noopener noreferrer'
+            className='col-span-5 w-full flex gap-2 items-center justify-center py-2.5 px-6 rounded-xl cursor-pointer text-sm
+            transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background 
+            active:bg-accent-hover active:text-background shadow-shadow-medium shadow-lg'>
               <FaGithub className='shrink-0'/> Github
-            </AnimatedButton>
           </a>
         </AnimatedContainer>
       </section>

@@ -1,5 +1,4 @@
 import AnimatedContainer from "#/components/AnimatedContainer";
-import AnimatedLink from "#/components/AnimatedLink";
 import TechStack from "#/components/TechStack";
 import { useNav } from "#/context/navContext";
 import { createFileRoute } from "@tanstack/react-router";
@@ -61,21 +60,28 @@ function AboutPage ()  {
                              that make a product feel alive. Every pixel is intentional.
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-center w-[86%] mx-auto md:mx-0">
-                            <AnimatedLink 
-                            classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
+                            <a 
+                            href="https://x.com/raph_maxi?s=11"
+                            target="_blank"
+                            rel='noopener noreferrer'
+                            className='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
-                            route='/projects'
-                            func={()=> undefined}><FaTwitter size={16} className='shrink-0'/> Twitter</AnimatedLink>
-                            <AnimatedLink 
-                            classes='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
+                            ><FaTwitter size={16} className='shrink-0'/> Twitter</a>
+                            <a 
+                            href="https://github.com/Maxi-raph"
+                            target="_blank"
+                            rel='noopener noreferrer'
+                            className='flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
-                            route='/projects'
-                            func={()=> undefined}><FaGithub size={16} className='shrink-0'/> Github</AnimatedLink>
-                            <AnimatedLink 
-                            classes='col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
+                            ><FaGithub size={16} className='shrink-0'/> Github</a>
+                            <a 
+                            href="https://www.linkedin.com/in/chibuzoronwujekwe?utm_source
+                            =share&utm_campaign=share_via&utm_content=profile"
+                            target="_blank"
+                            rel='noopener noreferrer'
+                            className='col-span-2 md:col-span-1 flex gap-2 justify-center items-center py-2.5 px-6 rounded-xl
                                 transition bg-gray-700/30 hover:bg-accent-hover hover:text-background focus:bg-accent-hover focus:text-background active:bg-accent-hover active:text-background text-sm shadow-shadow-medium shadow-lg'
-                            route='/about'
-                            func={()=> undefined}><FaLinkedin size={16} className='shrink-0'/> LinkedIn</AnimatedLink>
+                            ><FaLinkedin size={16} className='shrink-0'/> LinkedIn</a>
                         </div>
                     </div>
                 </div>

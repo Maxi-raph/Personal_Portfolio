@@ -7,9 +7,9 @@ export default function Footer() {
         <h5 className="md:w-48 lg:w-76 font-bold text-text-primary text-[12px]">Raphael.dev</h5>
         <div className="flex-1 flex flex-col md:flex-row-reverse justify-between items-center gap-4">
           <div className="flex gap-8 items-center text-text-secondary text-[12px] font-semibold">
-            <a href="" target="_blank" className="hover:text-accent-hover hover:underline transition">Twitter</a>
-            <a href="" target="_blank" className="hover:text-accent-hover hover:underline transition">Github</a>
-            <a href="" target="_blank" className="hover:text-accent-hover hover:underline transition">LinkedIn</a>
+            <a href="https://x.com/raph_maxi?s=11" target="_blank" rel='noopener noreferrer' className="hover:text-accent-hover hover:underline transition">Twitter</a>
+            <a href="https://github.com/Maxi-raph" target="_blank" rel='noopener noreferrer' className="hover:text-accent-hover hover:underline transition">Github</a>
+            <a href="https://www.linkedin.com/in/chibuzoronwujekwe?utm_source=share&utm_campaign=share_via&utm_content=profile" target="_blank" rel='noopener noreferrer' className="hover:text-accent-hover hover:underline transition">LinkedIn</a>
           </div>
           <span className="text-text-secondary text-[12px]">
             &copy; {year} Raphael Onwujekwe. All rights reserved.
