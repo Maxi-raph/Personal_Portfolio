@@ -112,7 +112,7 @@ body {
     radial-gradient(800px 500px at 105% -10%, var(--accent-hover), transparent 55%),
     radial-gradient(600px 400px at 50% 120%, var(--accent-primary), transparent 60%),
     linear-gradient(180deg, var(--surface) 0%, var(--background) 100%);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
