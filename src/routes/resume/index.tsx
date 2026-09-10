@@ -40,8 +40,6 @@ function ResumePage() {
           <AnimatedContainer 
            type='load'
            containerType={'section'}
-           initial={{ opacity: 0, y: 50 }}
-           animate={{ opacity: 1, y: 0 }}
            delay={0}
            className="flex flex-col md:flex-row justify-between gap-4">
             <div className='md:w-[78%]'>
@@ -87,16 +85,14 @@ function ResumePage() {
           <AnimatedContainer 
            containerType={'section'}
            delay={0.3}
-           initial={{ opacity: 0, x: 150 }}
-           whileInView={{ opacity: 1, x: 0 }}
+           direction='right'
            className="flex flex-col md:flex-row gap-10">
             <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EXPERIENCE</span>
             <div className="flex flex-col gap-10 flex-1">
               <AnimatedContainer
                 containerType={'div'}
                 delay={0.3}
-                initial={{ opacity: 0, x: 150 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                direction='right'
                 className='flex flex-col gap-3'>
                 <div className="flex justify-between gap-4 flex-wrap">
                   <div className="flex flex-col gap-2">
@@ -122,8 +118,7 @@ function ResumePage() {
               <AnimatedContainer
                 containerType={'div'}
                 delay={0.6}
-                initial={{ opacity: 0, x: 150 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                direction='right'
                 className='flex flex-col gap-3'>
                 <div className="flex justify-between gap-4 flex-wrap">
                   <div className="flex flex-col gap-2">
@@ -149,8 +144,7 @@ function ResumePage() {
               <AnimatedContainer
                 containerType={'div'}
                 delay={0.9}
-                initial={{ opacity: 0, x: 150 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                direction='right'
                 className='flex flex-col gap-3'>
                 <div className="flex justify-between gap-4 flex-wrap">
                   <div className="flex flex-col gap-2">
@@ -178,8 +172,7 @@ function ResumePage() {
           <AnimatedContainer
            containerType={'section'}
            delay={0.3}
-           initial={{ opacity: 0, x: -150 }}
-           whileInView={{ opacity: 1, x: 0 }}
+           direction='left'
            className="flex flex-col md:flex-row gap-6 md:gap-10">
             <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>SKILLS</span>
             {/*Desktop version for skills*/}
@@ -240,8 +233,7 @@ function ResumePage() {
           <AnimatedContainer
            containerType={'section'}
            delay={0.3}
-           initial={{ opacity: 0, x: 150 }}
-           whileInView={{ opacity: 1, x: 0 }}
+           direction='right'
            className="flex flex-col md:flex-row gap-10">
             <span className="md:w-[26%] lg:w-[36%] xl:w-[40%] text-accent-text text-[11px] block"><span className="inline-block mr-2">//</span>EDUCATION</span>
             <div className="flex flex-col gap-10 flex-1">

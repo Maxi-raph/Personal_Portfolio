@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 
 type ContainerProps = {
@@ -8,10 +8,18 @@ type ContainerProps = {
     type?:'scroll' | 'load',
     containerType:string,
     className?:string,
-    initial: { opacity: number; y?: number; x?: number }
-    animate?: { opacity: number; y?: number; x?: number }
-    whileInView?: { opacity: number; y?: number; x?: number }
+    direction?: 'up' | 'down' | 'left' | 'right';
 }
+
+  const DIRECTIONS = {
+    up:    { opacity: 0, y: 50,  x: 0 },
+    down:  { opacity: 0, y: -50, x: 0 },
+    left:  { opacity: 0, x: -150, y: 0 },
+    right: { opacity: 0, x: 150,  y: 0 },
+  };
+
+  const ANIMATED = { opacity: 1, x: 0, y: 0 };
+  const viewport = { once: true, amount: 0.2 };
 
 const AnimatedContainer = ({ 
   children, 
@@ -19,20 +27,29 @@ const AnimatedContainer = ({
   type = 'scroll',
   containerType = 'section',
   className,
-  initial= { opacity: 0, y: 50 },
-  animate = { opacity: 1, y: 0 },
-  whileInView = { opacity: 1, y: 0 }
+  direction = 'up'
 }:ContainerProps)  => {
 
-  const MotionContainer = motion(containerType) as any;
+  const MotionContainer = useMemo(
+    () => motion.create(containerType) as any,
+    [containerType]
+  );
+
+  const initialState = DIRECTIONS[direction];
+  const animateState = ANIMATED;
+  const transition = useMemo(
+    () => ({ duration: 0.8, delay }),
+    [delay]
+  );
+
 
   // For load animations
   if (type === 'load') {
     return (
       <MotionContainer
-        initial={initial}
-        animate={animate}
-        transition={{ duration: 0.8, delay }}
+        initial={initialState}
+        animate={animateState}
+        transition={transition}
         className={className}
       >
         {children}
@@ -43,10 +60,10 @@ const AnimatedContainer = ({
   // For scroll animations (default)
   return (
     <MotionContainer
-      initial={initial}
-      whileInView={whileInView}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.8, delay }}
+      initial={initialState}
+      whileInView={animateState}
+      viewport={viewport}
+      transition={transition}
       className={className}
     >
       {children}

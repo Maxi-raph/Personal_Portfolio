@@ -29,8 +29,6 @@ function ProjectsPage() {
             onClick={()=>setIsOpen(false)}></div>
             <AnimatedContainer
                 containerType='div'
-                initial={{ opacity: 0, y:20 }}
-                animate={{ opacity: 1, y:0 }}
                 delay={0.2}
                 className="flex flex-col md:justify-between md:items-end md:flex-row gap-6">
                 <div className='flex flex-col gap-4'>
@@ -55,8 +53,6 @@ function ProjectsPage() {
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-6" />
             <AnimatedContainer
                 containerType='div'
-                initial={{ opacity: 0, y:20 }}
-                whileInView={{ opacity: 1, y:0 }}
                 delay={0.2}
                 className="flex flex-col gap-6">
                 <div className="flex gap-2 w-full items-center">
@@ -99,8 +95,6 @@ function ProjectsPage() {
             <div>
                 <AnimatedContainer
                     containerType='div'
-                    initial={{ opacity: 0, y:20 }}
-                    whileInView={{ opacity: 1, y:0 }}
                     delay={0.2}
                     className="flex flex-wrap gap-4 whitespace-nowrap">
                 {categoryArr.map((cat)=>(
@@ -121,8 +115,6 @@ function ProjectsPage() {
             <hr className="text-text-muted w-full h-0.5 mt-6 mb-18" />
             <AnimatedContainer
                 containerType='div'
-                initial={{ opacity: 0, y:20 }}
-                whileInView={{ opacity: 1, y:0 }}
                 delay={0.2}
                 className="flex flex-col gap-4">
                 <h2 className="text-text-primary text-4xl font-bold">Projects</h2>
@@ -153,8 +145,6 @@ function ProjectsPage() {
             </AnimatedContainer>
             <AnimatedContainer
                 containerType='div'
-                initial={{ opacity: 0, y:20 }}
-                whileInView={{ opacity: 1, y:0 }}
                 delay={0.2}
                 className="my-8 flex justify-center items-center py-2 px-1 w-full h-70 rounded-3xl bg-surface border border-border-default">
                 <div className="flex justify-center items-center flex-col gap-4">

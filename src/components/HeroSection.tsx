@@ -10,8 +10,6 @@ const HeroSection = () => {
      {/* Desktop Hero Section */}
       <AnimatedContainer 
       containerType='section'
-      initial={{ opacity: 0, y:30 }}
-      animate={{ opacity: 1, y:0 }}
       delay={0.2}
       className={`hidden md:flex gap-3 mt-34 page-wrap`}>
         <div className='md:w-[58%] lg:w-[65%]'>
@@ -73,8 +71,6 @@ const HeroSection = () => {
     {/* Mobile Hero Section */}
       <AnimatedContainer
         containerType='section'
-        initial={{ opacity: 0, y:30 }}
-        animate={{ opacity: 1, y:0 }}
         delay={0.2}
         className="flex flex-col items-center md:hidden gap-4 mt-32 page-wrap">
           <div className="flex gap-2  w-full justify-center sm:justify-start items-center">

@@ -98,8 +98,6 @@ function ContactPage() {
             <AnimatedContainer
              type='load'
              containerType={'section'}
-             initial={{ opacity: 0, y: 50 }}
-             animate={{ opacity: 1, y: 0 }}
              delay={0}
              className="flex flex-col md:flex-row justify-between gap-6 md:gap-2 lg:gap-6">
                 <div>
@@ -124,8 +122,6 @@ function ContactPage() {
             <div className="flex flex-col lg:flex-row gap-8">
                 <AnimatedContainer
                  containerType={'section'}
-                 initial={{ opacity: 0, y: 50 }}
-                 animate={{ opacity: 1, y: 0 }}
                  delay={0}                
                  className="flex flex-col gap-4 lg:w-[70%] bg-surface-elevated border border-text-muted p-7 lg:h-fit rounded-xl">
                     <h3 className="text-text-primary text-xl font-bold">
@@ -236,8 +232,6 @@ function ContactPage() {
                 <hr className="block lg:hidden text-text-muted w-full h-0.5 mt-18 mb-18" />
                 <AnimatedContainer
                  containerType='section'
-                 initial={{ opacity: 0, y:20 }}
-                 animate={{ opacity: 1, y:0 }}
                  delay={0.2}
                  className="flex flex-col gap-4 lg:w-[30%]">
                     <h3 className="text-text-primary text-xl font-bold">
@@ -246,8 +240,7 @@ function ContactPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
                         <AnimatedContainer
                          containerType='div'
-                         initial={{ opacity: 0, x:150 }}
-                         whileInView={{ opacity: 1, x:0 }}
+                         direction='right'
                          delay={0.2}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <a
@@ -268,8 +261,7 @@ function ContactPage() {
                         </AnimatedContainer>
                         <AnimatedContainer
                          containerType='div'
-                         initial={{ opacity: 0, x:150 }}
-                         whileInView={{ opacity: 1, x:0 }}
+                         direction='right'
                          delay={0.4}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <a 
@@ -289,8 +281,7 @@ function ContactPage() {
                         </AnimatedContainer>
                         <AnimatedContainer
                          containerType='div'
-                         initial={{ opacity: 0, x:150 }}
-                         whileInView={{ opacity: 1, x:0 }}
+                         direction='right'
                          delay={0.6}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <a 
@@ -311,8 +302,7 @@ function ContactPage() {
                         </AnimatedContainer>
                         <AnimatedContainer
                          containerType='div'
-                         initial={{ opacity: 0, x:150 }}
-                         whileInView={{ opacity: 1, x:0 }}
+                         direction='right'
                          delay={0.8}
                          className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                             <a 
@@ -334,8 +324,7 @@ function ContactPage() {
                     </div>
                     <AnimatedContainer
                      containerType='div'
-                     initial={{ opacity: 0, x:150 }}
-                     whileInView={{ opacity: 1, x:0 }}
+                     direction='right'
                      delay={1}                    
                      className="bg-surface-elevated border border-text-muted rounded-xl p-3">
                         <a

@@ -23,8 +23,6 @@ function ProjectDetailsPage() {
       <div className="page-wrap mt-28">
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          animate={{ opacity: 1, y:0 }}
           delay={0.2}>
           <AnimatedLink 
           classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
@@ -56,8 +54,6 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          animate={{ opacity: 1, y:0 }}
           delay={0.4}
           className='bg-surface-elevated border border-border-default rounded-3xl w-full h-108'>
           <img src={project?.img} alt={project?.title} className="w-full h-full bg-cover rounded-3xl" />
@@ -65,8 +61,6 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-6" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}>
         <hr className="text-text-muted w-[90%] mx-auto h-0.5 mb-6" />
         <div className="w-[90%] mx-auto grid gap-3 space-y-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -103,8 +97,6 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-6 mb-10" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}
           className="flex flex-col md:flex-row gap-4 justify-between">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> CHALLENGE</span>
@@ -131,8 +123,6 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}        
           className="flex flex-col md:flex-row gap-4 justify-between">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> SOLUTION</span>
@@ -171,16 +161,12 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}
           className="flex flex-col gap-4">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> GALLERY</span>
           <div className="grid grid-cols-12 gap-4">
             <AnimatedContainer
               containerType='div'
-              initial={{ opacity: 0, y:20 }}
-              whileInView={{ opacity: 1, y:0 }}
               delay={0.3}
               className="bg-surface-elevated border border-border-default rounded-3xl col-span-12 row-span-16">
               <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
@@ -188,16 +174,12 @@ function ProjectDetailsPage() {
             <div className="col-span-12 row-span-12 grid grid-cols-1 md:grid-cols-2 gap-4">
               <AnimatedContainer
                 containerType='div'
-                initial={{ opacity: 0, y:20 }}
-                whileInView={{ opacity: 1, y:0 }}
                 delay={0.6}
                 className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
                 <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
               </AnimatedContainer>
               <AnimatedContainer
                 containerType='div'
-                initial={{ opacity: 0, y:20 }}
-                whileInView={{ opacity: 1, y:0 }}
                 delay={0.9}        
                 className="bg-surface-elevated border border-border-default rounded-3xl col-span-1 row-span-12 md:col-span-1 md:row-span-12">
                 <img src={undefined} alt='' className="w-full h-full bg-cover rounded-3xl" />
@@ -208,8 +190,6 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}
           className="flex flex-col md:flex-row gap-4 justify-between">
           <span className="md:w-[20%] text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> RESULTS</span>
@@ -230,8 +210,6 @@ function ProjectDetailsPage() {
         <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}
           className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <AnimatedLink 

@@ -45,15 +45,12 @@ function HomePage() {
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <AnimatedContainer
         containerType='section'
-        initial={{ opacity: 0, y:0 }}
-        whileInView={{ opacity: 1, y:0 }}
         delay={0.3}
         className="page-wrap">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AnimatedContainer
             containerType='div'
-            initial={{ opacity: 0, x:-50 }}
-            whileInView={{ opacity: 1, x:0 }}
+            direction='left'
             delay={0.2} 
             className='flex flex-col gap-4'>
             <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> ABOUT ME</span>
@@ -63,8 +60,7 @@ function HomePage() {
           </AnimatedContainer>
           <AnimatedContainer
             containerType='div'
-            initial={{ opacity: 0, x:50 }}
-            whileInView={{ opacity: 1, x:0 }}
+            direction='right'
             delay={0.2}
             className='flex flex-col gap-4 mt-4 md:mt-0'>
             <p className="text-text-secondary text-sm leading-relaxed">
@@ -88,8 +84,6 @@ function HomePage() {
       <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
       <AnimatedContainer
         containerType='section'
-        initial={{ opacity: 0, y:20 }}
-        whileInView={{ opacity: 1, y:0 }}
         delay={0.2}
         className="page-wrap flex flex-col gap-3">
             <span className="text-accent-text text-[11px]"><span className="inline-block mr-2">//</span> TECH STACK</span>
@@ -126,8 +120,7 @@ function HomePage() {
         <div className='flex flex-col gap-6'>
           <AnimatedContainer
             containerType='div'
-            initial={{ opacity: 0, x:-50 }}
-            whileInView={{ opacity: 1, x:0 }}
+            direction='left'
             delay={0.2}
             className="flex flex-col gap-6"
             >
@@ -143,8 +136,6 @@ function HomePage() {
           {/* Desktop external links */}
           <AnimatedContainer
             containerType='div'
-            initial={{ opacity: 0, y:20 }}
-            whileInView={{ opacity: 1, y:0 }}
             delay={0.2}
             className='hidden md:grid grid-cols-2 items-center gap-4 w-fit'>
             <a 
@@ -180,8 +171,7 @@ function HomePage() {
         </div>
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, x:50 }}
-          whileInView={{ opacity: 1, x:0 }}
+          direction='right'
           delay={0.2}
           className='flex flex-col md:text-end gap-4'>
           <div className="flex justify-between md:flex-col md:justify-start gap-2">
@@ -204,8 +194,6 @@ function HomePage() {
         {/*Mobile external links*/}
         <AnimatedContainer
           containerType='div'
-          initial={{ opacity: 0, y:20 }}
-          whileInView={{ opacity: 1, y:0 }}
           delay={0.2}
           className='grid grid-cols-10 md:hidden w-full gap-4'>
           <a 

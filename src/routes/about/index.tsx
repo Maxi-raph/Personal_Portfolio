@@ -19,8 +19,7 @@ function AboutPage ()  {
             <div className="mt-34">
               <AnimatedContainer
                containerType='div'
-               initial={{ opacity: 0, x:50 }}
-               whileInView={{ opacity: 1, x:0 }}
+               direction='right'
                delay={0.2}
                className="mx-auto md:mx-0">
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> ABOUT ME</span>
@@ -36,8 +35,7 @@ function AboutPage ()  {
               </AnimatedContainer>
               <AnimatedContainer
                containerType='div'
-               initial={{ opacity: 0, x:-50 }}
-               whileInView={{ opacity: 1, x:0 }}
+               direction='left'
                delay={0.6}              
                className="flex flex-col md:flex-row gap-6 md:gap-13 lg:gap-18 mt-14">
                 <div className="w-[70%] mx-auto sm:w-[50%] md:w-[26%] lg:w-[21%]">
@@ -90,8 +88,6 @@ function AboutPage ()  {
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
             <AnimatedContainer
              containerType='section'
-             initial={{ opacity: 0, y:20 }}
-             whileInView={{ opacity: 1, y:0 }}
              delay={0.2}>
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> EXPERIENCE</span>
                 <h2 className="text-text-primary text-2xl font-bold mb-12">
@@ -99,8 +95,7 @@ function AboutPage ()  {
                 </h2>
                 <AnimatedContainer
                  containerType='div'
-                 initial={{ opacity: 0, x:150 }}
-                 whileInView={{ opacity: 1, x:0 }}
+                 direction='right'
                  delay={0.2}            
                  className="flex flex-col md:flex-row gap-3">
                     <span className="text-xs text-text-secondary md:w-[16%]">2025 — present</span>
@@ -115,8 +110,7 @@ function AboutPage ()  {
                 <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
                 <AnimatedContainer
                  containerType='div'
-                 initial={{ opacity: 0, x:150 }}
-                 whileInView={{ opacity: 1, x:0 }}
+                 direction='right'
                  delay={0.4}               
                  className="flex flex-col md:flex-row gap-3">
                     <span className="text-xs text-text-secondary md:w-[16%]">2024 — 2025</span>
@@ -131,8 +125,7 @@ function AboutPage ()  {
                 <hr className="text-text-muted w-full h-0.5 mt-10 mb-10" />
                 <AnimatedContainer
                  containerType='div'
-                 initial={{ opacity: 0, x:150 }}
-                 whileInView={{ opacity: 1, x:0 }}
+                 direction='right'
                  delay={0.6}               
                  className="flex flex-col md:flex-row gap-3">
                     <span className="text-xs text-text-secondary md:w-[16%]">2021 — 2023</span>
@@ -147,8 +140,7 @@ function AboutPage ()  {
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-18" />
             <AnimatedContainer
              containerType='div'
-             initial={{ opacity: 0, x:150 }}
-             whileInView={{ opacity: 1, x:0 }}
+             direction='right'
              delay={0.2}>
                 <span className="md:w-[20%] text-accent-text text-[11px] block mb-2"><span className="inline-block mr-2">//</span> TECH STACK</span>
                 <h2 className="text-text-primary text-2xl font-bold mb-6">
