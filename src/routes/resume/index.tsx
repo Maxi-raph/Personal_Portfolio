@@ -34,7 +34,7 @@ function ResumePage() {
         <div className="absolute left-[-9999px]">
           <ResumePDF />
         </div>
-        <div className="page-wrap mt-34">
+        <div className="relative page-wrap mt-34">
           <div className={`md:hidden ${isOpen && 'absolute z-20 inset-0 bg-background/40 backdrop-blur-[2px] pointer-events-auto'}`}
           onClick={()=>setIsOpen(false)}></div>
           <AnimatedContainer 
