@@ -25,9 +25,9 @@ function ProjectDetailsPage() {
           containerType='div'
           delay={0.2}>
           <AnimatedLink 
-          classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
+          classes='text-accent-primary text-sm font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
           route='/projects'
-          func={()=> undefined}><ArrowLeft className='inline-block mr-1 shrink-0' size={14}/>Back To Projects</AnimatedLink>
+          func={()=> undefined}><ArrowLeft className='inline-block mr-1 shrink-0' size={16}/>Back To Projects</AnimatedLink>
           <div className="flex gap-2 items-center mt-4">
             <p className="text-sm text-accent-text">{Number(project?.id) > 10 ? project?.id : '0' + Number(project?.id)} </p>
             <span className="block w-fit py-1 px-2 rounded-xl border border-border-default

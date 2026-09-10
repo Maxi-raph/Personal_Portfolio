@@ -6,7 +6,7 @@ import TechStack from '#/components/TechStack'
 import { useNav } from '#/context/navContext'
 import { projectsArr } from '#/services/projectsArr'
 import { createFileRoute } from '@tanstack/react-router'
-import { ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { ClipLoader } from 'react-spinners'
 
@@ -30,25 +30,31 @@ function ProjectsPage() {
             <AnimatedContainer
                 containerType='div'
                 delay={0.2}
-                className="flex flex-col md:justify-between md:items-end md:flex-row gap-6">
-                <div className='flex flex-col gap-4'>
-                    <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> WORK</span>
-                    <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-md">
-                     Selected Projects
-                    </h2>
-                    <p className="text-text-secondary text-sm max-w-120 leading-relaxed md:leading-normal sm:w-140! md:w-130! mt-2">
-                        A curated collection of my frontend projects — web apps, 
-                        landing pages, dashboards, and UI experiments built with care and precision.
+                className="">
+                <AnimatedLink 
+                classes='text-accent-primary text-sm font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
+                route='/'
+                func={()=> undefined}><ArrowLeft className='inline-block mr-1 shrink-0' size={16}/>Back To Home</AnimatedLink>
+                <div className="flex flex-col md:justify-between md:items-end md:flex-row gap-6 mt-4">
+                    <div className='flex flex-col gap-4'>
+                        <span className="text-accent-text text-xs"><span className="inline-block mr-2">//</span> WORK</span>
+                        <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-text-primary max-w-md md:max-w-sm lg:max-w-md">
+                        Selected Projects
+                        </h2>
+                        <p className="text-text-secondary text-sm max-w-120 leading-relaxed md:leading-normal sm:w-140! md:w-130! mt-2">
+                            A curated collection of my frontend projects — web apps, 
+                            landing pages, dashboards, and UI experiments built with care and precision.
+                        </p>
+                    </div>
+                    <p className="text-text-primary font-bold text-4xl flex items-center">
+                        {projects.length > 0 
+                        ? projects.length + '+'
+                        : 0} 
+                        <span className="inline-block ml-2 text-xs text-text-muted">
+                            projects total
+                        </span>
                     </p>
                 </div>
-                <p className="text-text-primary font-bold text-4xl flex items-center">
-                    {projects.length > 0 
-                    ? projects.length + '+'
-                    : 0} 
-                    <span className="inline-block ml-2 text-xs text-text-muted">
-                        projects total
-                    </span>
-                </p>
             </AnimatedContainer>
             <hr className="text-text-muted w-full h-0.5 mt-18 mb-6" />
             <AnimatedContainer
@@ -84,7 +90,7 @@ function ProjectsPage() {
                         text-[10px] font-semibold bg-surface-elevated shadow-shadow-medium shadow-md'
                         />
                         <AnimatedLink 
-                        classes='text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
+                        classes='flex items-center text-accent-primary text-xs font-bold hover:text-accent-hover hover:scale-95 w-fit transition'
                         route='/projects/detail/$projectId'
                         params={{projectId: firstFeaturedProject[0]?.id}}
                         func={()=> undefined}>View Case Study <ArrowRight className='inline-block ml-1 shrink-0' size={14}/></AnimatedLink>
